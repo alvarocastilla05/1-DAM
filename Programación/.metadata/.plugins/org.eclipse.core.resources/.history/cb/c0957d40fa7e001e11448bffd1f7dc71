@@ -1,0 +1,25 @@
+package ejercicio02;
+
+import java.util.Scanner;
+
+public class Principal {
+
+	public static void main(String[] args) {
+		
+		String aux;
+		double radio;
+		double area = 0;
+		Circulo a1;
+
+		Scanner sc=new Scanner(System.in);
+		
+		System.out.println("Diga radio del círculo:");
+		aux=sc.nextLine();
+		radio=Double.parseDouble(aux);
+		
+		a1=new Circulo(radio);
+		
+		System.out.printf("El área del círculo es: %.2f cm2\n", area);
+	}
+
+}

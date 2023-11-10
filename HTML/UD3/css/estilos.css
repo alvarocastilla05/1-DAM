@@ -1,0 +1,62 @@
+    @font-face {
+    font-family: "miFuenteChula";
+    src: url();
+    
+}
+
+body{
+    background-color: coral;
+    font-size: 12pt;
+}
+
+h1, h2, h3{
+    
+    
+    font-variant: small-caps;
+    word-spacing: 50px;
+    direction: rtl;
+}
+p{
+    font-size: 1.5em;
+    font-weight: bolder;
+    text-align: justify;
+    text-indent: 5%;
+    line-height: 50px;
+    width: 50%;
+    overflow: scroll;
+    overflow: visible;
+    
+}
+
+/*Para que sirvar para un único párrafo*/
+.cursiva{
+    font-style: italic;
+    font-family: Calibri;
+}
+
+
+.derecha{
+    text-align: right;
+}
+.foto{
+    
+    text-align: center;
+}
+.pieFoto{
+   /*alinea el texto*/
+    text-align: center;
+    font-size: 2em;
+    background-color: rgba(178, 54, 30, 0.5);
+    font-family: 'Oswald','Comic Sans Ms', Arial, Helvetica, sans-serif;
+    letter-spacing: 10px;
+    width: 35%;
+    /*alinea la caja*/
+    margin: 0 auto;
+}
+.nombre{
+   color: rgba(50, 150, 60, 0.7);
+   text-decoration:overline;
+}
+a{
+    text-decoration: none;
+}

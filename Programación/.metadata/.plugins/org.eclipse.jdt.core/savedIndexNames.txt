@@ -1,0 +1,6 @@
+INDEX VERSION 1.134+C:\Users\castilla.caalv24_tri\Desktop\Programación\.metadata\.plugins\org.eclipse.jdt.core
+3772632687.index
+1322807059.index
+3734005767.index
+1865797976.index
+3384282311.index

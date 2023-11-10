@@ -1,0 +1,26 @@
+body{
+    background-color: lightcyan;
+    color: rgb(185, 139, 78);
+}
+@font-face {
+    font-family: mifuentechula;
+    src: url(../fuentes/Agbalumo-Regular.ttf);
+}
+h1, h2, h3, h4{
+    font-family: 'mifuentechula';
+    color: rgb(249, 249, 141);
+    text-shadow: 5px 5px 20px blue;
+    
+}
+
+
+img{
+    text-align: right;
+}
+a{
+    text-decoration: none;
+}
+.cursiva{
+    font-style: italic;
+}
+

@@ -1,0 +1,41 @@
+h1{
+    color: rgb(0, 68, 98);
+    font-size: 2em;
+    font-family:  Helvetica;
+    font-weight: inherit;
+}
+@font-face {
+    font-family: mifuentechula;
+    src: url(../fonts/UrbanElegance.ttf);
+}
+
+h2{
+    font-family: mifuentechula;
+    font-size: 1.3em;
+    font-weight: inherit;
+}
+.fecha{
+    font-variant: small-caps;
+    font-size: 0.7em;
+    font-weight: bold;
+    color: rgb(142, 142, 142);
+    text-align: right;
+}
+
+.foto{
+    width: 55%;
+    text-align: center;
+}
+p{
+    font-family: 'Times New Roman', Verdana, Georgia, serif;
+    font-size: 0.95em;
+    color: rgb(124, 124, 124);
+}
+
+body{
+    background-color: rgb(242, 242, 242);
+}
+.cursiva{
+    font-style: italic;
+}
+   

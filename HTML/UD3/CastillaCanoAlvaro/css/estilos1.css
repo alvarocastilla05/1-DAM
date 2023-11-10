@@ -1,0 +1,24 @@
+a{
+    text-decoration: none;
+    color: brown;
+}
+h1, h2, h3, h4{
+    font-family: 'Oswald','Comic Sans Ms', Arial, Helvetica, sans-serif;
+    color: red;
+    margin: 0;
+    text-align: center;
+    letter-spacing: 10px;
+    text-shadow: 50px, 50px, 50px, brown;
+}
+body{
+    background-color: burlywood;
+}
+p{
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; 
+}
+.cursiva{
+    font-style: italic;
+}
+.negrita{
+    font-weight: bold;
+}

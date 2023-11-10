@@ -1,0 +1,9 @@
+package ejemplo03;
+
+public class Vendedor {
+	
+	private String nombre;
+	private double ventas;
+	private int cantVehiculos;
+
+}
