@@ -43,10 +43,17 @@ public class Generadora {
 	}
 	
 	public int generarChinos (int desde, int hasta) {
-		int num1Chinos;
+		int num1Chinos = 0;
 		int num2Chinos=generarNum(desde,hasta);
+		int suma;
+		suma=num1Chinos+num2Chinos;
 		
+		return suma;
 		
+	}
+	
+	public void mostrarChinos(int suma) {
+		System.out.println(suma);
 	}
 
 }

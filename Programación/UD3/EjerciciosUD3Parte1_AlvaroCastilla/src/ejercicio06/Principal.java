@@ -12,6 +12,8 @@ public class Principal {
 		int primitiva = 6;
 		int num2;
 		String aux;
+		int num1Chinos;
+		int num2Chinos;
 		Generadora g=new Generadora();
 		
 		
@@ -68,6 +70,26 @@ public class Principal {
 					num2=Integer.parseInt(aux);
 					
 					g.mostrarGanador(g.generarParImpar(desde, hasta));
+					break;
+					
+				case 3:
+					System.out.println("Introduzca desde: ");
+					aux=sc.nextLine();
+					desde=Integer.parseInt(aux);
+					
+					System.out.println("Introduzca hasta: ");
+					aux=sc.nextLine();
+					hasta=Integer.parseInt(aux);
+					
+					System.out.println("Diga un número del 0 al 3");
+					aux=sc.nextLine();
+					num1Chinos=Integer.parseInt(aux);
+					
+					g.mostrarChinos(g.generarChinos(desde, hasta));
+					
+					
+				
+					
 					
 					
 			}
