@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style type="text/css">
+        nav{
+            border: 3px solid blue;
+            display: flex;
+            
+            
+        }
+        li{
+            border:2px solid red;
+            list-style-type: none;
+            flex-basis: 40%;
+            flex-grow: 1;
+            flex-shrink: 4;
+            /*flex: 1, 4, 40%; --> es lo mismo que lo de arriba*/
+        }
+        li.doble{
+
+            flex-grow: 2;
+            flex-shrink: 1;
+
+            flex: 1 1 auto;/*valoe por defecto*/
+        }
+        li.triple{
+            flex-grow: 3;
+            flex-shrink: 1;
+        }
+
+
+    </style>
+</head>
+<body>
+
+    <nav>
+        <li>hola tu</li>
+
+        <li class="doble">Hola yo</li>
+
+        <li class="triple">Hola él</li>
+
+        <li>Hola quillo</li>
+
+        
+        
+
+    </nav>
+    
+</body>
+</html>
