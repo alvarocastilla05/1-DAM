@@ -1,54 +1,70 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style type="text/css">
-        nav{
+        section {
             border: 3px solid blue;
             display: flex;
-            
-            
-        }
-        li{
-            border:2px solid red;
-            list-style-type: none;
-            flex-basis: 40%;
-            flex-grow: 1;
-            flex-shrink: 4;
-            /*flex: 1, 4, 40%; --> es lo mismo que lo de arriba*/
-        }
-        li.doble{
-
-            flex-grow: 2;
-            flex-shrink: 1;
-
-            flex: 1 1 auto;/*valoe por defecto*/
-        }
-        li.triple{
-            flex-grow: 3;
-            flex-shrink: 1;
-        }
+            justify-content: space-between;
+            width: 750px;
 
 
+        }
+
+        p {
+            border: 2px solid red;
+
+        }
+
+        section>p {
+            flex: 0 1 35%;
+        }
+
+        section p img{
+            width: 100%;
+        }
+        section>p+p {
+            flex: 0 1 40%;
+        }
+
+        section div{
+            flex: 0 1 25%
+        }
+
+        .boton {
+            background-color: aqua;
+            text-align: center;
+            padding: 8px;
+
+        }
     </style>
 </head>
+
 <body>
 
-    <nav>
-        <li>hola tu</li>
+    <section>
+        <p><img src="../img/illojuan-se-ríe-con-80-memes-illojuan-v0-bd70bo38tsy91.webp" alt="illojuan"></p>
 
-        <li class="doble">Hola yo</li>
+        <p>Lorem fistrum no te digo trigo por no llamarte Rodrigor sexuarl no puedor pecador me cago en tus muelas la
+            caidita a peich.
+            Torpedo por la gloria de mi madre tiene musho peligro papaar papaar fistro. Llevame al sircoo te va a hasé
+            pupitaa torpedo está
+            la cosa muy malar amatomaa qué dise usteer. Pupita ahorarr me cago en tus muelas sexuarl pecador de la
+            pradera.  </p>
 
-        <li class="triple">Hola él</li>
+        <div>
+            <p class="boton">Hola él</p>
+            <p class="boton">Hola quillo</p>
+        </div>
 
-        <li>Hola quillo</li>
 
-        
-        
 
-    </nav>
-    
+    </section>
+
 </body>
+
 </html>
