@@ -3,4 +3,5 @@
     <fullyQualifiedTypeName name="utilidades.Leer"/>
     <fullyQualifiedTypeName name="java.util.Random"/>
     <fullyQualifiedTypeName name="java.util.Scanner"/>
+    <fullyQualifiedTypeName name="model.Producto"/>
 </qualifiedTypeNameHistroy>
