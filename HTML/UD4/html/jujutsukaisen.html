@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style type="text/css">
+        * {
+            box-sizing: border-box;
+        }
+
+        #envolvente {
+            width: 85%;
+            margin: 0 auto;
+            min-width: 650px;
+        }
+
+        #envolvente header img {
+            width: 100%;
+        }
+
+        #envolvente #contenido {
+            display: flex;
+            align-items: stretch;
+            flex-direction: row;
+            justify-content: space-between;
+        }
+
+        #envolvente #contenido nav {
+            flex-basis: 20%;
+            flex-grow: 1;
+            flex-shrink: 1;
+
+            background-color: black;
+            color: #fff;
+            list-style-type: none;
+            padding: 20px 3%;
+        }
+
+        #envolvente #contenido main {
+            flex: 1 1 60%;
+            padding: 20px 3%;
+        }
+
+        #envolvente #contenido aside {
+            flex: 1 1 20%;
+            padding: 20px 3%;
+            background-color: #000;
+        }
+        #envolvente #contenido aside .anuncio{
+            background-color: rgb(175, 1, 1);
+            width: 90%;
+            text-align: center;
+            margin: 20px auto;
+        }
+        #envolvente #contenido aside .anuncio img{
+            width: 90%;
+            display: block;
+            padding: 15px;
+        }
+        #envolvente #contenido aside .anuncio img+p{
+            width: 75%;
+            margin: 3px auto;
+        }
+        #envoltorio footer{
+            background-color: rgb(175, 1, 1);
+            display: flex;
+        }
+        #envoltorio footer #pieizq{
+            padding: 10px 25%;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="envolvente">
+        <header>
+            <img src="../img/jk.jpg" alt="banner jujutsu kaisen">
+
+        </header>
+        <div id="contenido">
+            <nav>
+                <li>Personajes</li>
+                <li>Sagas</li>
+                <li>Creador</li>
+                <li>Tienda</li>
+                <li>Contacto</li>
+            </nav>
+            <main>
+               <h2>Personajes</h2>
+               
+                <h3>Saturo Gojo</h3>
+                <p>Satoru Gojo (五条悟 Gojō Satoru?) es uno de los personajes de la serie manga Tokyo Metropolitan Curse
+                    Technical School y uno de los protagonistas de la serie secuela,
+                    Jujutsu Kaisen. Conocido con el apodo de El Chamán Más Fuerte (最強の呪術師 Saikyō no Jujutsu-shi?), es
+                    uno de los cuatro chamanes de Clase Especial, antiguo
+                    compañero de Suguru Geto y Shoko Ieiri, y actual profesor del Colegio Técnico de Magia Metropolitana
+                    de Tokio, encargado de los alumnos de primer año.</p>
+
+                <p>Como único miembro y cabeza del Clan Gojo, es descendiente del chamán y espíritu vengativo,
+                    Sugawara-no-Michizan, y heredero de la Técnica de Maldición Ilimitada y el
+                    poder de los seis ojos. Desde el día de su nacimiento, se produjo un balance de poder entre la
+                    humanidad y las maldiciones; la caída de su clan y por ende, su muerte,
+                    significaría perder dicho balance, provocando una guerra a gran escala que sería difícil de ganar
+                    para la humanidad.
+                </p>
+                <h3>Yuji Itadori</h3>
+                <p>Yuji Itadori (虎杖悠仁 Itadori Yūji?) es el protagonista de la serie manga Jujutsu Kaisen. Es un
+                    estudiante de primer año del Colegio Técnico de Magia Metropolitana
+                    de Tokio y recipiente del Rey de las Maldiciones, Sukuna.</p>
+
+                <p>Solía ser estudiante de la Escuela Secundaria Municipal Sugisawa, donde demostró poseer una increíble
+                    fuerza física pero no tenía interés alguno en los deportes.
+                    Solía pasar gran parte de su tiempo en el Club de Ocultismo. Cualquier información
+                    relacionada a sus padres es desconocida y el único familiar que estuvo a su cuidado fue su abuelo.
+                </p>
+
+                <p>Cuando conoce a Megumi Fushiguro, termina arrastrado al mundo de los chamanes y maldiciones. En
+                    cierto punto de la historia, luego de ingerir uno de los dedos de Sukuna,
+                    éste encarna en él e Itadori se convierte su recipiente. A partir de entonces, Itadori tiene la
+                    misión de encontrar los restos de Sukuna que se encuentran esparcidos por
+                    todo Japón e ingerirlos, para luego ser ejecutado y destruir para siempre al Rey de las Maldiciones.
+                </p>
+            </main>
+            <aside>
+                <div class="anuncio">
+                    <img src="" alt="">
+                    <p>Comprar Producto</p>
+                </div>
+                <div class="anuncio">
+                    <img src="" alt="">
+                    <p>Comprar Producto</p>
+                </div>
+                <div class="anuncio">
+                    <img src="" alt="">
+                    <p>Comprar Producto</p>
+                </div>
+            </aside>
+        </div>
+        <footer>
+            <div id="pieizq"><a href="#">Aviso Legal</a></div>
+        </footer>
+    </div>
+</body>
+
+</html>
