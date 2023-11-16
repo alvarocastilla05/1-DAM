@@ -30,6 +30,7 @@ public class CrudProducto {
 	
 	//Pasamos un producto y una posición y se añade dicho producto en dicha posición
 	//OJO, porque no se comprueba nada, se pierde lo que había.
+	//No es buena idea pedirle la posición al usuario, aunque de momento lo vamos a hacer. 
 	
 	public void add(Producto p, int posicion) {
 		lista[posicion]=p;
