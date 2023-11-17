@@ -11,25 +11,23 @@ public class CuentaCorriente {
 	}
 
 	public double retirarCant (double retiro) {
-		double saldoRetiro;
 		
-		saldoRetiro=saldo-retiro;
-		return saldoRetiro;
+		saldo=saldo-retiro;
+		return saldo;
 		
 	}
-	public void mostrarRetiro(double saldoRetiro) {
-		System.out.printf("Su saldo actual es %.2f €\n", saldoRetiro);
+	public void mostrarRetiro(double saldo) {
+		System.out.printf("Su saldo actual es %.2f €\n", saldo);
 	}
 	
 	public double ingresarCant (double ingreso) {
-		double saldoIngreso;
 		
-		saldoIngreso=saldo+ingreso;
-		return saldoIngreso;
+		saldo=saldo+ingreso;
+		return saldo;
 		
 	}
-	public void mostrarIngreso(double saldoIngreso) {
-		System.out.printf("Su saldo actual es %.2f €\n", saldoIngreso);
+	public void mostrarIngreso(double saldo) {
+		System.out.printf("Su saldo actual es %.2f €\n", saldo);
 	}
 	
 	public double calcularDolares (double dolares) {
@@ -40,6 +38,10 @@ public class CuentaCorriente {
 	}
 	public void mostrarDolares(double dolares) {
 		System.out.printf("Tienes un total de %.2f $\n", dolares);
+	}
+	
+	public void mostrarSaldo (double saldo) {
+		System.out.printf("Tu saldo es %.2f €\n", saldo);
 	}
 		
 	

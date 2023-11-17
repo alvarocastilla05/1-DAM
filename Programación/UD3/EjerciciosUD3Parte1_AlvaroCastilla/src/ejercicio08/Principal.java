@@ -61,6 +61,17 @@ public class Principal {
 					break;
 				case 3:
 					c.mostrarDolares(c.calcularDolares(dolares));
+					break;
+				case 4:
+					c.mostrarSaldo(saldo);
+					break;
+				case 0:
+					System.out.println("Gracias por utilizar este programa.");
+					break;
+				default:
+					System.out.println("Opción no válida.");
+					break;
+						
 			}
 			
 			
