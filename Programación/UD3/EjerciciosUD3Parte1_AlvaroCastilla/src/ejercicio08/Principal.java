@@ -12,6 +12,7 @@ public class Principal {
 		double ingreso;
 		double retiro;
 		double dolares = 0;
+		double tasaEurDol;
 		String aux;
 		int op;
 		CuentaCorriente c;
@@ -35,8 +36,8 @@ public class Principal {
 		do {
 			System.out.println("-------------");
 			System.out.println("0-Salir.");
-			System.out.println("1-Retirar Dinero.");
-			System.out.println("2-Ingresar Dinero.");
+			System.out.println("1-Ingresar Dinero.");
+			System.out.println("2-Retirar Dinero.");
 			System.out.println("3-Calcular dólares americanos.");
 			System.out.println("4-Consultar el saldo.");
 			System.out.println("-------------");
@@ -45,25 +46,34 @@ public class Principal {
 			op=Integer.parseInt(aux);
 			
 			switch(op) {
+				
 				case 1:
-					System.out.println("Ingrese la cantidad que desea retirar:");
-					aux=sc.nextLine();
-					retiro=Double.parseDouble(aux);
-			
-					c.mostrarRetiro(c.retirarCant(retiro));
-					break;
-				case 2:
 					System.out.println("Ingrese la cantidad que desea ingresar:");
 					aux=sc.nextLine();
 					ingreso=Double.parseDouble(aux);
 					
-					c.mostrarIngreso(c.ingresarCant(ingreso));
+					c.ingresarCant(ingreso);
+					break;
+				case 2:
+					System.out.println("Ingrese la cantidad que desea retirar:");
+					aux=sc.nextLine();
+					retiro=Double.parseDouble(aux);
+					if (retiro > c.getSaldo()) {
+						
+						System.out.println("Dinero insuficiente");
+					}else {
+						c.retirarCant(retiro);
+					}
+					
 					break;
 				case 3:
-					c.mostrarDolares(c.calcularDolares(dolares));
+					System.out.println("Introduzca a cuánto está el dolar:");
+					aux=sc.nextLine();
+					tasaEurDol=Double.parseDouble(aux);
+					c.mostrarDolares(c.calcularDolares(tasaEurDol));
 					break;
 				case 4:
-					c.mostrarSaldo(saldo);
+					c.mostrarSaldo();
 					break;
 				case 0:
 					System.out.println("Gracias por utilizar este programa.");

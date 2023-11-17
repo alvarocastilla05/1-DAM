@@ -29,8 +29,10 @@ public class Prinicipal {
 		
 		m=new Moneda();
 		
-		m.generarNum(num, hasta, desde);
-		m.lanzar(m.generarNum(num, hasta, desde));
+		m.generarNum(hasta, desde);
+		
+		
+		m.lanzar(m.generarNum(hasta, desde));
 		m.mostrarResult(m.lanzar(num));
 		m.comprobarGan(num, numJug);
 		

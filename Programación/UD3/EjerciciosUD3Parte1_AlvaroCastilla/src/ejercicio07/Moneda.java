@@ -8,9 +8,9 @@ public class Moneda {
 	//lanzar {if(gen==1){return true}}else{return false}
 	//public void mostrarResult(){ if (lanzar=true){syso(cara)} else { syso(cruz)}
 	
-	public int generarNum (int num, int hasta, int desde) {
+	public int generarNum (int hasta, int desde) {
 		Random rnd=new Random(System.nanoTime());
-		
+		int num;
 		num=rnd.nextInt(hasta-desde+1)+desde;
 		
 		return num;
@@ -25,7 +25,7 @@ public class Moneda {
 	}
 	
 	public void mostrarResult (boolean lanzar) {
-		if (lanzar=true) {
+		if (lanzar) {
 			System.out.println("Cara");
 		}else {
 			System.out.println("Cruz");
