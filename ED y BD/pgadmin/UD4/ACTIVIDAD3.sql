@@ -13,11 +13,12 @@ WHERE TO_CHAR(fecha_operacion, 'DAY/MM/YYYY ')
 /*2. Selecciona el precio medio por metro cuadrado de los alquileres de viviendas 
 en los meses de marzo y abril de cualquier año para las provincias costeras de Andalucía.*/
 
-SELECT avg(precio)
+SELECT avg(precio/superficie) AS mediaM2
 FROM inmueble JOIN operacion USING (id_inmueble)
 WHERE provincia IN ('Cádiz', 'Huelva', 'Málaga', 'Almería', 'Granada')
 	AND  TO_CHAR(fecha_operacion, 'MM') = '03' 
-	OR TO_CHAR(fecha_operacion, 'MM') = '04';
+	OR TO_CHAR(fecha_operacion, 'MM') = '04'
+	AND tipo_operacion = 'Alquiler';
 	
 /*3. ¿Cuál es la media del porcentaje de diferencia entre el precio inicial 
 (en la tabla inmueble) y el precio final (en la tabla operación)
@@ -64,7 +65,15 @@ WHERE nombre IN ('Casa', 'Piso')
 	AND TO_CHAR(fecha_operacion, 'MM') IN ('07', '08');
 
 
+/*Selecciona el precio inicial en el mes de agosto en la provincia de Jaén, 
+ordenalo de forma descendente*/
 
+SELECT precio 
+FROM operacion JOIN inmueble USING (id_inmueble)
+	JOIN tipo ON (tipo_inmueble=id_tipo)
+WHERE provincia = 'Jaén'
+	AND TO_CHAR(fecha_operacion, 'MM') = '08'
+ORDER BY precio DESC;
 
 	
 
