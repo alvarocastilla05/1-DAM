@@ -24,11 +24,11 @@ WHERE provincia IN ('Cádiz', 'Huelva', 'Málaga', 'Almería', 'Granada')
 para aquellas operaciones de alquiler realizadas en enero de cualquier año, 
 donde el tipo del inmueble es Oficina, Local o Suelo?*/
 
-SELECT *
-FROM inmueble i JOIN tipo ON (tipo_inmueble=id_tipo)
-	JOIN operacion USING (operacion_id)
-WHERE fecha_operacion TO_CHAR(fecha_operacion, 'MM') = '03'
- AND tipo_inmueble IN ('Oficina', 'Local', 'Suelo');
+SELECT ROUND(avg(precio/precio_final*100),2)
+FROM inmueble i JOIN operacion USING (id_inmueble)
+	JOIN tipo ON (tipo_inmueble=id_tipo)
+WHERE  TO_CHAR(fecha_operacion, 'MM') = '01'
+ AND nombre IN ('Oficina', 'Local', 'Suelo');
  
  
 /*4. Seleccionar el nombre de aquellos compradores de Casa o Piso en las provincias de Jaén o 
@@ -38,11 +38,11 @@ inmuebles que han tardado entre 3 y 4 meses en venderse.*/
 SELECT c.nombre
 FROM comprador c JOIN operacion USING (id_cliente)
 	JOIN inmueble USING (id_inmueble)
-	JOIN tipo t USING (id_tipo)
+	JOIN tipo t USING (id_inmueble)
 WHERE t.nombre IN ('Casa', 'Piso')
 	AND provincia IN ('Jaén', 'Córdoba')
 	AND precio BETWEEN 150000 AND 200000
-	AND 
+	AND (fecha_operacion-fecha_alta) BETWEEN 90 AND 120
 	
 /*5. Selecciona la media del precio inicial (en la tabla inmueble), del precio final
 (en la tabla operación) y de la diferencia en porcentaje entre ellas de aquellas viviendas 
@@ -56,15 +56,12 @@ SELECT avg(precio+precio_final)
 /*6. Selecciona el alquiler de vivienda (Casa o Piso) más caro realizado en Julio o 
 Agosto de cualquier año en la provincia de Huelva.*/
 
-SELECT precio 
+SELECT MAX(precio) 
 FROM inmueble CROSS JOIN tipo
 	JOIN operacion USING (id_inmueble)
 WHERE nombre IN ('Casa', 'Piso')
 	AND provincia = 'Huelva'
-	AND (fecha_operacion::text LIKE '%07%'
-	OR fecha_operacion::text LIKE '%08%');
-	
-	
+	AND TO_CHAR(fecha_operacion, 'MM') IN ('07', '08');
 
 
 
