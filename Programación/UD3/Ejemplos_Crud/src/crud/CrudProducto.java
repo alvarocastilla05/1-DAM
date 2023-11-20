@@ -86,5 +86,33 @@ public class CrudProducto {
 		}
 	}
 	
+	//Método borrar
+	/*
+	public void delete(Producto p) {
+		int index = findProduct(p); //Devuelve el indice del array
+		if (index)
+	}*/
+	
+	
+	
+	//Mostrar todos los productos de la lista
+	
+	public void imprimirTodosLosProductos () {
+		for (int i = 0; i < lista.length; i++) {
+			System.out.println((i+1)+"."+lista[i]);
+		}
+	}
+	
+	//Mostrar solo los productos cuyo atributos activo es true, es decir, están a la venta
+	
+	public void imprimirSoloActivos () {
+		
+		for (int i = 0; i < lista.length && lista[i]!=null; i++) {
+			if (lista[i].isActivo()) {
+				System.out.println((i+1)+"."+lista[i]);
+			}
+		}
+	}
+	
 	
 }
