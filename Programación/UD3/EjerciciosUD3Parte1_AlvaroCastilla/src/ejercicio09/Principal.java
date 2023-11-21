@@ -8,10 +8,17 @@ public class Principal {
 		
 		int op;
 		String aux;
+<<<<<<< HEAD
 		int decimo ;
 		
 		int decimoGan ;
 		Sorteo s=new Sorteo();
+=======
+		int decimo = 0 ;
+		
+		int decimoGan = 0;
+		Sorteo s=new Sorteo(decimoGan);
+>>>>>>> b114030eb025b5686a7d91384e41688bb52856e6
 		
 		Scanner sc=new Scanner(System.in);
 		
@@ -37,13 +44,18 @@ public class Principal {
 				System.out.println("Introduzca el número que desea comprar:");
 				aux=sc.nextLine();
 				decimo=Integer.parseInt(aux);
+				if (decimo<=99999) {
+					System.out.println("Su número es :"+decimo);
+				}else {
+					System.out.println("Opción no válida");
+				}
 				break;
 			case 2:
-				s.mostrarDecimo(s.generarDecimo(decimo));
+				s.mostrarDecimo(s.generarDecimo());
 				break;
 			case 3:
-				s.mostrarDecimoGan(s.generarDecimoGan(decimoGan));
-				s.mostrarGan(s.comprobarGan(decimo, decimoGan));
+				s.mostrarDecimoGan(s.generarDecimoGan());
+				s.mostrarGan(s.comprobarGan());
 				break;
 			case 0:
 				System.out.println("Gracias por utilizar este programa :)");
