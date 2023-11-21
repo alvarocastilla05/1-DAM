@@ -8,17 +8,17 @@ public class Principal {
 		
 		int op;
 		String aux;
-<<<<<<< HEAD
+
 		int decimo ;
 		
 		int decimoGan ;
 		Sorteo s=new Sorteo();
-=======
+
 		int decimo = 0 ;
 		
 		int decimoGan = 0;
 		Sorteo s=new Sorteo(decimoGan);
->>>>>>> b114030eb025b5686a7d91384e41688bb52856e6
+
 		
 		Scanner sc=new Scanner(System.in);
 		
