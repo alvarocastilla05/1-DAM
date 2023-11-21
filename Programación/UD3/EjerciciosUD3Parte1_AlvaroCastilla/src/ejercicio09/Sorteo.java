@@ -3,7 +3,7 @@ package ejercicio09;
 import java.util.Random;
 
 public class Sorteo {
-	
+
 
 	public int generarDecimo (int decimo) {
 		int desde=00001;

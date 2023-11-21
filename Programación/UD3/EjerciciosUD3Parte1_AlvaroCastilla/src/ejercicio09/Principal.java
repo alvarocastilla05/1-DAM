@@ -8,9 +8,9 @@ public class Principal {
 		
 		int op;
 		String aux;
-		int decimo = 0;
+		int decimo ;
 		
-		int decimoGan = 0;
+		int decimoGan ;
 		Sorteo s=new Sorteo();
 		
 		Scanner sc=new Scanner(System.in);

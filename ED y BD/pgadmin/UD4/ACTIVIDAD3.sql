@@ -64,7 +64,7 @@ inmuebles que han tardado entre 3 y 4 meses en venderse.*/
 SELECT c.nombre
 FROM comprador c JOIN operacion USING (id_cliente)
 	JOIN inmueble USING (id_inmueble)
-	JOIN tipo t USING (id_inmueble)
+	JOIN tipo t ON(tipo_inmueble = id_inmueble)
 WHERE t.nombre IN ('Casa', 'Piso')
 	AND provincia IN ('Jaén', 'Córdoba')
 	AND precio BETWEEN 150000 AND 200000
