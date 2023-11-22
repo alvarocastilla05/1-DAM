@@ -19,7 +19,7 @@ public class Sorteo {
 		
 		return numRnd;
 	}
->>>>>>> b114030eb025b5686a7d91384e41688bb52856e6
+
 
 	public int generarDecimo () {
 		int decimo;
