@@ -76,11 +76,7 @@ inmuebles que han tardado entre 3 y 4 meses en venderse.*/
 SELECT c.nombre
 FROM comprador c JOIN operacion USING (id_cliente)
 	JOIN inmueble USING (id_inmueble)
-<<<<<<< HEAD
-	JOIN tipo t ON(tipo_inmueble = id_inmueble)
-=======
 	JOIN tipo t ON (tipo_inmueble=id_tipo)
->>>>>>> b114030eb025b5686a7d91384e41688bb52856e6
 WHERE t.nombre IN ('Casa', 'Piso')
 	AND provincia IN ('Jaén', 'Córdoba')
 	AND precio BETWEEN 150000 AND 200000
@@ -115,14 +111,16 @@ WHERE  nombre IN ('Casa','Piso')
 	AND fecha_operacion-fecha_alta >= 365;
   
 --Corregido.
-SELECT AVG(precio), AVG(precio_final)
+SELECT AVG(precio), AVG(precio_final),
+        ROUND(((AVG(precio) - AVG(precio_final)) /
+          AVG(precio))*100,2)  
 FROM inmueble JOIN tipo ON (tipo_inmueble=id_tipo)
 	JOIN operacion USING (id_inmueble)
 WHERE nombre IN ('Casa','Piso')
 	AND superficie < 100 
 	AND tipo_operacion = 'Alquiler'
 	AND fecha_operacion >=
-	fecha_alta + '1 year'::interval;
+	fecha_alta + '1 month'::interval; --Cambiamos el enunciado a un mes en vez de a un año ya que no sale ninguno con un año.
 
 
 
@@ -135,6 +133,15 @@ FROM inmueble CROSS JOIN tipo
 WHERE nombre IN ('Casa', 'Piso')
 	AND provincia = 'Huelva'
 	AND TO_CHAR(fecha_operacion, 'MM') IN ('07', '08');
+	
+--Corregido.
+SELECT MAX(precio_final)
+FROM inmueble JOIN tipo ON (id_tipo=tipo_inmueble)
+		JOIN operacion USING (id_inmueble)
+WHERE nombre IN ('Casa','Piso')
+	AND TO_CHAR(fecha_operacion, 'MM') IN ('07','08')
+	AND provincia = 'Huelva'
+	AND tipo_operacion = 'Alquiler';
 
 
 /*Selecciona el precio inicial en el mes de agosto en la provincia de Jaén tipo Industrial, 
