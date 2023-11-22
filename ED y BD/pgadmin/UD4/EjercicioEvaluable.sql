@@ -9,3 +9,15 @@ WHERE ciudad = 'Berlín'
 	AND TO_CHAR(salida, 'MM') BETWEEN '01' AND '06'
 	AND AGE(salida, fecha_reserva) > '1'
 ORDER BY fecha_reserva;
+
+--Corregido
+
+SELECT *
+FROM vuelo v JOIN aeropuerto origen
+			ON (v.desde = origen.id_aeropuerto)
+	JOIN aeropuerto llegada
+			ON (v.hasta = llegada.id_aeropuerto)
+	JOIN reserva r USING (id_vuelo)
+WHERE origen.ciudad = 'Berlín'
+	AND EXTRACT(month from salida) BETWEEN 1 AND 6
+	AND AGE(salida,fecha_reserva) >='1mon'::interval;
