@@ -12,7 +12,7 @@ public class Sorteo {
 	//3. A LA HORA DE COMPARAR SI TU DECIMO ES GANADOR PONES IF (DECIMO==DECIMOGANADOR)... 
 	//LO QUE TENDRIAS QUE HACER ES IF(GENERARDECIMO==DECIMOGANADOR)
 	
-	/*public int generarRandom (int desde, int hasta) {
+	public int generarRandom (int desde, int hasta) {
 		Random rnd=new Random(System.nanoTime());
 		
 		int numRnd=rnd.nextInt(hasta-desde-1)+desde;
@@ -61,10 +61,10 @@ public class Sorteo {
 		}else {
 			System.out.println("Has perdido.");
 		}
-	}*/
+	}
 	
 	
-	
+	/*
 	//Corregido
 	  
 	private int decimoGan;
@@ -86,7 +86,7 @@ public class Sorteo {
 		
 	}
 	
-	 
+	 */
 	
 	
 	

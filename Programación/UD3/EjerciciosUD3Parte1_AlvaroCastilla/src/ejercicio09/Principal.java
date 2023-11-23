@@ -14,10 +14,7 @@ public class Principal {
 		int decimoGan ;
 		Sorteo s=new Sorteo();
 
-		int decimo = 0 ;
 		
-		int decimoGan = 0;
-		Sorteo s=new Sorteo(decimoGan);
 
 		
 		Scanner sc=new Scanner(System.in);
