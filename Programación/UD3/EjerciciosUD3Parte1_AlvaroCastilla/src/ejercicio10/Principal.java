@@ -13,6 +13,10 @@ public class Principal {
 		int cantBilletes;
 		double dinEntregado;
 		double cambio;
+		double saldoTotal;
+		String contrasenia1 ;
+		Ticket ticket = null;
+		double precioN;
 		
 		int op;
 		int op2;
@@ -30,6 +34,10 @@ public class Principal {
 		
 		Ticket t = new Ticket (precioTicket, fecha);
 		
+		
+		System.out.println("Introduzca nueva contraseña:");
+		contrasenia1=sc.nextLine();
+		Máquina m= new Máquina (ticket, contrasenia1);
 		
 		
 		
@@ -50,16 +58,16 @@ public class Principal {
 					aux=sc.nextLine();
 					cantBilletes=Integer.parseInt(aux);
 					
-					System.out.println("Introduzca dinero:");
+					System.out.println("Indique la cantidad que va a abonar:");
 					aux=sc.nextLine();
 					dinEntregado=Double.parseDouble(aux);
 					
-					t.calcularPrecio(precioTicket, cantBilletes);
+					m.calcularPrecio(precioTicket, cantBilletes);
 					
-					if(t.calcularPrecio(precioTicket, cantBilletes)>dinEntregado) {
+					if(m.calcularPrecio(precioTicket, cantBilletes)>dinEntregado) {
 						System.out.println("No tiene dinero suficiente ");
 					}
-					t.mostrarPrecio(t.calcularPrecio(precioTicket, cantBilletes));
+					m.mostrarPrecio(m.calcularPrecio(precioTicket, cantBilletes));
 					
 					do {
 						System.out.println("  ");
@@ -75,14 +83,14 @@ public class Principal {
 						switch(op2) {
 						
 							case 1:
-								if(t.calcularPrecio(precioTicket, cantBilletes)<dinEntregado) {
-									t.mostrarDev(t.calcularDev(precioTicket, dinEntregado));
+								if(m.calcularPrecio(precioTicket, cantBilletes)<dinEntregado) {
+									m.mostrarDev(m.calcularDev(precioTicket, dinEntregado));
 								}else {
 									System.out.println("No le corresponde devolución");
 								}
 								break;
 							case 2: 
-								t.imprimirTicket(t.calcularDev(precioTicket, dinEntregado),t.calcularPrecio(precioTicket, cantBilletes), precioTicket, cantBilletes, fecha);
+								t.imprimirTicket(m.calcularDev(precioTicket, dinEntregado),m.calcularPrecio( precioTicket, cantBilletes), precioTicket, cantBilletes, fecha);
 								break;
 							case 0:
 								System.out.println("  ");
@@ -98,6 +106,9 @@ public class Principal {
 					
 					break;
 				case 2:
+					
+					if(contrasenia1.equals(contrasenia1))
+					
 					do {
 						System.out.println("-----------------------");
 						System.out.println("0-Volver al menú principal");
@@ -111,6 +122,15 @@ public class Principal {
 						
 						switch (op3) {
 							case 1:
+								
+								break;
+							case 2:
+								System.out.println("Introduzca el precio nuevo:");
+								aux=sc.nextLine();
+								precioN=Double.parseDouble(aux);
+								
+								m.cambiarPrecio(precioN);
+								break;
 						}
 						
 					}while(op3!=0);
