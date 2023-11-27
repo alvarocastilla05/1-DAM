@@ -29,12 +29,46 @@ WHERE t.nombre IN ('Casa','Piso')
 ORDER BY fecha_operacion DESC;
 
 
-/*5. (INMO) Calcula el precio máximo y precio mínimo por metro cuadrado de venta de inmuebles que no sean 
-viviendas (no sean Piso o Casa) en provincias que contengan una n (mayúscula o minúscula), siempre que los
-inmuebles se hayan vendido en un mes que escrito de forma completa en inglés tenga entre 5 y 7 caracteres.*/
+/*5. (INMO) Calcula el precio máximo y precio mínimo por metro cuadrado de venta de inmuebles
+que no sean viviendas (no sean Piso o Casa) en provincias que contengan una n 
+(mayúscula o minúscula), siempre que los inmuebles se hayan vendido en un mes que escrito de 
+forma completa en inglés tenga entre 5 y 7 caracteres.*/
 
-SELECT *
-FROM 
+SELECT max(precio/superficie), min(precio/superficie)
+FROM inmueble JOIN tipo ON (id_tipo=tipo_inmueble)
+	JOIN operacion USING (id_inmueble)
+WHERE nombre NOT IN ('Piso', 'Casa')
+	AND provincia ILIKE '%n%'
+	AND TO_CHAR(fecha_operacion, 'Month') IN ('January', 'March', 'April', 'August'
+											 , 'October');
+											 
+											 
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
  
 
 
