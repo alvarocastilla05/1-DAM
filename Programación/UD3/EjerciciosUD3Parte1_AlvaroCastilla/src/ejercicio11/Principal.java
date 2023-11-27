@@ -38,8 +38,8 @@ public class Principal {
 			System.out.println("0-Salir.");
 			System.out.println("1-Mostrar notas.");
 			System.out.println("2-Modificar notas.");
-			System.out.println("3-Calcular nota media.");
-			System.out.println("4-Número de suspensos.");
+			System.out.println("3-Número de suspensos.");
+			System.out.println("4-Calcular nota media.");
 			System.out.println("-----------------------");
 			
 			aux=sc.nextLine();
@@ -60,6 +60,20 @@ public class Principal {
 					notaNueva=Double.parseDouble(aux);
 					
 					g.modificarNotas(notas, pos, notaNueva);
+					g.mostrarNuevasNotas(notas);
+					break;
+				case 3:
+					g.mostrarSuspensos(g.contarSuspensos(notas));
+					break;
+				case 4:
+					g.mostrarMedia(g.calcularMedia(notas, tam));
+					break;
+				case 0:
+					System.out.println("Gracias por utilizar este programa :)");
+					break;
+				default:
+					System.out.println("Opcion no valida");
+					break;
 			}
 			
 			
