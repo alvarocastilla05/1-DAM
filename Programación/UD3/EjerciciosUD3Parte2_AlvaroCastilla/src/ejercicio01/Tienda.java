@@ -2,6 +2,7 @@ package ejercicio01;
 
 import java.util.Arrays;
 
+
 public class Tienda {
 
 	private Producto []lista;
@@ -46,7 +47,9 @@ public class Tienda {
 				+ "]";
 	}
 	
-	
+	public void add(Producto p, int posicion) {
+		lista[posicion]=p;
+	}
 	
 	
 	

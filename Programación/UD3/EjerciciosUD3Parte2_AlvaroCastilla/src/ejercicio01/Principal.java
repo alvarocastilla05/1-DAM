@@ -7,6 +7,9 @@ public class Principal {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		
+		Producto [] lista;
+		double ganancias = 0;
+		double gastosTot = 0;
 		String nombre;
 		int fragil = 0;
 		Double precioVent = null;
@@ -17,6 +20,7 @@ public class Principal {
 		String aux;
 		Scanner sc=new Scanner(System.in);
 		Producto p;
+		Tienda t=new Tienda(lista, ganancias, gastosTot);
 		
 		System.out.println("Introduzca el precio de fabricacion: ");
 		aux=sc.nextLine();
