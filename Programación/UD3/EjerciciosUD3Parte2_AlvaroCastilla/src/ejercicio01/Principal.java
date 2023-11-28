@@ -7,12 +7,16 @@ public class Principal {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		
-		
+		String nombre;
+		int fragil = 0;
+		Double precioVent = null;
+		String codProduct = null;
 		double precioFab;
 		double porcentaje;
 		int op;
 		String aux;
 		Scanner sc=new Scanner(System.in);
+		Producto p;
 		
 		System.out.println("Introduzca el precio de fabricacion: ");
 		aux=sc.nextLine();
@@ -22,7 +26,21 @@ public class Principal {
 		aux=sc.nextLine();
 		porcentaje=Double.parseDouble(aux);
 		
+		System.out.println("Introduzca nombre del porducto:");
+		nombre=sc.nextLine();
+	
+		System.out.println("Diga 1 si es fragil o 2 sino lo es:");
+		aux=sc.nextLine();
+		fragil=Integer.parseInt(aux);
 		
+		
+		
+		
+		p= new Producto(precioFab, nombre, fragil, precioVent, codProduct);
+		p.calcularPrecioTr(precioFab, porcentaje);
+		
+		
+		p.mostrarCoste(p.calcularCoste(precioFab, p.calcularPrecioTr(precioFab, porcentaje) ));
 		
 		do {
 			System.out.println("---------------------");
@@ -41,6 +59,17 @@ public class Principal {
 			switch(op) {
 			
 				case 1:
+					
+					break;
+				case 2:
+					if(fragil==1) {
+						System.out.println("El objeto es frágil");
+					}else {
+						System.out.println("El objeto no es frágil.");
+					}
+					break;
+				case 3:
+					
 				
 			}
 			
