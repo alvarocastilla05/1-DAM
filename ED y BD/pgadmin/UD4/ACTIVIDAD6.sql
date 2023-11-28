@@ -7,6 +7,8 @@ FROM tipo JOIN inmueble ON (id_tipo=tipo_inmueble)
 	JOIN operacion USING (id_inmueble)
 WHERE nombre = 'Piso'
 	AND TO_CHAR(fecha_operacion, 'YYYY') = '2019'
+	AND tipo_operacion = 'Venta'
+	AND provincia = 'Sevilla'
 ORDER BY precio DESC
 LIMIT 3;
 
@@ -39,7 +41,7 @@ FROM operacion JOIN inmueble USING (id_inmueble)
 WHERE nombre = 'Parking'
 	AND provincia = 'Huelva'
 	AND tipo_operacion = 'Venta'
-	AND TO_CHAR(fecha_operacion, 'ID') BETWEEN '1' AND '5'
+	AND TO_CHAR(fecha_operacion, 'ID') BETWEEN '1' AND '5';
 
 /*5. Selecciona aquellos pisos que han tardado en venderse entre 3 y 6 meses en la provincia
 de Granada.*/
