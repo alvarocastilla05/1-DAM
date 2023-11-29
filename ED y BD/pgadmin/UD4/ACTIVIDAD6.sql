@@ -61,16 +61,57 @@ WHERE provincia IN ('Jaén', 'Córdoba')
 
 --Corregido(Está bien)
 
---Hacer lo mismo pero que se haya vendido del 15 de enero al 15 de marzo*/
+
+--Hacer lo mismo pero que se haya vendido del 15 de enero al 15 de marzo*/--Ingorando año
 SELECT *
 FROM inmueble JOIN operacion USING (id_inmueble)
 WHERE provincia IN ('Jaén', 'Córdoba')
 	AND tipo_operacion = 'Venta'
 	AND TO_CHAR(fecha_operacion, 'MM-DD') BETWEEN '01-15' AND '03-15';
 	
---Corregido por Luismi en classroom.
+--Corregido.
 	
+SELECT i.*, fecha_operacion
+FROM inmueble i JOIN operacion USING(id_inmueble)
+WHERE provincia IN ('Jaén','Córdoba')
+  AND tipo_operacion = 'Venta'
+  AND TO_DATE(TO_CHAR(fecha_operacion,'DD/MM'),'DD/MM')
+        BETWEEN TO_DATE('15/01','DD/MM')
+          AND
+         TO_DATE('15/03','DD/MM');  
+		 
+--Otra forma de ignorar el año
 
+SELECT i.*, fecha_operacion
+FROM inmueble i JOIN operacion USING(id_inmueble)
+WHERE provincia IN ('Jaén','Córdoba')
+  AND tipo_operacion = 'Venta'
+	AND make_date(extract(year from CURRENT_DATE)::int, 
+			  extract(month from fecha_operacion)::int,
+			 extract(day from fecha_operacion)::int)
+	BETWEEN make_date(2023,1,15) AND make_date(2023,3,15);
+	
+--Otra forma distinta.
+
+SELECT i.*, fecha_operacion
+FROM inmueble i JOIN operacion USING(id_inmueble)
+WHERE provincia IN ('Jaén','Córdoba')
+  AND tipo_operacion = 'Venta'
+  AND (
+  (EXTRACT(day from fecha_operacion) BETWEEN 15 AND 31
+   AND 
+   EXTRACT (month from fecha_operacion) = 1
+  )
+	OR
+	(EXTRACT(day from fecha_operacion) BETWEEN 1 AND 28
+	AND
+	 EXTRACT(month from fecha_operacion) = 2)
+	 OR
+	  (EXTRACT(day from fecha_operacion) BETWEEN 1 AND 15
+	  AND
+	   EXTRACT(month from fecha_operacion) = 3));
+	  
+	
 	
 /*4. Selecciona el precio medio de las ventas de Parking en la provincia de Huelva para 
 aquellas operaciones que se realizaran entre semana (de Lunes a Viernes).*/
