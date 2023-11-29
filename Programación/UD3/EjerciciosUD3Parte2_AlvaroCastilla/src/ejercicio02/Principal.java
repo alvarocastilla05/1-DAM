@@ -117,7 +117,8 @@ public class Principal {
 								h.comprobarOcupacion(ocupacion, lista);
 								break;
 							case 3:
-								
+								h.calcularPrecioFinal(numD);
+								h.mostrarFactura(numD);
 						}
 						
 					}while (op2!=0);

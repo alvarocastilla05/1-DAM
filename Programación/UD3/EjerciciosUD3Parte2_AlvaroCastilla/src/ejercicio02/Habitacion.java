@@ -97,9 +97,22 @@ public class Habitacion {
 			}
 		}
 		
-	public double calcular precioExtras()
-		
-	}
+		 public double calcularPrecioFinal(int dias ) {
+		        
+		        return dias* precio;
+		    }
+		 public void comprobarTipo(String tipo, double) {
+			 if(tipo.equalsIgnoreCase(tipo)) {
+				 precioTot
+			 }
+		 }
+
+		    public void mostrarFactura(int dias) {
+		        System.out.println("Factura para: " + nomClient);
+		        System.out.println("Tipo de habitación: " + tipo);
+		        System.out.println("Días contratados: " + dias);
+		        System.out.println("Precio final: " + calcularPrecioFinal(dias));
+		    }
 	
 	
 }
