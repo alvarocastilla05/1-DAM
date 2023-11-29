@@ -83,6 +83,23 @@ public class Habitacion {
 				+ ", dias=" + dias + ", limpieza=" + limpieza + ", ocupada=" + ocupada + "]";
 	}
 	
+	public void mostrarHab(Habitacion [] lista, int contH, int pos) {
+		for (int i = 0; i < lista.length; i++) {
+			System.out.println((i+1)+". "+lista[i]);
+		}
+		
+	}
+	
+	public void comprobarOcupacion(boolean ocupado, Habitacion [] lista) {
+		for (int i = 0; i < lista.length; i++) {
+			if(ocupado==true) {
+				System.out.println(lista[i]);
+			}
+		}
+		
+	public double calcular precioExtras()
+		
+	}
 	
 	
 }

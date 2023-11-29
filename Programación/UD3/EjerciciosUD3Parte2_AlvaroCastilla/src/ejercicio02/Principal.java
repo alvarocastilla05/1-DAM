@@ -16,6 +16,7 @@ public class Principal {
 		int extras;
 		String aux;
 		int op;
+		int op2;
 		int tam;
 		int pos;
 		String nombreHot;
@@ -42,9 +43,6 @@ public class Principal {
 			System.out.println("------------------------");
 			System.out.println("0-Salir.");
 			System.out.println("1-Añadir habitación.");
-			System.out.println("2-Ver si está ocupada.");
-			System.out.println("3-Calcular precio final.");
-			System.out.println("4-Mostra ticket.");
 			System.out.println("--------------------------");
 			
 			aux=sc.nextLine();
@@ -95,12 +93,37 @@ public class Principal {
 				    	ocupacion=false;
 				    }
 					
-					
+					h=new Habitacion(tipo, precio, extras, nombre, numD, servicioLimp, ocupacion);
+				    
 					hotel.add(new Habitacion(tipo, precio, extras, nombre, numD, servicioLimp, ocupacion), pos);
 					contH++;
 					
-					System.out.println(hotel);
-					break;
+					h.mostrarHab(lista, contH, pos);
+					do {
+						System.out.println("------------------------");
+						System.out.println("0-Salir.");
+						System.out.println("2-Ver habitaciones disponibles.");
+						System.out.println("3-Calcular precio final.");
+						System.out.println("4-Mostra ticket.");
+						System.out.println("--------------------------");
+						
+						aux=sc.nextLine();
+						op2=Integer.parseInt(aux);
+						
+						
+						switch(op2) {
+						
+							case 2:
+								h.comprobarOcupacion(ocupacion, lista);
+								break;
+							case 3:
+								
+						}
+						
+					}while (op2!=0);
+				
+					
+					
 			}
 			
 			
