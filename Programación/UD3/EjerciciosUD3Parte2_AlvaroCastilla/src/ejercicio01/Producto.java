@@ -133,4 +133,13 @@ public class Producto {
 	}
 	
 	
+	
+	public double sumarPrecios(double coste) {
+		double precioTot;
+		precioTot=coste++;
+		
+		return precioTot;
+	}
+	
+	
 }
