@@ -2,6 +2,7 @@ package ejercicio02;
 
 public class Habitacion {
 
+	private int id;
 	private String tipo;
 	private double precio;
 	private int extras;
@@ -10,7 +11,7 @@ public class Habitacion {
 	private boolean limpieza;
 	private boolean ocupada;
 	
-	public Habitacion(String tipo, double precio, int extras, String nomClient, int dias, boolean limpieza,
+	public Habitacion(int id, String tipo, double precio, int extras, String nomClient, int dias, boolean limpieza,
 			boolean ocupada) {
 		this.tipo = tipo;
 		this.precio = precio;
@@ -43,6 +44,14 @@ public class Habitacion {
 
 	public void setExtras(int extras) {
 		this.extras = extras;
+	}
+	
+	public int getId() {
+		return id;
+	}
+
+	public void setId(int id) {
+		this.id = id;
 	}
 
 	public String getNomClient() {
@@ -83,36 +92,6 @@ public class Habitacion {
 				+ ", dias=" + dias + ", limpieza=" + limpieza + ", ocupada=" + ocupada + "]";
 	}
 	
-	public void mostrarHab(Habitacion [] lista, int contH, int pos) {
-		for (int i = 0; i < lista.length; i++) {
-			System.out.println((i+1)+". "+lista[i]);
-		}
-		
-	}
-	
-	public void comprobarOcupacion(boolean ocupado, Habitacion [] lista) {
-		for (int i = 0; i < lista.length; i++) {
-			if(ocupado==true) {
-				System.out.println(lista[i]);
-			}
-		}
-		
-		 public double calcularPrecioFinal(int dias ) {
-		        
-		        return dias* precio;
-		    }
-		 public void comprobarTipo(String tipo, double) {
-			 if(tipo.equalsIgnoreCase(tipo)) {
-				 precioTot
-			 }
-		 }
-
-		    public void mostrarFactura(int dias) {
-		        System.out.println("Factura para: " + nomClient);
-		        System.out.println("Tipo de habitación: " + tipo);
-		        System.out.println("Días contratados: " + dias);
-		        System.out.println("Precio final: " + calcularPrecioFinal(dias));
-		    }
 	
 	
 }

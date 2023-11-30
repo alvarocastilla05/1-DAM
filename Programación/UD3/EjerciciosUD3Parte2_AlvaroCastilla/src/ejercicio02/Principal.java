@@ -12,18 +12,23 @@ public class Principal {
 		int numD, limpieza, ocupado;
 		String nombre;
 		String tipo;
-		double precio;
+		double precio, precioExtras = 25;
 		int extras;
 		String aux;
 		int op;
 		int op2;
 		int tam;
 		int pos;
+		int id;
 		String nombreHot;
-		Habitacion [] lista;
-		Scanner sc=new Scanner(System.in);
 		
-		Habitacion h;
+		Scanner sc=new Scanner(System.in);
+		Habitacion [] lista;
+		lista=new Habitacion [tam];
+		
+		Habitacion h1, h2, h3, h4;
+		
+		lista[0]=new Habitacion(1, "Individual", 50.0, 0, "Álvaro", 0.0 , false);
 		
 		
 		System.out.println("Introduzca el nombre del hotel:");
@@ -33,7 +38,7 @@ public class Principal {
 		aux=sc.nextLine();
 		tam=Integer.parseInt(aux);
 		
-		lista=new Habitacion [tam];
+		
 		
 		Hotel hotel=new Hotel (lista, nombreHot);
 		
@@ -43,6 +48,9 @@ public class Principal {
 			System.out.println("------------------------");
 			System.out.println("0-Salir.");
 			System.out.println("1-Añadir habitación.");
+			System.out.println("2-Ver habitaciones disponibles.");
+			System.out.println("3-Calcular precio final.");
+			System.out.println("4-Mostra ticket.");
 			System.out.println("--------------------------");
 			
 			aux=sc.nextLine();
@@ -51,6 +59,10 @@ public class Principal {
 			switch(op) {
 			
 				case 1: 
+					System.out.println("Introduzca el ID de la habitación:");
+					aux=sc.nextLine();
+					id=Integer.parseInt(aux);
+					
 					System.out.println("Indique dónde quiere añadir la habitacion:");
 					aux=sc.nextLine();
 					pos=Integer.parseInt(aux);
@@ -93,35 +105,8 @@ public class Principal {
 				    	ocupacion=false;
 				    }
 					
-					h=new Habitacion(tipo, precio, extras, nombre, numD, servicioLimp, ocupacion);
-				    
-					hotel.add(new Habitacion(tipo, precio, extras, nombre, numD, servicioLimp, ocupacion), pos);
-					contH++;
 					
-					h.mostrarHab(lista, contH, pos);
-					do {
-						System.out.println("------------------------");
-						System.out.println("0-Salir.");
-						System.out.println("2-Ver habitaciones disponibles.");
-						System.out.println("3-Calcular precio final.");
-						System.out.println("4-Mostra ticket.");
-						System.out.println("--------------------------");
-						
-						aux=sc.nextLine();
-						op2=Integer.parseInt(aux);
-						
-						
-						switch(op2) {
-						
-							case 2:
-								h.comprobarOcupacion(ocupacion, lista);
-								break;
-							case 3:
-								h.calcularPrecioFinal(numD);
-								h.mostrarFactura(numD);
-						}
-						
-					}while (op2!=0);
+					
 				
 					
 					
