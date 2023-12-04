@@ -27,3 +27,27 @@ FROM employees JOIN departments USING (department_id)
 	JOIN locations USING (location_id)
 GROUP BY  street_address;
 
+/*4.Modificar la consulta anterior para que muestre las localizaciones que no tienen
+ningún empleado.*/
+
+SELECT  COALESCE(street_address, 'Sin empleado'), COUNT(*)
+FROM employees JOIN departments USING (department_id)
+	JOIN locations USING (location_id)
+GROUP BY  street_address;
+
+/*5. Seleccionar el salario que es cobrado a la vez por más personas. Mostrar
+dicho salario y el número de personas.*/
+
+SELECT employee_id, sum(salary), COUNT(*)
+FROM employees 
+ORDER BY employee_id;
+
+/*6. Seleccionar el número de empleados que empezaron a trabajar cada año, 
+ordenando la salida por el año.*/
+
+SELECT 
+
+
+
+
+
