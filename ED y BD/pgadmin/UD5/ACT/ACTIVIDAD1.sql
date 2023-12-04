@@ -38,14 +38,19 @@ GROUP BY  street_address;
 /*5. Seleccionar el salario que es cobrado a la vez por más personas. Mostrar
 dicho salario y el número de personas.*/
 
-SELECT employee_id, sum(salary), COUNT(*)
-FROM employees 
-ORDER BY employee_id;
+SELECT salary, COUNT(*) AS numero_personas
+FROM employees
+GROUP BY salary
+HAVING COUNT(*) > 1
+ORDER BY numero_personas DESC;
 
 /*6. Seleccionar el número de empleados que empezaron a trabajar cada año, 
 ordenando la salida por el año.*/
 
-SELECT 
+SELECT EXTRACT(year from hire_date) AS año, COUNT(*) AS empleados_nuevos
+FROM employees
+GROUP BY año
+ORDER BY año;
 
 
 
