@@ -7,10 +7,14 @@
 		<item key="WizardProjectsImportPage.STORE_CLOSE_CREATED_PROJECTS_ID" value="false"/>
 		<item key="WizardProjectsImportPage.STORE_HIDE_CONFLICTING_PROJECTS_ID" value="false"/>
 		<list key="WizardProjectsImportPage.STORE_DIRECTORIES">
+<<<<<<< HEAD
+=======
+			<item value="C:\Users\castilla.caalv24_tri\Desktop\1-DAM\Programación\UD3\EjemploT3CRUDs"/>
+			<item value="C:\Users\castilla.caalv24_tri\Desktop\1-DAM\Programación\UD3\EjerciciosUD3Parte2_AlvaroCastilla"/>
+>>>>>>> acc6aafa34f1d8779c81e8c6c5fa096b655809e0
 			<item value="C:\Users\alvar\OneDrive\Escritorio\1-DAM\Programación\UD3\EjemploT3CRUDs"/>
 			<item value="C:\Users\castilla.caalv24_tri\Desktop\1-DAM\Programación\UD3\EjerciciosUD3Parte2_AlvaroCastilla"/>
 			<item value="C:\Users\alvar\OneDrive\Escritorio\1-DAM\Programación\UD3\EjerciciosUD3Parte2_AlvaroCastilla"/>
-			<item value="C:\Users\castilla.caalv24_tri\Desktop\1-DAM\Programación\UD3\EjemploT3CRUDs"/>
 			<item value="C:\Users\castilla.caalv24_tri\Desktop\1-DAM\Programación\UD3\EjerciciosUD3Parte1_AlvaroCastilla"/>
 			<item value="C:\Users\alvar\OneDrive\Escritorio\1-DAM\Programación\UD3\ejemploUD3"/>
 			<item value="C:\Users\alvar\OneDrive\Escritorio\1-DAM\Programación\UD3\EjerciciosUD3Parte1_AlvaroCastilla"/>
@@ -32,5 +36,8 @@
 		</list>
 	</section>
 	<section name="NewWizardAction">
+		<item key="NewWizardSelectionPage.STORE_SELECTED_ID" value="org.eclipse.jdt.ui.wizards.JavaProjectWizard"/>
+		<list key="NewWizardSelectionPage.STORE_EXPANDED_CATEGORIES_ID">
+		</list>
 	</section>
 </section>
