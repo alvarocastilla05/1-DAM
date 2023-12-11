@@ -28,9 +28,10 @@ LIMIT 1;
 son beneficios, y el 75% son costes), calcular la cantidad de beneficio que hemos obtenido, agrupado por categoría y
 producto. Las cantidades deben redondearse a dos decimales.*/
 
-SELECT (unit_price*units_on_order*0.25) as "beneficios"
-FROM products JOIN order_details USING (product_id)
-	JOIN orders USING (order_id)
+SELECT category_name, product_name, unit_price,
+ROUND((unit_price*25/100)::numeric, 2) as "beneficios"
+FROM categories JOIN products USING (category_id)
+GROUP BY category_name, product_name, unit_price;
 
 
 
@@ -39,4 +40,11 @@ FROM products JOIN order_details USING (product_id)
 los haya transportado (SHIPPERS) la empresa United Package.*/
 
 
-
+SELECT c.contact_name, s.company_name, COUNT (s.company_name) as "contador"
+FROM customers c LEFT JOIN orders USING (customer_id)
+	LEFT JOIN shippers s ON (ship_via=shipper_id)
+WHERE company_name = ALL (
+							SELECT company_name
+							FROM shippers)
+GROUP BY c.contact_name, s.company_name
+ORDER BY c.contact_name;
