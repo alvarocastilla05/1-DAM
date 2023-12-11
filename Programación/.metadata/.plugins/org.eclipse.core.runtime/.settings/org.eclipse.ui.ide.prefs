@@ -1,12 +1,8 @@
 =\=\=\=\=\=\=
 <<<<<<<=HEAD
->>>>>>>=b114030eb025b5686a7d91384e41688bb52856e6
+>>>>>>>=acc6aafa34f1d8779c81e8c6c5fa096b655809e0
 SWITCH_PERSPECTIVE_ON_PROJECT_CREATION=never
 eclipse.preferences.version=1
-<<<<<<< HEAD
-platformState=1695127338291
-=======
-platformState=1697626492324
->>>>>>> acc6aafa34f1d8779c81e8c6c5fa096b655809e0
+platformState=1697626492340
 quickStart=false
 tipsAndTricks=true
