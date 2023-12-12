@@ -43,8 +43,10 @@ los haya transportado (SHIPPERS) la empresa United Package.*/
 SELECT c.contact_name, s.company_name, COUNT (s.company_name) as "contador"
 FROM customers c LEFT JOIN orders USING (customer_id)
 	LEFT JOIN shippers s ON (ship_via=shipper_id)
-WHERE company_name = ALL (
+WHERE s.company_name = ALL (
 							SELECT company_name
-							FROM shippers)
+							FROM shippers
+							WHERE company_name = 'United Package'
+							)
 GROUP BY c.contact_name, s.company_name
 ORDER BY c.contact_name;
