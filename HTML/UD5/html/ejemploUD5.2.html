@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UD5</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.2/font/bootstrap-icons.min.css">
+    <style type="text/css">
+        *{
+            box-sizing: border-box;
+        }
+        nav {
+            width: 85%;
+            margin: 0 auto;
+        }
+        
+        /*Opciones para cualquier nivel de menu*/
+        nav ul {
+            list-style-type: none;
+            padding-left: 0px;
+
+            background-color: dimgray;
+            color: whitesmoke;
+        }
+        nav ul li {
+            
+            padding: 10px;
+        }
+       
+       /*Opciones de primer nivel*/
+        nav>ul{
+            display: flex;
+        }
+
+        nav>ul>li {
+            flex: 1 1 auto;
+            height: 50px;
+            
+        }
+
+        /*Segundo nivel del menu*/
+
+        nav>ul>li>ul>li{
+            height: 0px;
+            padding: 0px;
+            overflow: hidden;
+            transition: all 0.5s;
+            font-size: 0;
+            text-align: center;     
+        }
+
+        /*como ponerla visibles*/
+
+        nav>ul>li:hover>ul>li{
+            height: 20px;
+            padding: inherit;
+            font-size: inherit;
+        }
+
+        i{
+            font-size: 15px;
+        }
+        i:hover{
+            color: greenyellow;
+        }
+
+        
+
+    </style>
+</head>
+
+<body>
+
+    <nav>
+        <ul>
+            <li><i class="bi bi-android2"></i></li>
+            <li>Primera opcion</li>
+            <li>Segunda opcion
+                <ul>
+                    <li>Opcion 2.1</li>
+                    <li>Opcion 2.2</li>
+                    <li>Opcion 2.3</li>
+                    <li><i class="bi bi-android2"></i></li>
+                </ul>
+            </li>
+            <li>Tercera opcion</li>
+            <li>Cuarta opcion</li>
+
+        </ul>
+
+
+
+    </nav>
+
+
+</body>
+
+</html>
