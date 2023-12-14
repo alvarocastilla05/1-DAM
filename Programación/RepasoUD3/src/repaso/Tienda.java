@@ -54,8 +54,15 @@ public class Tienda {
 	public void addProduct(Producto p) {
 		lista[numProductos]=p;
 		numProductos++;
-		
 	}
+	
+	public void mostrarProductos (){
+		for (int i = 0; i < numProductos; i++) {
+			System.out.println((i+1)+ ". "+lista[i]);
+		}
+	}
+	
+	
 	
 	
 	

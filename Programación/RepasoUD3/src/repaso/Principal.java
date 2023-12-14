@@ -18,6 +18,10 @@ public class Principal {
 		int tam=10;
 		
 		Producto p;
+		
+		Producto p1= new Producto("PAntalon", 30.5, 3, true);
+		Producto p2= new Producto("Pantalla", 100, 2, true);
+		
 		Producto [] lista=new Producto[tam];
 		Tienda t = new Tienda(lista, numProductos, numTrabajadores);
 		
@@ -28,8 +32,10 @@ public class Principal {
 		
 		
 		do {
+			System.out.println("---------------------------------");
 			System.out.println("1-Agregar producto");
 			System.out.println("2-Mostrar lista de productos");
+			System.out.println("---------------------------------");
 			aux=sc.nextLine();
 			op=Integer.parseInt(aux);
 			
@@ -64,12 +70,19 @@ public class Principal {
 					
 					p=new Producto (nombre, precioFabrica, seccion, enVenta);
 					t.addProduct(p);
+					t.addProduct(p1);
+					t.addProduct(p2);
+					
 					
 					//b)Instanciando directamente el producto.
 					
-					t.addProduct(new Producto(nombre, precioFabrica, seccion, enVenta));
+					//t.addProduct(new Producto(nombre, precioFabrica, seccion, enVenta));
 					
 					break;	
+					
+				case 2:
+					t.mostrarProductos();
+					break;
 					
 			}
 			
