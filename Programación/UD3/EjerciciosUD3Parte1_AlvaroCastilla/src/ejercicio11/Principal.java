@@ -2,7 +2,11 @@ package ejercicio11;
 
 import java.util.Scanner;
 
-
+/**
+ * @author castilla.caalv24_tri
+ * @version
+ * @since	
+ */
 
 public class Principal {
 
