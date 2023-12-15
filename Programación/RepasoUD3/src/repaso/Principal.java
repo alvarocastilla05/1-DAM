@@ -21,12 +21,17 @@ public class Principal {
 		
 		Producto p1= new Producto("PAntalon", 30.5, 3, true);
 		Producto p2= new Producto("Pantalla", 100, 2, true);
+		Producto p3= new Producto("Portátil", 500, 2, true);
 		
 		Producto [] lista=new Producto[tam];
 		Tienda t = new Tienda(lista, numProductos, numTrabajadores);
 		
 		String aux;
 		Scanner sc=new Scanner(System.in);
+		
+		t.addProduct(p1);
+		t.addProduct(p2);
+		t.addProduct(p3);
 		
 		System.out.println("Hola, bienvenido al programa de gestionar porductos.");
 		
@@ -35,6 +40,7 @@ public class Principal {
 			System.out.println("---------------------------------");
 			System.out.println("1-Agregar producto");
 			System.out.println("2-Mostrar lista de productos");
+			System.out.println("3-Buscar por sección");
 			System.out.println("---------------------------------");
 			aux=sc.nextLine();
 			op=Integer.parseInt(aux);
@@ -70,8 +76,7 @@ public class Principal {
 					
 					p=new Producto (nombre, precioFabrica, seccion, enVenta);
 					t.addProduct(p);
-					t.addProduct(p1);
-					t.addProduct(p2);
+					
 					
 					
 					//b)Instanciando directamente el producto.
@@ -82,6 +87,14 @@ public class Principal {
 					
 				case 2:
 					t.mostrarProductos();
+					break;
+				case 3:
+					System.out.println("¿Qué sección quieres buscar?");
+					aux=sc.nextLine();
+					seccion=Integer.parseInt(aux);
+					
+					t.mostrarLista(t.buscarBySeccion(seccion));
+					
 					break;
 					
 			}

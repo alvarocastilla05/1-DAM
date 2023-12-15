@@ -7,6 +7,7 @@ public class Producto {
 	private int seccion; //1 alimentacion, 2 electronica, 3 ropa.
 	private boolean enVenta;
 	
+	
 	//Constructor. 
 	public Producto(String nombre, double precioFabrica, int seccion, boolean enVenta) {
 		this.nombre = nombre;
@@ -52,6 +53,8 @@ public class Producto {
 		return "Producto [nombre=" + nombre + ", precioFabrica=" + precioFabrica + ", seccion=" + seccion + ", enVenta="
 				+ enVenta + "]";
 	}
+	
+	
 	
 	
 	

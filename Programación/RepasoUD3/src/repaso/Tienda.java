@@ -62,8 +62,43 @@ public class Tienda {
 		}
 	}
 	
+	public void mostrarLista (Producto [] lista){
+		for (int i = 0; i < lista.length; i++) {
+			if(lista[i]!=null) {
+				System.out.println(lista[i]);
+			}
+			
+		}
+	}
+	
+	public Producto [] buscarBySeccion (int seccion) {
+		int i=0;
+		
+		Producto [] listaEncontrados=new Producto[numProductos];
+		
+		while (i<numProductos) {
+			if (lista[i].getSeccion()==seccion) {
+				listaEncontrados[i]=lista[i];
+			}
+			i++;
+		}
+		return listaEncontrados;
+		
+	}
+	
+	public Producto [] findById
 	
 	
+	public double calcularPrecioVenta (double precio) {
+		double precioVenta;
+		double porcentaje = 0;
+		int cien=100;
+		
+		precioVenta=precio*(porcentaje/cien);
+		
+		return precioVenta;
+		
+	}
 	
 	
 }
