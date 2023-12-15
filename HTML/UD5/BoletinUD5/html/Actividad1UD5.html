@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Actividad5</title>
+    <style type="text/css">
+         *{
+            box-sizing: border-box;
+            
+        }
+        nav {
+            width: 85%;
+            margin: 0 auto;
+            
+        }
+        
+        /*Opciones para cualquier nivel de menu*/
+        nav ul {
+            list-style-type: none;
+            padding-left: 0px;
+
+            background-color: rgb(180, 180, 180);
+            color: black;
+           
+            
+
+            
+        }
+        nav ul li {
+            
+            padding: 10px;
+            flex: 1 1 auto;
+        padding: 0.5%;
+        text-align: center;
+        }
+
+        nav ul li :first-child {
+            border-bottom-left-radius: 50px;
+            border-top-left-radius: 50px;
+        }
+        nav ul li :last-child {
+      border-bottom-left-radius: 50px;
+      border-top-left-radius: 50px;
+    }
+    
+
+        /*Opciones de primer nivel*/
+        nav>ul{
+            display: flex;
+        }
+
+        nav>ul>li {
+            flex: 1 1 auto;
+            height: 50px;
+            
+        }
+
+        nav>ul>li:hover{
+            background-color: black;
+            color: white;
+            
+        }
+        
+
+    
+
+    </style>
+</head>
+<body>
+
+    <nav>
+        <ul>
+            <li>HOME</li>
+            <li>SERVICES</li>
+            <li>PORTFOLIO</li>
+            <li>ABOUT</li>
+            <li>BLOG</li>
+            <li>CONTACT</li>
+
+        </ul>
+
+    </nav>
+    
+</body>
+</html>

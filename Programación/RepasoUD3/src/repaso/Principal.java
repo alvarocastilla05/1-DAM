@@ -19,9 +19,9 @@ public class Principal {
 		
 		Producto p;
 		
-		Producto p1= new Producto("PAntalon", 30.5, 3, true);
-		Producto p2= new Producto("Pantalla", 100, 2, true);
-		Producto p3= new Producto("Portátil", 500, 2, true);
+		Producto p1= new Producto("PAntalon", 30.5, 3, true, 2);
+		Producto p2= new Producto("Pantalla", 100, 2, true, 1);
+		Producto p3= new Producto("Portátil", 500, 2, true, 3);
 		
 		Producto [] lista=new Producto[tam];
 		Tienda t = new Tienda(lista, numProductos, numTrabajadores);
