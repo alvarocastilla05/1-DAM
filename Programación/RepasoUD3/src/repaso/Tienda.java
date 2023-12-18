@@ -56,6 +56,14 @@ public class Tienda {
 		numProductos++;
 	}
 	
+	public void mostrarActivos () {
+		for (int i = 0; i < numProductos; i++) {
+			if(lista[i].isEnVenta()) {
+				System.out.println(lista[i]);
+			}
+		}
+	}
+	
 	public void mostrarProductos (){
 		for (int i = 0; i < numProductos; i++) {
 			System.out.println((i+1)+ ". "+lista[i]);
@@ -86,7 +94,41 @@ public class Tienda {
 		
 	}
 	
-	public Producto [] findById
+	public int findById(int id) {
+		int i=0;
+		boolean encontrado = false;
+		
+		while(i<numProductos && !encontrado) {
+			if(lista[i].getId()==id) {
+				encontrado=true;
+			}else {
+				i++;
+			}
+		}
+		if(encontrado) {
+			return i;
+		}else {
+			return -1;
+		}
+	}
+	
+	public Producto findById2(int id) {
+		int i=0;
+		boolean encontrado = false;
+		
+		while(i<numProductos && !encontrado) {
+			if(lista[i].getId()==id) {
+				encontrado=true;
+			}else {
+				i++;
+			}
+		}
+		if(encontrado) {
+			return lista[i];
+		}else {
+			return null;
+		}
+	}
 	
 	
 	public double calcularPrecioVenta (double precio) {
@@ -99,6 +141,44 @@ public class Tienda {
 		return precioVenta;
 		
 	}
+	
+	public double calcularPrecioFinal (double ganancia, int id) {
+		double cien=100.0;
+		Producto p;
+		p=findById2 (id);
+		
+		return p.getPrecioFabrica()+p.getPrecioFabrica()*ganancia/cien;
+	}
+	
+	public void modifyPrecio (double precioNuevo, int seccion) {
+		for (int i = 0; i < numProductos; i++) {
+			if(lista[i].getSeccion()==seccion) {
+				lista[i].setPrecioFabrica(precioNuevo);
+			}
+		}
+	}
+	
+	
+	public double hacerDescuento (double descuento, double ganancia, int id) {
+		double cien=100;
+		double resul;
+		resul=calcularPrecioFinal(ganancia, id)-calcularPrecioFinal(ganancia, id)*descuento/cien;
+		return resul;
+	}
+	
+	//Devuelve el numero de elementos "eliminados" de la lista (dejados de vender)
+	
+	public int eliminarSeccion (int seccion) {
+		int contador = 0;
+		for (int i = 0; i < numProductos; i++) {
+			if (lista[i].getSeccion()==seccion) {
+				lista[i].setEnVenta(false);
+				contador++;
+			}
+		}
+		return contador;
+	}
+	
 	
 	
 }

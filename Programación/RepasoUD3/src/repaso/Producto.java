@@ -17,6 +17,12 @@ public class Producto {
 		this.enVenta = enVenta;
 		this.id=id;
 	}
+	
+	public Producto() {
+	
+	}
+	
+	
 
 	public String getNombre() {
 		return nombre;
