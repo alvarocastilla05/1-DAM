@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transform</title>
+    <style type="text/css">
+
+        main{
+            perspective: 10px;
+        }
+
+        div{
+            box-sizing: border-box;
+            width: 250px;
+            height: 50px;
+            padding: 10px;
+            font-size: 20pt;
+            text-align: center;
+            background-color: greenyellow;
+            margin-top: 5px ;
+            
+
+            transition: transform 5s;
+            /*backface-visibility: hidden;*/
+            transform-style: preserve-3d;
+           
+        }
+
+        div:hover{
+            /*transform: translate(50px);*/
+            /*transform: rotate(90deg);*/
+            /*transform: scale(1.05);*/
+            /*transform: skew(30deg);*/
+            transform: rotateY(180deg);
+        }
+
+
+
+    </style>
+</head>
+<body>
+   <main>
+    <div>Una caja</div>
+    <div>otra caja</div>
+</main>
+</body>
+</html>
