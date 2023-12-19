@@ -106,10 +106,64 @@ WITH por_beneficios AS (
 		FROM vuelo JOIN aeropuerto o ON (desde=o.id_aeropuerto)
 			JOIN aeropuerto l ON (hasta=l.id_aeropuerto)
 )
-SELECT beneficios, o.nombre, l.nombre
+SELECT beneficios, nombre, nombre
 FROM por_beneficios
 WHERE beneficios = (SELECT MAX(beneficios) FROM por_beneficios)
    OR beneficios = (SELECT MIN(beneficios) FROM por_beneficios);
+   
+--Corregido.
+
+WITH rendimiento_por_trayecto AS (
+	SELECT s.ciudad, ll.ciudad, 
+		ROUND(0.3 * SUM(precio * (1-COALESCE(descuento,0)/100.0)),2) AS "rendimiento"
+	FROM vuelo JOIN reserva USING (id_vuelo)
+		JOIN aeropuerto s ON (desde=s.id_aeropuerto)
+		JOIN aeropuerto ll ON (hasta=ll.id_aeropuerto)
+	GROUP BY s.ciudad, ll.ciudad	
+), rendimiento_maximo AS (
+	SELECT MAX(rendimiento) as "maximo"
+	FROM rendimiento_por_trayecto
+), rendimiento_minimo AS (
+	SELECT MIN(rendimiento) as "minimo"
+	FROM rendimiento_por_trayecto
+)
+SELECT *, 'max'
+FROM rendimiento_por_trayecto
+WHERE rendimiento = (
+						SELECT maximo
+						FROM rendimiento_maximo
+)
+UNION
+SELECT *, 'min'
+FROM rendimiento_por_trayecto
+WHERE rendimiento = (
+						SELECT minimo
+						FROM rendimiento_minimo
+)
+--Considererar ida y vuelta juntos
+
+WITH rendimiento_por_trayecto AS (
+	SELECT s.ciudad, ll.ciudad, 
+		ROUND(0.3 * SUM(precio * (1-COALESCE(descuento,0)/100.0)),2) AS "rendimiento"
+	FROM vuelo JOIN reserva USING (id_vuelo)
+		JOIN aeropuerto s ON (desde=s.id_aeropuerto)
+		JOIN aeropuerto ll ON (hasta=ll.id_aeropuerto)
+	GROUP BY s.ciudad, ll.ciudad	
+),rendimiento_total AS(
+	SELECT SUM(rendimiento)
+	FROM 
+), rendimiento_maximo AS (
+	SELECT MAX(rendimiento) as "maximo"
+	FROM rendimiento_por_trayecto
+)
+SELECT *
+FROM rendimiento_por_trayecto
+WHERE rendimiento = (
+						SELECT maximo
+						FROM rendimiento_maximo
+)
+
+
    
 /*4. Seleccionar el nombre y apellidos de los clientes que no han hecho ninguna reserva para un vuelo que salga
 en el tercer trimestre desde Sevilla.*/
@@ -122,6 +176,21 @@ FROM cliente c LEFT JOIN reserva USING (id_cliente)
 WHERE TO_CHAR(salida, 'Q')= '3'
 	AND o.ciudad = 'Sevilla'
 	AND fecha_reserva IS NULL;
+	
+--Corregido
+
+SELECT DISTINCT c.nombre, apellido1, apellido2
+FROM cliente c JOIN reserva USING (id_cliente)
+	JOIN vuelo USING (id_vuelo)
+	JOIN aeropuerto  ON (desde=id_aeropuerto)
+WHERE id_cliente NOT IN (
+		SELECT id_cliente
+		FROM reserva JOIN vuelo USING (id_vuelo)
+			JOIN aeropuerto ON (desde=id_aeropuerto)
+		WHERE ciudad = 'Sevilla'
+			AND TO_CHAR(salida, 'Q') = '3'
+)
+	
 
 /*5. Selecciona el nombre y apellidos de aquellos clientes cuyo gasto en reservas de vuelos
 con origen en España (Sevilla, Málaga, Madrid, Bilbao y Barcelona) ha sido superior
