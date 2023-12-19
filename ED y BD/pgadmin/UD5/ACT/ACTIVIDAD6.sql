@@ -12,11 +12,13 @@ WITH precio_medio_casas AS (
 		JOIN tipo ON (tipo_inmueble=id_tipo)
 	WHERE tipo.nombre = 'Piso'
 )
-SELECT vendedor.nombre, (SELECT media_casa
+SELECT  vendedor.nombre, provincia, (SELECT media_casa
 						FROM precio_medio_casas),
 						(SELECT media_piso 
 						FROM precio_medio_pisos)
-FROM vendedor; 
+FROM vendedor JOIN operacion USING (id_vendedor)
+	JOIN inmueble USING (id_inmueble)
+GROUP BY vendedor.nombre, provincia
 
 /*2. Seleccionar la suma del precio final, agrupado por provincia, de aquellos locales donde su precio sea superior
 al producto del número de metros cuadrados de ese local por el precio medio del metro cuadrado 
