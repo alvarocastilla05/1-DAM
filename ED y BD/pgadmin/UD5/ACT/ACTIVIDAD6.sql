@@ -204,12 +204,22 @@ WITH OperacionesAlquiler AS (
 
 --Corregido.
 
-SELECT v.nombre, EXTRACT(isodow FROM fecha_operacion),
-	
-FROM vendedor v JOIN operacion USING (id_vendedor)
-	JOIN inmueble USING (id_inmueble)
+SELECT nombre,
+    EXTRACT(isodow from fecha_operacion) as "dia",
+        ROUND((COUNT(*)::numeric /
+        (
+          SELECT COUNT(*)
+          FROM inmueble JOIN operacion o2 USING (id_inmueble)
+          WHERE tipo_operacion = 'Alquiler'
+            AND o1.id_vendedor = o2.id_vendedor
+        ))*100,2),
+        ROUND(AVG(precio_final / superficie),2)
+FROM inmueble JOIN operacion o1 USING (id_inmueble)
+        JOIN vendedor USING (id_vendedor)
 WHERE tipo_operacion = 'Alquiler'
-	AND EXTRACT(isodow FROM fecha_operacion) BETWEEN 1 AND 6
+  AND EXTRACT(isodow from fecha_operacion) != 7
+GROUP BY nombre, id_vendedor, dia
+ORDER BY nombre, dia;
 
 	
 
