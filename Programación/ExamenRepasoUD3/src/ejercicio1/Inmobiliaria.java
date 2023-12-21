@@ -2,6 +2,8 @@ package ejercicio1;
 
 import java.util.Arrays;
 
+import repaso.Producto;
+
 
 public class Inmobiliaria {
 
@@ -62,6 +64,46 @@ public class Inmobiliaria {
 			}
 			
 		}
+	}
+	
+	public int findById (int id) {
+		int i=0;
+		boolean encontrado = false;
+		
+		while(i<numPiso && !encontrado) {
+			if(lista[i].getId()==id) {
+				encontrado=true;
+			}else {
+				i++;
+			}
+		}
+		if(encontrado) {
+			return i;
+		}else {
+			return -1;
+		}
+	}
+	
+	public double calcularPrecioVentaFinal (int id,  double porcentaje) {
+				
+		
+		return lista[findById(id)].getPrecioVenta() + (lista[findById(id)].getPrecioVenta()*(porcentaje/100));
+		
+	}
+	
+	public Piso [] buscarByEstado (int estado) {
+		int i=0;
+		
+		Piso [] listaEncontrados=new Piso[numPiso];
+		
+		while (i<numPiso) {
+			if (lista[i].getEstado()==estado) {
+				listaEncontrados[i]=lista[i];
+			}
+			i++;
+		}
+		return listaEncontrados;
+		
 	}
 	
 	
