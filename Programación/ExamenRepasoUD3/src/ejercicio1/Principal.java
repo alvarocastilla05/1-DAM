@@ -118,6 +118,9 @@ public class Principal {
 					
 					System.out.println("El precio por metro cuadrado del piso buscado es: "+i.calcularPrecioM2(i.findById(id), porcentaje));
 					
+					break;
+					
+					
 					
 			}
 			
