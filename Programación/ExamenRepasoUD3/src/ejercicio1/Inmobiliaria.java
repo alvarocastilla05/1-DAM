@@ -2,7 +2,7 @@ package ejercicio1;
 
 import java.util.Arrays;
 
-import repaso.Producto;
+
 
 
 public class Inmobiliaria {
@@ -57,6 +57,7 @@ public class Inmobiliaria {
 		numPiso++;
 	}
 	
+	//Método para mostrar cualquier lista
 	public void mostrarLista (Piso [] lista){
 		for (int i = 0; i < lista.length; i++) {
 			if(lista[i]!=null) {
@@ -91,6 +92,7 @@ public class Inmobiliaria {
 		
 	}
 	
+	
 	public Piso [] buscarByEstado (int estado) {
 		int i=0;
 		
@@ -103,6 +105,21 @@ public class Inmobiliaria {
 			i++;
 		}
 		return listaEncontrados;
+		
+	}
+	
+	public void modifyPrecio (double precioNuevo, int id) {
+		for (int i = 0; i < numPiso; i++) {
+			if(lista[i].getId()==id) {
+				lista[i].setPrecioVenta(precioNuevo);
+			}
+		}
+	}
+	
+public double calcularPrecioM2 (int id,  double porcentaje) {
+				
+		int index=findById(id);
+		return calcularPrecioVentaFinal(findById(id), porcentaje)/lista[index].getArea();
 		
 	}
 	

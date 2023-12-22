@@ -13,11 +13,11 @@ public class Principal {
 		String direccion;
 		int area;
 		int estado = 0;
-		double precioVenta = 0;
+		double precioVenta = 0, precioNuevo;
 		int numVendedores = 10;
 		int numPiso = 0;
 		int op;
-		double porcentaje;
+		double porcentaje = 0;
 		
 		Piso p;
 		
@@ -43,6 +43,8 @@ public class Principal {
 			System.out.println("2-Mostrar lista de pisos.");
 			System.out.println("3-Calcular Precio de Venta Final.");
 			System.out.println("4-Busca pisos por estado.");
+			System.out.println("5-Modificar precio venta.");
+			System.out.println("6-Calcular precimo por m2.");
 			System.out.println("---------------------");
 			
 			aux=sc.nextLine();
@@ -85,8 +87,36 @@ public class Principal {
 					System.out.println("El precio final del producto buscado es de "+i.calcularPrecioVentaFinal(i.findById(id), porcentaje)+" € totales"); 
 					break;
 				case 4:
-					System.out.println("Introduzca el estado:");
+					System.out.println("Introduzca el estado(1 nuevo, 2 seminuevo, 3 reformar):");
+					aux=sc.nextLine();
+					estado=Integer.parseInt(aux);
+					
 					i.mostrarLista(i.buscarByEstado(estado));
+					break;
+				case 5: 
+					System.out.println("Introduzca id para buscar producto:");
+					aux=sc.nextLine();
+					id=Integer.parseInt(aux);
+					
+					i.findById(id);
+					
+					System.out.println("Introuzca el precio nuevo que desea ponerle al piso:");
+					aux=sc.nextLine();
+					precioNuevo=Double.parseDouble(aux);
+					
+					i.modifyPrecio(precioNuevo, i.findById(id));
+					
+					i.mostrarLista(lista);
+					break;
+					
+				case 6:
+					System.out.println("Introduzca a que piso desea calcular el precio por m2:");
+					aux=sc.nextLine();
+					id=Integer.parseInt(aux);
+					
+					i.findById(id);
+					
+					System.out.println("El precio por metro cuadrado del piso buscado es: "+i.calcularPrecioM2(i.findById(id), porcentaje));
 					
 					
 			}
