@@ -7,7 +7,11 @@
 		<item key="WizardProjectsImportPage.STORE_CLOSE_CREATED_PROJECTS_ID" value="false"/>
 		<item key="WizardProjectsImportPage.STORE_HIDE_CONFLICTING_PROJECTS_ID" value="false"/>
 		<list key="WizardProjectsImportPage.STORE_DIRECTORIES">
+<<<<<<< HEAD
 			<item value="C:\Users\alvar\OneDrive\Escritorio\1-DAM\Programación\RepasoUD3"/>
+=======
+			<item value="C:\Users\castilla.caalv24_tri\Desktop\1-DAM\Programación\RepasoUD3Carreras"/>
+>>>>>>> 658b6cb3fca34229addcb447879dd6049721579f
 			<item value="C:\Users\castilla.caalv24_tri\Desktop\1-DAM\Programación\RepasoUD3"/>
 			<item value="C:\Users\castilla.caalv24_tri\Desktop\1-DAM\Programación\ExamenRepasoUD3"/>
 			<item value="C:\Users\castilla.caalv24_tri\Desktop\1-DAM\Programación\UD3\EjemploT3CRUDs"/>

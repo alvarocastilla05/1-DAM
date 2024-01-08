@@ -1,4 +1,9 @@
+<<<<<<< HEAD
 INDEX VERSION 1.134+C:\Users\alvar\OneDrive\Escritorio\1-DAM\Programación\.metadata\.plugins\org.eclipse.jdt.core
+=======
+INDEX VERSION 1.134+C:\Users\castilla.caalv24_tri\Desktop\1-DAM\Programación\.metadata\.plugins\org.eclipse.jdt.core
+1576756483.index
+>>>>>>> 658b6cb3fca34229addcb447879dd6049721579f
 1865797976.index
 927514445.index
 1354860510.index

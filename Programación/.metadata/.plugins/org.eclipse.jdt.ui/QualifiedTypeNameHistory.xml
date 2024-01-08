@@ -4,7 +4,13 @@
     <fullyQualifiedTypeName name="model.Producto"/>
     <fullyQualifiedTypeName name="javax.swing.plaf.synth.SynthOptionPaneUI"/>
     <fullyQualifiedTypeName name="java.util.Random"/>
+<<<<<<< HEAD
     <fullyQualifiedTypeName name="java.lang.Integer"/>
     <fullyQualifiedTypeName name="java.nio.file.spi.FileSystemProvider"/>
     <fullyQualifiedTypeName name="java.util.Scanner"/>
+=======
+    <fullyQualifiedTypeName name="java.util.Scanner"/>
+    <fullyQualifiedTypeName name="java.nio.file.spi.FileSystemProvider"/>
+    <fullyQualifiedTypeName name="java.lang.Integer"/>
+>>>>>>> 658b6cb3fca34229addcb447879dd6049721579f
 </qualifiedTypeNameHistroy>
