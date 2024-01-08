@@ -7,25 +7,11 @@
 		<item key="WizardProjectsImportPage.STORE_CLOSE_CREATED_PROJECTS_ID" value="false"/>
 		<item key="WizardProjectsImportPage.STORE_HIDE_CONFLICTING_PROJECTS_ID" value="false"/>
 		<list key="WizardProjectsImportPage.STORE_DIRECTORIES">
-<<<<<<< HEAD
-			<item value="C:\Users\alvar\OneDrive\Escritorio\1-DAM\Programación\RepasoUD3"/>
-=======
-			<item value="C:\Users\castilla.caalv24_tri\Desktop\1-DAM\Programación\RepasoUD3Carreras"/>
->>>>>>> 658b6cb3fca34229addcb447879dd6049721579f
-			<item value="C:\Users\castilla.caalv24_tri\Desktop\1-DAM\Programación\RepasoUD3"/>
-			<item value="C:\Users\castilla.caalv24_tri\Desktop\1-DAM\Programación\ExamenRepasoUD3"/>
-			<item value="C:\Users\castilla.caalv24_tri\Desktop\1-DAM\Programación\UD3\EjemploT3CRUDs"/>
-			<item value="C:\Users\castilla.caalv24_tri\Desktop\1-DAM\Programación\UD3\EjerciciosUD3Parte1_AlvaroCastilla"/>
-			<item value="C:\Users\castilla.caalv24_tri\Desktop\1-DAM\Programación\UD3\EjerciciosUD3Parte2_AlvaroCastilla"/>
-			<item value="C:\Users\castilla.caalv24_tri\Desktop\1-DAM\Programación\ExamUD3AlvaroCastilla"/>
+			<item value="C:\Users\alvar\OneDrive\Escritorio\1-DAM\Programación\Ejercicio8Enero"/>
+			<item value="C:\Users\alvar\OneDrive\Escritorio\1-DAM\Programación\EjemplosUD4_AlvaroCastilla"/>
 		</list>
 		<list key="WizardProjectsImportPage.STORE_ARCHIVES">
 			<item value=""/>
-		</list>
-	</section>
-	<section name="NewWizardAction">
-		<item key="NewWizardSelectionPage.STORE_SELECTED_ID" value="org.eclipse.jdt.ui.wizards.JavaProjectWizard"/>
-		<list key="NewWizardSelectionPage.STORE_EXPANDED_CATEGORIES_ID">
 		</list>
 	</section>
 </section>
