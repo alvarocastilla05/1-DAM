@@ -56,6 +56,17 @@ public class Empleado extends Trabajador {
 		return sueldo-sueldo+impuesto/cien;
 	}
 	
+	/*Segundo ejemplo*/
+	
+	public double calcularPagaV2 (double fijo) {
+		double cien = 100;
+		double total = 0.0;
+		
+		total=super.calcularPagaV2(fijo)+sueldo-sueldo*impuesto/cien; /*Para poder usar el valor fijo de la clase madre (Trabajador), debemos de llamar al método 
+																	en el que se encuentra esa variable por eso pone super.calcularPagaV2*/
+		return total;
+	}
+	
 	
 	
 	

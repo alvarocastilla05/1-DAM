@@ -56,6 +56,12 @@ public class Trabajador {
 		return 0.0;
 	}
 	
+	/*Ejemplo en el que la clase madre tiene ya un calculo en el método*/
+	public double calcularPagaV2 (double fijo) {
+		
+		return fijo;
+	}
+	
 	
 	
 }

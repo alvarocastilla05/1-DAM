@@ -39,4 +39,12 @@ public class Consultor extends Trabajador{
 		return tarifa*horas;
 	}
 	
+	public double calcularPagaV2 (double fijo) {
+		
+		return tarifa*horas;
+	}
+	/*En el caso de que no utilicemos la variable fijo, igualmente hay que pasarsela porque sino sería sobrecarga y no es reescribir. 
+	 * Básicamente, deben de tener la misma firma*/
+	 
+	
 }

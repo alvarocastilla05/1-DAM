@@ -4,6 +4,8 @@ public class Principal {
 
 	public static void main(String[] args) {
 		
+		double fijo=1000;
+		
 		Trabajador t = new Trabajador("Alvaro", "Programador Junior", "17477928K");
 		Empleado e =new Empleado("Alberto", "Jefe", "295386256W", 2000, 15.0);
 		Consultor c = new Consultor("Miguel", "Experto", "4D", 20, 18);
@@ -18,6 +20,13 @@ public class Principal {
 		System.out.println(t.calcularPaga());
 		System.out.println(e.calcularPaga());
 		System.out.println(c.calcularPaga());
+		
+		System.out.println("*******************************");
+		
+		System.out.println(t.calcularPagaV2(fijo));
+		System.out.println(e.calcularPagaV2(fijo));
+		System.out.println(c.calcularPagaV2(fijo));
+		
 	}
 
 }
