@@ -47,4 +47,10 @@ public class Consultor extends Trabajador{
 	 * Básicamente, deben de tener la misma firma*/
 	 
 	
+	public void avisarExtras () {
+		if(horas>40) {
+			System.out.println("Te has pasado de las horas permitidas");
+		}
+	}
+	
 }
