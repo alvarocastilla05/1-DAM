@@ -19,7 +19,7 @@ CREATE TABLE autor (
 	nombre VARCHAR(150) NOT NULL,
 	nacionalidad VARCHAR(100), 
 	CONSTRAINT pk_autor PRIMARY KEY (dni)
-),
+);
 
 DROP TABLE IF EXISTS editorial;
 
@@ -37,5 +37,16 @@ CREATE TABLE genero (
 	id_genero SERIAL,
 	nombre VARCHAR(150) NOT NULL,
 	descripcion TEXT
+);
+
+DROP TABLE IF EXISTS edicion;
+
+CREATE TABLE edicion (
+	ISBN VARCHAR(150),
+	fecha_publicacion DATE,
+	cantidad INTEGER,
+	CONSTRAINT pk_edicion PRIMARY KEY (ISBN, fecha_publicacion),
+	CONSTRAINT mayor_cero CHECK (cantidad > 0),
+	CONSTRAINT fk_edicion_libro FOREIGN KEY (ISBN) REFERENCES libro (ISBN)
 );
 
