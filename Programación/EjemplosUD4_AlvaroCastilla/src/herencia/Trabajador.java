@@ -62,6 +62,10 @@ public class Trabajador {
 		return fijo;
 	}
 	
+	public void darDeBaja () {
+		puesto="Baja";
+	}
+	
 	
 	
 }

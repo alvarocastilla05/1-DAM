@@ -27,6 +27,18 @@ public class Principal {
 		System.out.println(e.calcularPagaV2(fijo));
 		System.out.println(c.calcularPagaV2(fijo));
 		
+		System.out.println("*******************************");
+		
+		c.avisarExtras();
+		
+		System.out.println("********************************");
+		
+		t.darDeBaja();
+		System.out.println(t);
+		
+		e.darDeBaja();
+		
+		System.out.println(e);
 	}
 
 }
