@@ -22,8 +22,8 @@ public class TarjetaDeVisita extends Documento {
 		return "TarjetaDeVisita [nombreContacto=" + nombreContacto + "]";
 	}
 
-	public void cabecera () {
-		super.cabecera();
+	public void mostrarCabecera () {
+		super.mostrarCabecera();
 		System.out.println(nombreContacto);
 	}
 	

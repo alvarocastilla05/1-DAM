@@ -33,7 +33,7 @@ DROP TABLE IF EXISTS genero;
 CREATE TABLE genero (
 	id_genero SERIAL,
 	nombre VARCHAR(150) NOT NULL,
-	descripcion TEXT
+	descripcion TEXT,
 	CONSTRAINT pk_genero PRIMARY KEY (id_genero)
 );
 
@@ -46,3 +46,12 @@ CREATE TABLE edicion (
 	CONSTRAINT pk_edicion PRIMARY KEY (ISBN, fecha_publicacion)
 );
 
+
+ALTER TABLE libro 
+ADD CONSTRAINT fk_libro_autor FOREIGN KEY (dni_autor) REFERENCES autor (dni),
+ADD	CONSTRAINT fk_libro_genero FOREIGN KEY (cod_genero) REFERENCES genero (id_genero),
+ADD	CONSTRAINT fk_libro_editorial FOREIGN KEY (cod_editorial) REFERENCES editorial (cod_editorial);
+	
+ALTER TABLE edicion 
+ADD CONSTRAINT mayor_cero CHECK (cantidad > 0),
+ADD	CONSTRAINT fk_edicion_libro FOREIGN KEY (ISBN) REFERENCES libro (ISBN);

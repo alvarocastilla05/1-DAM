@@ -8,11 +8,11 @@ public class Principal {
 		TarjetaDeVisita t = new TarjetaDeVisita("Sony", 653399615, "sony@gmail.com", "Pepe");
 		Carta c = new Carta("Lenovo", 659883212, "lenovo@gmail.com", "16/06/2024");
 		
-		d.cabecera();
+		d.mostrarCabecera();
 		System.out.println("*****************");
-		t.cabecera();
+		t.mostrarCabecera();
 		System.out.println("******************");
-		c.cabecera();
+		c.mostrarCabecera();
 
 	}
 

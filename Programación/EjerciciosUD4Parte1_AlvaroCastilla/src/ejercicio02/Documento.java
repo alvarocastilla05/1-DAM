@@ -44,7 +44,7 @@ public class Documento {
 		return "Documento [nombreEmpresa=" + nombreEmpresa + ", telefono=" + telefono + ", correo=" + correo + "]";
 	}
 	
-	public void cabecera () {
+	public void mostrarCabecera () {
 		System.out.println(nombreEmpresa);
 		System.out.println(telefono);
 		System.out.println(correo);

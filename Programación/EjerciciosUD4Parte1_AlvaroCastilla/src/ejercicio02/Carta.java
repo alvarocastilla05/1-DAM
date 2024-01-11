@@ -22,8 +22,8 @@ public class Carta extends Documento {
 		return "Carta [fecha=" + fecha + "]";
 	}
 	
-	public void cabecera () {
-		super.cabecera();
+	public void mostrarCabecera () {
+		super.mostrarCabecera();
 		System.out.println(fecha);
 	}
 	
