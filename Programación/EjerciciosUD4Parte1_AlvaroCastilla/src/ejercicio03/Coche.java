@@ -22,8 +22,13 @@ public class Coche extends Vehiculo{
 		return "Coche [nombre=" + nombre + "]";
 	}
 	
-	public double calcularPrecio(double porcentajePotencia) {
-		return 0.0;
+	public double calcularPrecio(double fijo, double fijoMercancia, double porcentajeCilindrada, double porcentajePotencia) {
+		int cien=100;
+		double total;
+		
+		total=super.calcularPrecio(fijo, fijoMercancia, porcentajeCilindrada, porcentajePotencia)+(getPotenciaEnCaballos()*(porcentajePotencia/cien));
+		
+		return total;
 	}
 	
 }

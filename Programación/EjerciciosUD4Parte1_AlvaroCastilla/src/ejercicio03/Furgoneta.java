@@ -22,8 +22,12 @@ public class Furgoneta extends Vehiculo{
 		return "Furgoneta [nombre=" + nombre + "]";
 	}
 	
-	public double calcularPrecio(double fijaMercancia) {
-		return 0;
+	public double calcularPrecio(double fijo, double fijoMercancia, double porcentajeCilindrada, double porcentajePotencia) {
+		
+		double total;
+		
+		total=super.calcularPrecio(fijo, fijoMercancia, porcentajeCilindrada, porcentajePotencia)+fijoMercancia;
+		return total;
 	}
 	
 }

@@ -23,8 +23,13 @@ public class Motocicleta extends Vehiculo {
 	}
 
 	@Override
-	public double calcularPrecio(double porcentajeCilindrada) {
-		return 0;
+	public double calcularPrecio(double fijo, double fijoMercancia, double porcentajeCilindrada, double porcentajePotencia) {
+		int cien = 100;
+		double total;
+		
+		total=super.calcularPrecio(fijo, fijoMercancia, porcentajeCilindrada, porcentajePotencia)+(getCilindrada()*(porcentajeCilindrada/cien));
+		return total;
+		
 	}
 	
 	

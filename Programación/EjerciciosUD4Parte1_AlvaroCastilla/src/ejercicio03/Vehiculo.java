@@ -1,6 +1,6 @@
 package ejercicio03;
 
-public abstract class Vehiculo {
+public  class Vehiculo {
 
 	private double cilindrada;
 	private double potenciaEnCaballos;
@@ -43,7 +43,30 @@ public abstract class Vehiculo {
 
 	
 
-	public abstract double calcularPrecio();
+	public  double calcularPrecio(double fijo, double fijoMercancia, double porcentajeCilindrada, double porcentajePotencia) {
+		switch(emisiones) {
+			case 1:
+				return fijo;
+			case 2:
+				return fijo=1000;
+			case 3:
+				return fijo=500;
+			case 4:
+				return fijo=250;
+				
+		}
+		
+		
+			
+				
+		
+		
+		
+		
+		
+		
+		return fijo;
+	}
 	
 	
 }
