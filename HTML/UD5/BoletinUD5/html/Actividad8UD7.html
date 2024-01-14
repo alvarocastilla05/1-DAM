@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Actividad7</title>
+    <title>Actividad8</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <style type="text/css">
         * {
@@ -13,9 +13,9 @@
         }
 
         nav {
-            width: 85%;
             margin: 0 auto;
             perspective: 10px;
+            width: 20%;
 
         }
 
@@ -32,13 +32,13 @@
 
             flex: 1 1 auto;
             padding: 15px;
-            text-align: center;
+            
             background-color: rgb(37, 33, 33);
 
         }
-       /*Opciones de primer nivel*/
+
         nav>ul{
-            display: flex;
+            display:block;
         }
 
         nav>ul>li {
@@ -47,8 +47,7 @@
             
         }
 
-        /*Segundo nivel del menu*/
-
+        /*segundi nivel*/
         nav>ul>li>ul>li{
             height: 0px;
             padding: 0px;
@@ -66,46 +65,38 @@
 
         nav>ul>li:hover>ul>li{
             height: 20px;
-            padding: inherit;
+            padding:inherit;
             font-size: inherit;
-            
         }
+
+       
     </style>
 </head>
 
 <body>
+
     <nav>
         <ul>
-            <li><i class="bi bi-house"></i>
-                HOME
+            <li><i class="bi bi-person-fill"></i>
+                Profile
+            </li>
+            <li><i class="bi bi-envelope"></i>
+                Messages</li>
+            <li><i class="bi bi-gear-fill"></i>Settings
                 <ul>
-                    <li>Opcion1</li>
-                    <li>Opcion2</li>
-
+                    <li>Acount</li>
+                    <li>Profile</li>
+                    <li>Security & Privacy</li>
+                    <li>Password</li>
+                    <li>Notification</li>
                 </ul>
             </li>
-            <li><i class="bi bi-file-person"></i>
-                ABOUT
-                <ul>
-                    <li>Opcion1</li>
-                    <li>Opcion2</li>
-                </ul>
-            </li>
-            <li><i class="bi bi-camera"></i>
-                PORTFOLIO
-                <ul>
-                    <li>Opcion1</li>
-                    <li>Opcion2</li>
-                </ul>
-            </li>
-            <li><i class="bi bi-megaphone"></i>
-                BLOG
-                <ul>
-                    <li>Opcion1</li>
-                    <li>Opcion2</li>
-                </ul>
-            </li>
+            <li><i class="bi bi-question-circle-fill"></i>
+                Help</li>
+            <li><i class="bi bi-box-arrow-right"></i>
+                Logout</li>
         </ul>
+
 
     </nav>
 
