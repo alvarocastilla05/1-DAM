@@ -4,20 +4,108 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Actividad10</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <style type="text/css">
-        div+nav{
+        /*div+nav{
 
         }
 
         div:hover+nav{
 
+        }*/
+
+        * {
+            box-sizing: border-box;
+
+        }
+
+        nav {
+            margin: 0 auto;
+            perspective: 10px;
+            width: 20%;
+
+        }
+
+
+        nav ul {
+            list-style-type: none;
+            padding-left: 0px;
+
+            color: white;
+        }
+
+        nav ul li {
+
+
+            flex: 1 1 auto;
+            padding: 15px;
+            
+            background-color: rgb(37, 33, 33);
+
+        }
+
+        nav>ul{
+            display:block;
+        }
+
+        nav>ul>li {
+            flex: 1 1 auto;
+            height: 50px;
+            overflow: hidden;
+        }
+
+        /*segundi nivel*/
+        nav>ul>li>ul>li{
+            height: 0px;
+            padding: 0px;
+            overflow: hidden;
+            transition: all 0.5s;
+            font-size: 0;    
+
+            background-color: beige;
+            color: black;
+
+            
+        }
+
+        /*como ponerla visibles*/
+
+        nav>ul>li:hover{
+            height: 150px;
+        }
+        
+        nav>ul>li:hover>ul>li{
+            height: 20px;
+            padding:inherit;
+            font-size: inherit;
         }
 
 
     </style>
 </head>
 <body>
-    
-    
+    <div><i class="bi bi-list"></i></div>
+    <nav>
+        <ul>
+            <li><i class="bi bi-person-fill"></i>
+                Profile
+            </li>
+            <li><i class="bi bi-envelope"></i>
+                Messages</li>
+            <li><i class="bi bi-gear-fill"></i>Settings
+                <ul>
+                    <li>Acount</li>
+                    <li>Profile</li>
+                    <li>Security & Privacy</li>
+                    <li>Password</li>
+                    <li>Notification</li>
+                </ul>
+            </li>
+            <li><i class="bi bi-question-circle-fill"></i>
+                Help</li>
+            <li><i class="bi bi-box-arrow-right"></i>
+                Logout</li>
+        </ul>
+    </nav>
 </body>
 </html>
