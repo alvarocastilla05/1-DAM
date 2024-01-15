@@ -1,7 +1,7 @@
 DROP TABLE IF EXISTS libro;
 
 CREATE TABLE libro (
-	ISBN VARCHAR(50),
+	ISBN VARCHAR(15),
 	titulo VARCHAR(150) NOT NULL,
 	dni_autor VARCHAR(10) NOT NULL,
 	cod_genero INTEGER NOT NULL,
@@ -43,10 +43,10 @@ CREATE TABLE genero (
 DROP TABLE IF EXISTS edicion;
 
 CREATE TABLE edicion (
-	ISBN VARCHAR(150),
+	ISBN VARCHAR(15),
 	fecha_publicacion DATE,
 	cantidad INTEGER,
 	CONSTRAINT pk_edicion PRIMARY KEY (ISBN, fecha_publicacion),
-	CONSTRAINT mayor_cero CHECK (cantidad > 0),
+	CONSTRAINT mayor_cero CHECK (cantidad >= 0),
 	CONSTRAINT fk_edicion_libro FOREIGN KEY (ISBN) REFERENCES libro (ISBN)
 );

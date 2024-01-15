@@ -1,0 +1,6 @@
+1. Crear las tablas con todas las restricciones salvo las FK.
+2. Insertamos los datos actuales.
+3. Alterar las tablas para añadir las FKs.
+
+-----------------------------------------------------
+Las FK no pueden ser NUNCA de tipo SERIAL.
