@@ -1,111 +1,84 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Actividad10</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <title>Ejercicio10</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.2/font/bootstrap-icons.min.css">
     <style type="text/css">
-        /*div+nav{
-
-        }
-
-        div:hover+nav{
-
-        }*/
-
         * {
             box-sizing: border-box;
+        }
 
+        body {
+            margin: 0 auto;
         }
 
         nav {
-            margin: 0 auto;
-            perspective: 10px;
-            width: 20%;
-
+            position: relative;
+            display: flex;
+            width: 50%;
+            font-size: 40px;
         }
 
-
         nav ul {
+            width: 0%;
+            flex-direction: column;
             list-style-type: none;
-            padding-left: 0px;
+            transition: 0.5s all;
+        }
 
-            color: white;
+        nav i:hover+ul {
+            width: 100%;
         }
 
         nav ul li {
-
-
-            flex: 1 1 auto;
-            padding: 15px;
-            
-            background-color: rgb(37, 33, 33);
-
+            background-color: rgba(0, 81, 255, 0.76);
+            color: white;
         }
 
-        nav>ul{
-            display:block;
+        nav ul li i {
+            padding: 10px;
+            margin-right: 50px;
+            font-size: 40px;
         }
 
-        nav>ul>li {
-            flex: 1 1 auto;
-            height: 50px;
+        nav ul li p {
+            padding-left: 25px;
             overflow: hidden;
+            font-size: 0;
+            transition: 0.5s;
+            background-color: rgb(33, 41, 38);
+            margin-bottom: auto;
+            margin-top: auto;
         }
 
-        /*segundi nivel*/
-        nav>ul>li>ul>li{
-            height: 0px;
-            padding: 0px;
-            overflow: hidden;
-            transition: all 0.5s;
-            font-size: 0;    
-
-            background-color: beige;
-            color: black;
-
-            
-        }
-
-        /*como ponerla visibles*/
-
-        nav>ul>li:hover{
-            height: 150px;
-        }
-        
-        nav>ul>li:hover>ul>li{
-            height: 20px;
-            padding:inherit;
+        nav ul li:hover p {
             font-size: inherit;
+            margin-bottom: auto;
+            margin-top: auto;
         }
-
-
     </style>
 </head>
+
 <body>
-    <div><i class="bi bi-list"></i></div>
     <nav>
+        <i><i class="bi bi-list"></i></i>
         <ul>
-            <li><i class="bi bi-person-fill"></i>
-                Profile
+            <li><i class="bi bi-person-circle"></i>Profile
+                <p>Nombre<br>Correo<br>Seguidores<br>Siguiendo<br>Ver Perfil</p>
             </li>
-            <li><i class="bi bi-envelope"></i>
-                Messages</li>
-            <li><i class="bi bi-gear-fill"></i>Settings
-                <ul>
-                    <li>Acount</li>
-                    <li>Profile</li>
-                    <li>Security & Privacy</li>
-                    <li>Password</li>
-                    <li>Notification</li>
-                </ul>
+            <li><i class="bi bi-inbox"></i>Messages
+                <p>Entrantes<br>Solicitudes<br>No deseados<br>Spam<br></p>
             </li>
-            <li><i class="bi bi-question-circle-fill"></i>
-                Help</li>
-            <li><i class="bi bi-box-arrow-right"></i>
-                Logout</li>
+            <li><i class="bi bi-gear"></i>Settings
+                <p>Tu cuenta<br>Seguridad<br>Cambiar contraseña<br>Privacidad<br>Notificaciones</p>
+            </li>
+            <li><i class="bi bi-patch-question"></i>Help</li>
+            <li><i class="bi bi-door-open"></i>Logout</li>
         </ul>
     </nav>
 </body>
+
 </html>
