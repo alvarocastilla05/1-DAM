@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Actividad11</title>
+    <style type="text/css">
+    body{
+    display: flex;
+}
+h1{
+    width: 22%;
+    height: 10%;
+    background-color: aqua;
+    border: solid;
+    border-radius: 10px;
+    padding: 10px;
+}
+h1:hover+div{
+    position: relative;
+    animation-name: girar;
+    animation-duration: 60s;
+}
+@keyframes girar {
+    0%{
+        rotate: 0deg;
+    }
+    25%{
+        rotate: 90deg;
+    }
+    50%{
+        rotate: 180deg;
+    }
+    75%{
+        rotate: 270deg;
+    }
+    100%{
+        rotate: 360deg;
+    }
+}
+
+    
+
+    </style>
+</head>
+<body>
+    <h1>Girar Disco</h1>
+    <div>
+        <img src="../img/circulo.png" alt="Un circulo con una raya">
+    </div>
+</body>
+</html>
