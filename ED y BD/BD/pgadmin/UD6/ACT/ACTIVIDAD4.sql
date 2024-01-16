@@ -7,10 +7,12 @@ CREATE TABLE usuarios (
 	direccion 			VARCHAR(500),
 	telefono 			VARCHAR(20) NOT NULL,
 	email 				VARCHAR(150) NOT NULL,
-	passw				VARCHAR(8) DEFAULT 0,
+	passw				VARCHAR(8) NOT NULL DEFAULT 0,
 	saldo_disponible 	NUMERIC NOT NULL,
 	CONSTRAINT pk_usuarios PRIMARY KEY (dni),
-	CONSTRAINT longitud_cadena CHECK (passw LIKE '^[^ ]{4,8}$')
+	--CONSTRAINT longitud_cadena CHECK (passw LIKE '^[^ ]{4,8}$') ESTO ESTA MAL, ABAJO CORREGIDO.
+	CONSTRAINT longitud_cadena CHECK (LENGTH(passw) BETWEEN 4 AND 8),
+	CONSTRAINT sin_espacios CHECK (passw NOT LIKE '% %')
 );
 
 DROP TABLE IF EXISTS estaciones;
@@ -57,3 +59,5 @@ ALTER TABLE usuarios
 ADD COLUMN fecha_baja DATE;
 
 --No se hacer el apartado C.
+
+--APARTADO C CORREGIDO
