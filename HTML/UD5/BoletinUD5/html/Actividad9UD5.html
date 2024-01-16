@@ -6,60 +6,70 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Actividad9</title>
     <style id="text/css">
-        * {
-            box-sizing: border-box;
-
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
         }
 
         nav {
-            width: 100%;
-            margin: 0 auto;
-            perspective: 10px;
-
-
-        }
-
-
-        nav ul {
-            list-style-type: none;
-            padding-left: 0px;
-
-            color: white;
-        }
-
-        nav ul li {
-
-            padding: 10px;
-            flex: 1 1 auto;
-            padding: 0.5%;
-            text-align: center;
-            background-color: rgb(37, 33, 33);
-
-            transition: transform 1s;
-
-
-        }
-
-        nav ul li img {
-            transition: all 2s;
-            margin: 0;
-            width: 30%;
-            height: 50%;
-        }
-
-        nav ul li img:hover {
-            background-color: rgb(116, 17, 17);
-            width: 50%;
-            height: 50%;
-        }
-
-        nav>ul {
+            background-color: #df7b7b;
             display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px;
+            color: rgb(236, 231, 231);
         }
 
-        nav>ul>li {
-            flex: 1 1 auto;
+        #logos {
+            display: flex;
+            align-items: center;
+        }
+
+        #logo {
+            width: 50px;
             height: 50px;
+            transition: transform 0.3s;
+        }
+
+        #logo:hover {
+            transform: rotate(360deg);
+        }
+
+        #segunda_foto {
+            display: none;
+            width: 50px;
+            height: 50px;
+            margin-left: 10px;
+            transition: opacity 0.3s;
+        }
+
+        #logos:hover #segunda_foto {
+            display: block;
+        }
+
+        ul {
+            list-style: none;
+            display: flex;
+            margin: 0;
+            padding: 0;
+        }
+
+        ul li {
+            margin: 0 15px;
+        }
+
+        p {
+            text-decoration: none;
+            color: white;
+            transition: color 0.3s;
+        }
+
+        p:hover {
+            color: #a59a00;
+        }
+
+        #segunda_foto {
+            width: 150px;
 
         }
     </style>
@@ -68,22 +78,32 @@
 <body>
 
     <nav>
-        <ul>
-            <li><img src="../img/descarga.png" alt="logo"></li>
-            <li>SOFTWARE</li>
-            <li>OPERATOR</li>
-            <li>UNIFI</li>
-            <li>ULABS</li>
-            <li>PRODUCTS</li>
-            <li>BUY</li>
+        <div id="logos">
+            <img id="logo" src="../img/marca.png" alt="Logo">
+            <img id="segunda_foto" src="../img/Marca.svg.png" alt="Extra Image">
+            <ul>
+                <li>
+                    <p>Inicio</p>
+                </li>
+                <li>
+                    <p>Servicios</p>
+                </li>
+                <li>
+                    <p>Acerca de</p>
+                </li>
+            </ul>
+        </div>
 
-
+        <ul class="right-menu">
+            <li>
+                <p>Contacto</p>
+            </li>
+            <li>
+                <p>Ayuda</p>
+            </li>
         </ul>
-
-
-
-
     </nav>
+
 
 </body>
 
