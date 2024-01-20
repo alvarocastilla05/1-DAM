@@ -10,6 +10,9 @@ public class Principal {
 		String aux;
 		double porcentajeImpuestos;
 		double incentivo;
+		int tam = 10;
+		double sueldoBase = 1000;
+		
 		
 		Scanner sc = new Scanner(System.in);
 		
@@ -23,6 +26,14 @@ public class Principal {
 		System.out.println("Introduzca el incentivo que se llevaran los vendedores con respeto del número de ventas:");
 		aux = sc.nextLine();
 		incentivo = Double.parseDouble(aux);
+		
+		Empleado [] lista = new Empleado[tam];
+		
+		Oficina o = new Oficina(lista);
+		
+		Empleado e = new Empleado("Alvaro", "Castilla Cano", sueldoBase, 1);
+		Empleado v = new Vendedor("Paco", "García Rojas", sueldoBase, 2, 20, 2.0);
+		Empleado g = new Gerente("Jose Luis", "Ruíz Gómez", sueldoBase, 3);
 	}
 
 }
