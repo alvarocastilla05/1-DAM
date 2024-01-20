@@ -5,11 +5,13 @@ import java.util.Arrays;
 public class Oficina {
 
 	private Empleado [] lista;
+	private int numTrabajadores;
 
-	public Oficina(Empleado[] lista) {
+	public Oficina(Empleado[] lista, int numTrabajadores) {
 		this.lista = lista;
+		this.numTrabajadores = numTrabajadores;
 	}
-
+	
 	public Empleado[] getLista() {
 		return lista;
 	}
@@ -18,11 +20,20 @@ public class Oficina {
 		this.lista = lista;
 	}
 
-	@Override
-	public String toString() {
-		return "Oficina [lista=" + Arrays.toString(lista) + "]";
+	public int getNumTrabajadores() {
+		return numTrabajadores;
+	}
+
+	public void setNumTrabajadores(int numTrabajadores) {
+		this.numTrabajadores = numTrabajadores;
 	}
 	
+	@Override
+	public String toString() {
+		return "Oficina [lista=" + Arrays.toString(lista) + ", numTrabajadores=" + numTrabajadores + "]";
+	}
+	
+
 	public double calcularSueldoUnEmpleado (Empleado e, double porcentajeImpuestos, double incentivo) {
 		return e.calcularSueldo(porcentajeImpuestos, incentivo);
 	}
@@ -34,5 +45,11 @@ public class Oficina {
 			resultado = resultado+calcularSueldoUnEmpleado(lista[i], porcentajeImpuestos, incentivo);
 		}
 		return resultado;
+	}
+	
+	public void addEmpleado (Empleado e) {
+		
+		lista[numTrabajadores] = e;
+		numTrabajadores++;
 	}
 }
