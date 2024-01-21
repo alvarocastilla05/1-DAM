@@ -42,6 +42,11 @@ public class Vendedor extends Empleado{
 		return total;
 	}
 	
+	public void avisoObjetivo (int objetivo) {
+		
+		
+	}
+	
 	
 	
 	
