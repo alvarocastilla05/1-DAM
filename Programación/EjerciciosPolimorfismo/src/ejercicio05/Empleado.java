@@ -52,7 +52,7 @@ public class Empleado {
 				+ ", numEmpleado=" + numEmpleado + "]";
 	}
 	
-	public double calcularSueldo (double porcentajeImpuestos, double incentivo) {
+	public double calcularSueldo () {
 		return sueldoBase;
 	}
 	

@@ -2,17 +2,36 @@ package ejercicio05;
 
 public class Gerente extends Empleado {
 
-	public Gerente(String nombre, String apellidos, double sueldoBase, int numEmpleado) {
+	/*Debo de añadir el porcentaje de impuestos como atributo en esta clase, MODIFICAR EN CASA*/
+	private double porcentajeImpuestos;
+	
+	public Gerente(String nombre, String apellidos, double sueldoBase, int numEmpleado, double porcentajeImpuestos) {
 		super(nombre, apellidos, sueldoBase, numEmpleado);
-		// TODO Auto-generated constructor stub
+		this.porcentajeImpuestos = porcentajeImpuestos;
+	}
+	
+	
+	public double getPorcentajeImpuestos() {
+		return porcentajeImpuestos;
 	}
 
+	public void setPorcentajeImpuestos(double porcentajeImpuestos) {
+		this.porcentajeImpuestos = porcentajeImpuestos;
+	}
+	
+	
 	@Override
-	public double calcularSueldo(double porcentajeImpuestos, double incentivo) {
+	public String toString() {
+		return "Gerente [porcentajeImpuestos=" + porcentajeImpuestos + "]";
+	}
+
+
+	@Override
+	public double calcularSueldo() {
 		// TODO Auto-generated method stub
 		int cien = 100;
 		double total;
-		total = super.calcularSueldo(porcentajeImpuestos, incentivo)-(super.calcularSueldo(porcentajeImpuestos, incentivo)*porcentajeImpuestos/cien);
+		total = super.calcularSueldo()-(super.calcularSueldo()*porcentajeImpuestos/cien);
 		return total;
 	}
 	
