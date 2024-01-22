@@ -24,20 +24,28 @@
         }
 
         th {
-            color: white;
-            background-color: blueviolet;
+            color: green;
+            /*background-color: blueviolet;*/
         }
 
         tfoot td {
             font-size: 0.6em;
         }
         tr:nth-child(odd){
-            background-color: black;
-            color: white;
+            /*background-color: black;*/
+            color: blue;
         }
-        tr:nth-child(even){
+        tr:nth-child(3n){
             background-color: violet;
             color: yellow;
+        }
+
+
+
+
+        /*En el caso de que haya celdas unidas, mejor usar colgroup*/
+        tr>td:nth-child(odd){
+            /*background-color: red;*/
         }
     </style>
 </head>
@@ -45,6 +53,8 @@
 <body>
     <table summary="Tabla con canciones y puntuaciones">
         <caption>Tabla 1.1 Canciones Favoritas</caption>
+        <colgroup span="2"></colgroup>
+        <colgroup class="rojo" span="1"></colgroup>
         <thead>
             <tr>
                 <th>Cancion</th>
@@ -71,7 +81,43 @@
                 <td>Como Camaron</td>
                 <td>Estopa</td>
                 <td>8</td>
+                <tr>
+                    <td>La Vereda de la puerta de atras</td>
+                    <td>Extremoduro</td>
+                    <td>10</td>
+                </tr>
+                <tr>
+                    <td>La luz de lorenzo</td>
+                    <td rowspan="2">Los delincuentes</td>
+                    <td>7</td>
+                </tr>
+                <tr>
+                    <td>El Aire de la Calle</td>
+                    <td>9</td>
+                </tr>
+                <tr>
+                    <td>Como Camaron</td>
+                    <td>Estopa</td>
+                    <td>8</td>
             </tr>
+            <tr>
+                <td>La Vereda de la puerta de atras</td>
+                <td>Extremoduro</td>
+                <td>10</td>
+            </tr>
+            <tr>
+                <td>La luz de lorenzo</td>
+                <td rowspan="2">Los delincuentes</td>
+                <td>7</td>
+            </tr>
+            <tr>
+                <td>El Aire de la Calle</td>
+                <td>9</td>
+            </tr>
+            <tr>
+                <td>Como Camaron</td>
+                <td>Estopa</td>
+                <td>8</td>
         </tbody>
         <tfoot>
             <tr>
