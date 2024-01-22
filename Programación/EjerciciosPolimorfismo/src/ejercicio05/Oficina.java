@@ -62,7 +62,7 @@ public class Oficina {
 			System.out.println(lista[i] + "Sueldo" + calcularSueldoUnEmpleado(lista[i]));
 			
 			if(lista[i] instanceof Vendedor) {
-				((Vendedor)lista[i].avisoObjetivo(objetivo));
+				((Vendedor)lista[i]).avisoObjetivo(objetivo);
 			}
 		}
 	}
