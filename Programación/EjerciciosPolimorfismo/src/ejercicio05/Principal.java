@@ -11,7 +11,7 @@ public class Principal {
 		int tam = 10;
 		double sueldoBase = 1000;
 		double objetivo;
-		int numEmpleados;
+		int numEmpleados=0;
 		
 		Scanner sc = new Scanner(System.in);
 		
@@ -31,19 +31,25 @@ public class Principal {
 		Empleado e = new Empleado("Alvaro", "Castilla Cano", sueldoBase, 1);
 		Empleado v = new Vendedor("Paco", "García Rojas", sueldoBase, 2, 2000, 2.0);
 		Empleado g = new Gerente("Jose Luis", "Ruíz Gómez", sueldoBase, 3, 10);
-		numEmpleados = 4;
+		
 		
 		Oficina o = new Oficina(lista, numEmpleados);
 		o.addEmpleado(e);
 		o.addEmpleado(g);
 		o.addEmpleado(v);
 		
+		/*lista[0]=e;
+		lista[1]=v;
+		lista[2]=g;*/
+		
 		
 		System.out.println(o.calcularSueldoUnEmpleado(e));
 		System.out.println(o.calcularSueldoUnEmpleado(g));
 		System.out.println(o.calcularSueldoUnEmpleado(v));
-		//Preguntar mañana en clase porque sale nullPointer.
+		
+		
 		o.mostrarEmpleados(objetivo);
+		System.out.println(o.sumaSueldos());
 		
 	}
 

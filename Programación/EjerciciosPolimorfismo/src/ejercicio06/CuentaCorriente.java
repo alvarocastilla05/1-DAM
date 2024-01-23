@@ -5,8 +5,10 @@ public class CuentaCorriente extends Cuenta {
 	private double pagaMantenimiento;
 	private int puntos;
 	
-	public CuentaCorriente(double saldo, double pagaMantenimiento, int puntos) {
-		super(saldo);
+	
+
+	public CuentaCorriente(double saldo, int numeroCuenta, double pagaMantenimiento, int puntos) {
+		super(saldo, numeroCuenta);
 		this.pagaMantenimiento = pagaMantenimiento;
 		this.puntos = puntos;
 	}

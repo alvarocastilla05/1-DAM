@@ -2,8 +2,8 @@ package ejercicio06;
 
 public class CuentaEmpresa extends Cuenta{
 
-	public CuentaEmpresa(double saldo) {
-		super(saldo);
+	public CuentaEmpresa(double saldo, int numeroCuenta) {
+		super(saldo, numeroCuenta);
 	}
 
 	@Override

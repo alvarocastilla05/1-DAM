@@ -40,10 +40,10 @@ public class Oficina {
 		return e.calcularSueldo();
 	}
 	
-	public double sumaSueldos (double porcentajeImpuestos) {
+	public double sumaSueldos () {
 		double resultado = 0;
 		
-		for (int i = 0; i < lista.length; i++) {
+		for (int i = 0; i < numEmpleados; i++) {
 			resultado = resultado+calcularSueldoUnEmpleado(lista[i]);
 		}
 		return resultado;
@@ -61,7 +61,7 @@ public class Oficina {
 		for (int i = 0; i < numEmpleados; i++) {
 			System.out.println(lista[i] + "Sueldo" + calcularSueldoUnEmpleado(lista[i]));
 			
-			if(lista[i] instanceof Vendedor) {
+			if(lista[i] instanceof  Vendedor ) {
 				((Vendedor)lista[i]).avisoObjetivo(objetivo);
 			}
 		}
