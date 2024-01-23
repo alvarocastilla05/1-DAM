@@ -29,6 +29,8 @@ public class CuentaCorriente extends Cuenta {
 		this.puntos = puntos;
 	}
 
+	
+
 	@Override
 	public String toString() {
 		return "CuentaCorriente [pagaMantenimiento=" + pagaMantenimiento + ", puntos=" + puntos + "]";

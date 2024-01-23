@@ -44,7 +44,7 @@ public class Oficina {
 		
 		for (int i = 0; i < lista.length; i++) {
 			if (lista[i]!=null){
-				System.out.println(lista[i] + "Sueldo" + lista[i].saldo);
+				System.out.println(lista[i]);
 			}
 			
 	}

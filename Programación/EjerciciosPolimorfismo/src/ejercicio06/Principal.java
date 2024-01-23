@@ -28,10 +28,12 @@ public class Principal {
 		
 		Oficina o = new Oficina(lista);
 		
+		c.ingresarDinero(cantidadIngresada);
 		cc.ingresarDinero(cantidadIngresada);
 		ce.ingresarDinero(cantidadIngresada);
 		cj.ingresarDinero(cantidadIngresada);
 		
+		c.retirarDinero(cantidadRetirada);
 		cc.retirarDinero(cantidadRetirada);
 		ce.retirarDinero(cantidadRetirada);
 		cj.retirarDinero(cantidadRetirada);
