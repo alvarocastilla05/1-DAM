@@ -35,13 +35,13 @@ public  class Cuenta {
 		saldo += cantidadIngresada;
 	}
 	
+	//Corregir este metodo. NUNCA  se pone un syso en un metodo de calculo. 
 	public void retirarDinero (double cantidadRetirada) {
 		if (saldo>=cantidadRetirada) {
 			saldo -=cantidadRetirada;
-		}else {
-			System.out.println("Saldo insuficiente");
 		}
 	}
+	
 }
 	
 
