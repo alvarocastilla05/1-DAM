@@ -1,6 +1,6 @@
 package ejercicio02;
 
-public class Producto implements IImpuesto{
+public abstract class Producto implements IImpuesto{
 
 	@Override
 	public double calculoIva(double precio, int iva) {
@@ -9,9 +9,6 @@ public class Producto implements IImpuesto{
 	}
 
 	@Override
-	public double calculoIrpf(double sueldo) {
-		// TODO Auto-generated method stub
-		return 0;
-	}
+	public abstract double calculoIrpf(double sueldo);
 
 }
