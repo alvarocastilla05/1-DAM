@@ -69,5 +69,39 @@ public class Ventas {
 		return devolucion;
 	}
 	
+	public void mostrarListaConAvisos () {
+		for (int i = 0; i < lista.length; i++) {
+			if(lista[i]!=null) {
+				System.out.println(lista[i]);
+			}
+			if(lista[i] instanceof EspadaLaser) {
+				if(((EspadaLaser)lista[i]).getTipoEspada().equalsIgnoreCase("doble")) {
+					((EspadaLaser)lista[i]).avisoEspadaDoble();
+				}
+			}
+		}
+	}
+	
+	public Producto findByCantidad (int cantidadBuscada) {
+		int i = 0;
+		boolean encontrado = false;
+		
+		while(i<cantidadProductos && !encontrado) {
+			if(lista[i].getCantidad()==cantidadBuscada) {
+				encontrado=true;
+			}else {
+				i++;
+			}
+			}
+		if(encontrado) {
+			return lista[i];
+		}else {
+			return null;
+		}
+	}
+	
+	
+	
+	
 
 }

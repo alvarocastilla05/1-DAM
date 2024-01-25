@@ -14,6 +14,7 @@ public class Principal {
 		int cantidadProductos;
 		int tam = 10;
 		double dineroEntregado;
+		int cantidadBuscada;
 		
 		Producto m1 = new Moviles(50, 1, "iPhone 15 Pro Max", true);
 		Producto m2 = new Moviles(100, 2, "Xiaomi Redmi note 11 pro", false);
@@ -53,6 +54,19 @@ public class Principal {
 		aux=sc.nextLine();
 		dineroEntregado=Double.parseDouble(aux);
 		
+		if(v.calcularDineroRecaudado(porcentajeGanancias, fijoEspadaDoble)>dineroEntregado) {
+			System.out.println("Dinero Insuficiente");
+		}else {
+			System.out.println("La devolución es de "+v.calcularDevolucion(dineroEntregado, porcentajeGanancias, fijoEspadaDoble));
+		}
+		
+		v.mostrarListaConAvisos();
+		
+		System.out.println("Indique el producto que busca:");
+		aux=sc.nextLine();
+		cantidadBuscada=Integer.parseInt(aux);
+		
+		System.out.println(v.findByCantidad(cantidadBuscada));
 		
 	}
 
