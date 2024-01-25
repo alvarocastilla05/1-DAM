@@ -1,14 +1,16 @@
 package ejercicio02;
 
-public abstract class Producto implements IImpuesto{
+public  class Producto implements IImpuesto{
 
 	@Override
 	public double calculoIva(double precio, int iva) {
-		int cien = 100;
-		return precio*(iva/cien);
+		double cien = 100;
+		return precio+(precio*(iva/cien));
 	}
 
 	@Override
-	public abstract double calculoIrpf(double sueldo);
+	public  double calculoIrpf(double sueldo) {
+		return 0;
+	}
 
 }
