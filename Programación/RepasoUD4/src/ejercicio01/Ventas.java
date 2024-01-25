@@ -4,10 +4,12 @@ import java.util.Arrays;
 
 public class Ventas {
 
-	Producto [] lista;
-
-	public Ventas(Producto[] lista) {
+	private Producto [] lista;
+	private int cantidadProductos;
+	
+	public Ventas(Producto[] lista, int cantidadProductos) {
 		this.lista = lista;
+		this.cantidadProductos = cantidadProductos;
 	}
 
 	public Producto[] getLista() {
@@ -18,11 +20,20 @@ public class Ventas {
 		this.lista = lista;
 	}
 
-	@Override
-	public String toString() {
-		return "Ventas [lista=" + Arrays.toString(lista) + "]";
+	public int getCantidadProductos() {
+		return cantidadProductos;
+	}
+
+	public void setCantidadProductos(int cantidadProductos) {
+		this.cantidadProductos = cantidadProductos;
 	}
 	
+
+	@Override
+	public String toString() {
+		return "Ventas [lista=" + Arrays.toString(lista) + ", cantidadProductos=" + cantidadProductos + "]";
+	}
+
 	public int mostrarNumeroVendidos () {
 		int contador = 0;
 		for (int i = 0; i < lista.length; i++) {
@@ -33,6 +44,30 @@ public class Ventas {
 			}
 		}
 		return contador;
-		
 	}
+	
+	public double calcularPrecioUnProducto (Producto p, double porcentaje, double fijoEspadaDoble) {
+		return p.calcularPVP(porcentaje, fijoEspadaDoble);
+	}
+	
+	public double calcularDineroRecaudado(double porcentaje, double fijoEspadaDoble) {
+		double total = 0;
+		for (int i = 0; i < cantidadProductos; i++) {
+			if(lista[i]!=null &&  lista[i].isVendido()==true) {
+				total=total+calcularPrecioUnProducto(lista[i], porcentaje, fijoEspadaDoble);
+			}
+		}
+		return total;
+	}
+	public double calcularDevolucion (double cantidadEntregada, double porcentaje, double fijoEspadaDoble) {
+		double devolucion = 0;
+		for (int i = 0; i < lista.length; i++) {
+			if(cantidadEntregada>=calcularDineroRecaudado(porcentaje, fijoEspadaDoble)) {
+				devolucion=cantidadEntregada-calcularDineroRecaudado(porcentaje, fijoEspadaDoble);	
+		}
+		}
+		return devolucion;
+	}
+	
+
 }

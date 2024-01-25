@@ -13,6 +13,7 @@ public class Principal {
 		double fijoEspadaDoble = 10;
 		int cantidadProductos;
 		int tam = 10;
+		double dineroEntregado;
 		
 		Producto m1 = new Moviles(50, 1, "iPhone 15 Pro Max", true);
 		Producto m2 = new Moviles(100, 2, "Xiaomi Redmi note 11 pro", false);
@@ -34,9 +35,25 @@ public class Principal {
 		lista[5]=el3;
 		
 		
-		Ventas v = new Ventas(lista);
+		Ventas v = new Ventas(lista, cantidadProductos);
 		
+		//Mostrar vendidos
 		System.out.println(v.mostrarNumeroVendidos());
+		
+		//Calculo de precios
+		System.out.println(m1.calcularPVP(porcentajeGanancias, fijoEspadaDoble));
+		System.out.println(v.calcularPrecioUnProducto(m1, porcentajeGanancias, fijoEspadaDoble));
+		System.out.println(v.calcularPrecioUnProducto(el3, porcentajeGanancias, fijoEspadaDoble));
+		System.out.println(v.calcularDineroRecaudado(porcentajeGanancias, fijoEspadaDoble));
+		
+		
+		//Calculo de devolucion
+		System.out.println("Se debe de entregar "+v.calcularDineroRecaudado(porcentajeGanancias, fijoEspadaDoble)+" €");
+		
+		aux=sc.nextLine();
+		dineroEntregado=Double.parseDouble(aux);
+		
+		
 	}
 
 }
