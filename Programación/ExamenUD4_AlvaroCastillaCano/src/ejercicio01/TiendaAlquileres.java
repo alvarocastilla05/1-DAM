@@ -29,31 +29,28 @@ public class TiendaAlquileres {
 		return v.calcularPrecio(fijoBatmovil);
 	}
 	
-	public int findById (int id2) {
+	public Vehiculos findById (int id) {
 		boolean encontrado = false;
 		int i = 0;
 		
-		while(i<id2 && !encontrado) {
-			if(lista[i].getId()==id2 && lista[i]!=null) {
+		while(i<id && !encontrado) {
+			if(lista[i].getId()==id) {
 				encontrado = true;
 			}else {
 				i++;
 			}
 		}
 		if(encontrado) {
-			return i;
+			return lista[i];
 		}
 		else {
-			return -1;
+			return null;
 		}
 	}
 	//Repasar luego, esta mal
 	public double calcularPrecioBuscado (int id, double fijoBatmovil, Vehiculos v) {
-			if(v.getId()==id) {
 				return calcularPrecioUnVehiculo(v, fijoBatmovil);
-			}else {
-				return 0;
-			}
+			
 		}
 		
 	
@@ -69,11 +66,13 @@ public class TiendaAlquileres {
 		}
 	}
 	
-	public double calcularTotalRecaudado(double fijoBatmovil) {
+	public double calcularTotalRecaudado( double fijoBatmovil) {
 		double suma = 0;
 		for (int i = 0; i < lista.length; i++) {
 			if(lista[i]!=null) {
-				suma = suma+calcularPrecioUnVehiculo(lista[i], fijoBatmovil);
+				if(lista[i] instanceof Batmoviles) {
+					suma = suma+((Batmoviles)lista[i]).calcularPrecio(fijoBatmovil);
+				}
 			}
 			
 		}

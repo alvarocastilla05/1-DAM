@@ -17,7 +17,8 @@ public class Principal {
 		
 		Vehiculos v = new Vehiculos(1,"JBB 12345", 50, 2000);
 		Vehiculos b = new Batmoviles(2, "CZP 1245", 10, 1000, 4);
-		Vehiculos p = new PatineteVoladores(3, "JDA 12345", 5,2100 ,500);
+		Vehiculos b2 = new Batmoviles(3, "KKK 1245", 10, 5000, 4);
+		Vehiculos p = new PatineteVoladores(4, "JDA 12345", 5,2100 ,500);
 		id = 4;
 		id++;
 		
@@ -26,6 +27,7 @@ public class Principal {
 		lista[0]=v;
 		lista[1]=b;
 		lista[2]=p;
+		lista[3]=b2;
 		
 		TiendaAlquileres t = new TiendaAlquileres(lista);
 		
@@ -61,7 +63,7 @@ public class Principal {
 					aux=sc.nextLine();
 					id = Integer.parseInt(aux);
 					
-					System.out.println(t.calcularPrecioBuscado(t.findById(id), fijoBatmovil, v)); 
+					System.out.println(t.calcularPrecioBuscado(id, fijoBatmovil, v)); 
 					break;
 				case 2:
 					t.mostrarListaConAviso();
@@ -76,6 +78,7 @@ public class Principal {
 					
 					System.out.println("El precio de un vehiculo alquilado "+numeroDias+" dias es de "+t.calcularPrecioVariosDias(v, fijoBatmovil, numeroDias)+" €");
 					System.out.println("El precio de un batmovil alquilado "+numeroDias+" dias es de "+t.calcularPrecioVariosDias(b, fijoBatmovil, numeroDias)+" €");
+					System.out.println("El precio de un batmovil alquilado "+numeroDias+" dias es de "+t.calcularPrecioVariosDias(b2, fijoBatmovil, numeroDias)+" €");
 					System.out.println("El precio de un un Patinete Volador alquilado "+numeroDias+" dias es de "+t.calcularPrecioVariosDias(p, fijoBatmovil, numeroDias)+" €");
 					break;
 				case 0:
