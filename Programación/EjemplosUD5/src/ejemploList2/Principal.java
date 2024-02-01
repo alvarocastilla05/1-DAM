@@ -12,6 +12,8 @@ public class Principal {
 		
 		lista.add("Álvaro", "Castilla Cano", 18, true);
 		lista.add(1, "Alvaro", "Castilla", 18, false);
+		
+		
 	}
 
 }
