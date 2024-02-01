@@ -10,6 +10,8 @@ public class Principal {
 		int num2 = 2;
 		int mayor;
 		
+		
+		
 		//Antes de los 2 puntos debemos de definir una variable del tipo de lo que haya dentro, en este caso int
 		//No se pone la variable de dentro del parentesis = 0.
 		//Despues de los 2 puntos debemos de poner el nombre del array.
