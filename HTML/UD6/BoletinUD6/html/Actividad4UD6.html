@@ -8,23 +8,50 @@
     <style type="text/css">
         table {
 
-            border: 1px solid black;
             border-collapse: collapse;
             /*Sirve para evitar la doble linea, es decir, el duplicado de los bordes.*/
             caption-side: bottom;
         }
 
-        img{
+        img {
             width: 25px;
         }
 
         td,
         th {
-
-            border: 1px solid black;
             text-align: center;
             vertical-align: middle;
         }
+
+        th {
+            
+            padding: 5px;
+            
+
+            
+        }
+
+        tr:nth-child(odd) {
+            background-color: rgb(214, 214, 214);
+        }
+        #Superior1{
+            border-bottom: 2px solid black;
+            background-color: white;
+        }
+        #Superior2{
+            border-bottom: 2px solid red;
+
+        }
+        #Champions{
+            border-left: 5px solid green;
+        }
+        #Europa{
+            border-left: 5px solid orange;
+        }
+        #Descenso{
+            border-left: 5px solid red;
+        }
+        
     </style>
 </head>
 
@@ -32,12 +59,14 @@
     <table summary="Clasificación de la Liga">
         <caption>LA LIGA</caption>
         <thead>
-            <tr>
-                <th>Totales</th>
-                <th>En casa</th>
-                <th>Fuera</th>
+            <tr id="Superior1">
+                
+                    <th colspan="7">Totales</th>
+                    <th colspan="7">En casa</th>
+                    <th colspan="7">Fuera</th>
+                
             </tr>
-            <tr>
+            <tr id="Superior2">
                 <th>Equipos</th>
                 <th>PT</th>
                 <th>PJ</th>
@@ -63,7 +92,8 @@
             </tr>
         </thead>
         <tbody>
-            <tr>
+           
+            <tr id="Champions">
                 <td>1</td>
                 <td><img src="../img/equipos/fcb.png" alt="fcb"></td>
                 <td>Barcelona</td>
@@ -89,7 +119,8 @@
                 <td>0</td>
                 <td>0</td>
             </tr>
-            <tr>
+            <tr id="Champions">
+                <td>2</td>
                 <td><img src="../img/equipos/atm.png" alt="atm"></td>
                 <td>Atlético</td>
                 <td>0</td>
@@ -114,7 +145,8 @@
                 <td>0</td>
                 <td>0</td>
             </tr>
-            <tr>
+            <tr id="Champions">
+                <td>3</td>
                 <td><img src="../img/equipos/rma.png" alt="rma"></td>
                 <td>Real Madrid</td>
                 <td>0</td>
@@ -139,7 +171,8 @@
                 <td>0</td>
                 <td>0</td>
             </tr>
-            <tr>
+            <tr id="Champions">
+                <td>4</td>
                 <td><img src="../img/equipos/sfc.png" alt="sfc"></td>
                 <td>Sevilla</td>
                 <td>0</td>
@@ -164,7 +197,8 @@
                 <td>0</td>
                 <td>0</td>
             </tr>
-            <tr>
+            <tr id="Europa">
+                <td>5</td>
                 <td><img src="../img/equipos/get.png" alt="get"></td>
                 <td>Getafe</td>
                 <td>0</td>
@@ -189,7 +223,8 @@
                 <td>0</td>
                 <td>0</td>
             </tr>
-            <tr>
+            <tr id="Europa">
+                <td>6</td>
                 <td><img src="../img/equipos/ala.png" alt="ala"></td>
                 <td>Alavés</td>
                 <td>0</td>
@@ -215,6 +250,7 @@
                 <td>0</td>
             </tr>
             <tr>
+                <td>7</td>
                 <td><img src="../img/equipos/alm.png" alt="alm"></td>
                 <td>Almeria</td>
                 <td>0</td>
@@ -240,6 +276,7 @@
                 <td>0</td>
             </tr>
             <tr>
+                <td>8</td>
                 <td><img src="../img/equipos/ath.png" alt="ath"></td>
                 <td>Bilbao</td>
                 <td>0</td>
@@ -265,6 +302,7 @@
                 <td>0</td>
             </tr>
             <tr>
+                <td>9</td>
                 <td><img src="../img/equipos/bet.png" alt="bet"></td>
                 <td>Betis</td>
                 <td>0</td>
@@ -290,6 +328,7 @@
                 <td>0</td>
             </tr>
             <tr>
+                <td>10</td>
                 <td><img src="../img/equipos/cad.png" alt="cad"></td>
                 <td>Cádiz</td>
                 <td>0</td>
@@ -315,6 +354,7 @@
                 <td>0</td>
             </tr>
             <tr>
+                <td>11</td>
                 <td><img src="../img/equipos/cel.png" alt="cel"></td>
                 <td>Celta</td>
                 <td>0</td>
@@ -340,6 +380,7 @@
                 <td>0</td>
             </tr>
             <tr>
+                <td>12</td>
                 <td><img src="../img/equipos/gir.png" alt="gir"></td>
                 <td>Girona</td>
                 <td>0</td>
@@ -365,6 +406,7 @@
                 <td>0</td>
             </tr>
             <tr>
+                <td>13</td>
                 <td><img src="../img/equipos/gra.png" alt="gra"></td>
                 <td>Granada</td>
                 <td>0</td>
@@ -390,6 +432,7 @@
                 <td>0</td>
             </tr>
             <tr>
+                <td>14</td>
                 <td><img src="../img/equipos/cel.png" alt="cel"></td>
                 <td>Celta</td>
                 <td>0</td>
@@ -415,6 +458,7 @@
                 <td>0</td>
             </tr>
             <tr>
+                <td>15</td>
                 <td><img src="../img/equipos/lpa.png" alt="lpa"></td>
                 <td>Las Palmas</td>
                 <td>0</td>
@@ -440,6 +484,7 @@
                 <td>0</td>
             </tr>
             <tr>
+                <td>16</td>
                 <td><img src="../img/equipos/mll.png" alt="mll"></td>
                 <td>Mallorca</td>
                 <td>0</td>
@@ -465,6 +510,7 @@
                 <td>0</td>
             </tr>
             <tr>
+                <td>17</td>
                 <td><img src="../img/equipos/osa.png" alt="osa"></td>
                 <td>Osasuna</td>
                 <td>0</td>
@@ -490,6 +536,7 @@
                 <td>0</td>
             </tr>
             <tr>
+                <td>18</td>
                 <td><img src="../img/equipos/rso.png" alt="rso"></td>
                 <td>Real Sociedad</td>
                 <td>0</td>
@@ -514,7 +561,8 @@
                 <td>0</td>
                 <td>0</td>
             </tr>
-            <tr>
+            <tr id="Descenso">
+                <td>20</td>
                 <td><img src="../img/equipos/vil.png" alt="vil"></td>
                 <td>Villarreal</td>
                 <td>0</td>
@@ -539,7 +587,8 @@
                 <td>0</td>
                 <td>0</td>
             </tr>
-            <tr>
+            <tr id="Descenso">
+                <td>21</td>
                 <td><img src="../img/equipos/val.png" alt="val"></td>
                 <td>Valencia</td>
                 <td>0</td>
@@ -564,7 +613,8 @@
                 <td>0</td>
                 <td>0</td>
             </tr>
-            <tr>
+            <tr id="Descenso">
+                <td>22</td>
                 <td><img src="../img/equipos/rva.png" alt="rva"></td>
                 <td>Rayo</td>
                 <td>0</td>
@@ -591,6 +641,22 @@
             </tr>
 
         </tbody>
+        <tfoot>
+            <tr>
+                <td id="Champions">Champions League</td>
+                <td id="Europa">Europa League</td>
+                <td id="Descenso">Descenso</td>
+                <td>PT: Puntos Totales</td>
+                <td>PJ: Partidos Jugados</td>
+                <td>PG: Partidos Ganados</td>
+            </tr>
+            <tr>
+                <td>PE: Partidos Empatados</td>
+                <td>PP: Partidos Perdidos</td>
+                <td>GF: Goles a Favor</td>
+                <td>GC: Goles en Contra</td>
+            </tr>
+        </tfoot>
 
     </table>
 </body>
