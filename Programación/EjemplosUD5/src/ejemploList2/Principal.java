@@ -10,8 +10,19 @@ public class Principal {
 
 		List<Alumno> lista = new ArrayList <Alumno>();
 		
-		lista.add("Álvaro", "Castilla Cano", 18, true);
-		lista.add(1, "Alvaro", "Castilla", 18, false);
+		Alumno a1 = new Alumno("Álvaro", "Castilla Cano", 18, true);
+		Alumno a2 = new Alumno("Alejandro", "Blazquez Cano", 26, true);
+		Alumno a3 = new Alumno("Carlos", "Roman Abad", 19, false);
+
+		
+		lista.add(a1);
+		lista.add(a2);
+		lista.add(a3);
+		
+		System.out.println(lista);
+		System.out.println("************************");
+		System.out.println(lista.get(0));
+		
 		
 		
 	}
