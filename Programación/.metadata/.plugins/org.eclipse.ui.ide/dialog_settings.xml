@@ -7,11 +7,12 @@
 		<item key="WizardProjectsImportPage.STORE_CLOSE_CREATED_PROJECTS_ID" value="false"/>
 		<item key="WizardProjectsImportPage.STORE_HIDE_CONFLICTING_PROJECTS_ID" value="false"/>
 		<list key="WizardProjectsImportPage.STORE_DIRECTORIES">
+			<item value="C:\Users\alvar\OneDrive\Escritorio\1-DAM\Programación\EjerciciosUD5Parte1_AlvaroCastillaCano"/>
+			<item value="C:\Users\alvar\OneDrive\Escritorio\1-DAM\Programación\EjemplosUD5"/>
 			<item value="C:\Users\castilla.caalv24_tri\Desktop\1-DAM\Programación\UD4\ExamenUD4_AlvaroCastillaCano"/>
 			<item value="C:\Users\castilla.caalv24_tri\Desktop\1-DAM\Programación\UD4\EjerciciosPolimorfismo"/>
 			<item value="C:\Users\castilla.caalv24_tri\Desktop\1-DAM\Programación\UD4\EjerciciosUD4Parte1_AlvaroCastilla"/>
 			<item value="C:\Users\castilla.caalv24_tri\Desktop\1-DAM\Programación\EjemplosUD5"/>
-			<item value="C:\Users\alvar\OneDrive\Escritorio\1-DAM\Programación\EjemplosUD5"/>
 			<item value="C:\Users\castilla.caalv24_tri\Desktop\1-DAM\Programación\RepasoUD4"/>
 			<item value="C:\Users\alvar\OneDrive\Escritorio\1-DAM\Programación\EjerciciosPolimorfismo"/>
 			<item value="C:\Users\alvar\OneDrive\Escritorio\1-DAM\Programación\EjemploPoliformismo"/>
@@ -26,7 +27,6 @@
 			<item value="C:\Users\alvar\OneDrive\Escritorio\1-DAM\Programación\UD3\RepasoUD3"/>
 			<item value="C:\Users\castilla.caalv24_tri\Desktop\1-DAM\Programación\UD3\RepasoUD3"/>
 			<item value="C:\Users\castilla.caalv24_tri\Desktop\1-DAM\Programación\EjemplosUD4_AlvaroCastilla"/>
-			<item value="C:\Users\castilla.caalv24_tri\Desktop\1-DAM\Programación\RepasoUD3"/>
 		</list>
 		<list key="WizardProjectsImportPage.STORE_ARCHIVES">
 			<item value=""/>

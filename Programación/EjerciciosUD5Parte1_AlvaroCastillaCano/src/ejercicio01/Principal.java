@@ -11,6 +11,7 @@ public class Principal {
 		String aux;
 		Scanner sc = new Scanner(System.in);
 		int id;
+		String tituloNuevo;
 		
 		List <Nota> lista = new ArrayList <Nota>();
 		
@@ -31,6 +32,19 @@ public class Principal {
 		cr.deleteNota(id);
 		
 		cr.imprimirLista();
+		
+		System.out.println("**********************");
+		
+		System.out.println("Introduzca el id de la nota que desea modificar:");
+		aux=sc.nextLine();
+		id = Integer.parseInt(aux);
+		
+		System.out.println("Introduzca el nuevo título:");
+		tituloNuevo = sc.nextLine();
+		
+		cr.modificarNota(id, lista, tituloNuevo);
+		
+		
 		
 
 	}
