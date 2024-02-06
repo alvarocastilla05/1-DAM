@@ -19,7 +19,6 @@
 
         td,
         th {
-            text-align: center;
             vertical-align: middle;
         }
 
@@ -33,6 +32,14 @@
 
         tr:nth-child(odd) {
             background-color: rgb(214, 214, 214);
+        }
+
+        #numeros{
+            width: 10px;
+        }
+        #equipos{
+            /*text-align: left;*/
+            width: 25px;
         }
         #Superior1{
             border-bottom: 2px solid black;
@@ -94,9 +101,9 @@
         <tbody>
            
             <tr id="Champions">
-                <td>1</td>
-                <td><img src="../img/equipos/fcb.png" alt="fcb"></td>
-                <td>Barcelona</td>
+                <td id="numeros">1</td>
+                <td id="equipos"><img src="../img/equipos/fcb.png" alt="fcb"></td>
+                <td >Barcelona</td>
                 <td>0</td>
                 <td>0</td>
                 <td>0</td>

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ejercicio01</title>
+    <style type="text/css">
+
+form {
+            background-color: chocolate;
+            border: solid 1px darkorchid;
+            padding: 2px;
+            width: 50%;
+            color: white;
+        }
+
+        label {
+            display: block;
+            width: 33%;
+        }
+
+        input {
+            display: block;
+            width: 66%;
+        }
+        .filaFormulario{
+            display: flex;
+            width: 100%;
+        }
+        input:focus{
+            display: block;
+            flex: 0 0 65%;
+            color: darkred;
+            background-color: lightpink;
+            outline: none;
+            border: 3px solid darkred;
+        }
+
+
+
+    </style>
+</head>
+<body>
+    <h1>Formulario de Registro</h1>
+
+    <form name="Registro" method="" action="" autocomplete novalidate enctype="multipart/form-data">
+
+        <div class="filaFormulario">
+
+            <label for="nombre">Nombre</label>
+            <input type="text" name="nombre" id="nombre" required  placeholder="Su nombre aquí" autofocus autocomplete><br />
+        </div>
+
+        <div class="filaFormulario">
+            <label for="apellido1">Apellido1</label>
+            <input type="text" name="apellido1" id="apellido1">
+        </div>
+
+        <div class="filaFormulario">
+            <label for="edad">Edad:</label>
+            <input type="number" name="edad" id="edad" min="0" max="99" step="1" size="2">
+        </div>
+
+        <div class="filaFormulario">
+
+            <label for="email">Email:</label>
+            <input type="mail" name="email" id="email" required  placeholder="Introduzca su correo " autofocus autocomplete><br />
+        </div>
+        <div class="filaFormulario">
+
+            <label for="nav">Escoja su navegador Favorito</label>
+            <select name="nav" id="nav">
+                <option value="CH">Google Chrome</option>
+                <option value="FI">Firefox</option>
+                <option value="ME">Microsoft Edge</option>
+                <option value="O">Otro</option>
+
+            </select>
+        </div>
+        <input type="submit" name="enviar" value="Enviar">
+
+
+    </form>
+</body>
+</html>

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ejercicio02</title>
+    <style type="text/css">
+
+        
+form {
+            background-color: chocolate;
+            border: solid 1px darkorchid;
+            padding: 2px;
+            width: 50%;
+            color: white;
+        }
+
+        label {
+            display: block;
+            width: 33%;
+        }
+
+        input {
+            display: block;
+            width: 66%;
+        }
+        .filaFormulario{
+            display: flex;
+            width: 100%;
+        }
+        input:focus{
+            display: block;
+            flex: 0 0 65%;
+            color: darkred;
+            background-color: lightpink;
+            outline: none;
+            border: 3px solid darkred;
+        }
+
+    </style>
+</head>
+<body>
+    <h1>REGISTRO DE FORO</h1>
+    <form name="Registro" method="" action="" autocomplete novalidate enctype="multipart/form-data">
+
+        <div class="filaFormulario">
+
+            <label for="nombre">Nombre y Apellidos</label>
+            <input type="text" name="nombre" id="nombre" required  placeholder="Nombre y Apellidos" autofocus autocomplete><br />
+        </div>
+
+        <div class="filaFormulario">
+
+            <label for="email">Email:</label>
+            <input type="mail" name="email" id="email" required  placeholder="Introduzca su correo " autofocus autocomplete><br />
+        </div>
+
+        <div class="filaFormulario">
+
+            <label for="usuario">Usuario</label>
+            <input type="text" name="usuario" id="usuario" required  placeholder="Introduzca su nombre de Usuario" autofocus autocomplete><br />
+        </div>
+        <div class="filaFormulario">
+
+            <label for="Contrasenia">Contraseña</label>
+            <input type="password" name="Contrasenia" id="Contrasenia" required  placeholder="Introduzca su Contraseña" autofocus autocomplete><br />
+        </div>
+        <div class="filaFormulario">
+
+            <label for="RepetirContrasenia">Repita la Contraseña</label>
+            <input type="password" name="RepetirContrasenia" id="RepetirContrasenia" required  placeholder="Introduzca su Contraseña de nuevo" autofocus autocomplete><br />
+        </div>
+
+        <div class="filaFormulario">
+
+            <label for="sex">Escoja Sexo</label>
+            <select name="sex" id="sex">
+                <option value="H">Hombre</option>
+                <option value="M">Mujer</option>
+                <option value="O">Otro</option>
+
+            </select>
+        </div>
+      
+
+
+
+    </form>
+    
+</body>
+</html>
