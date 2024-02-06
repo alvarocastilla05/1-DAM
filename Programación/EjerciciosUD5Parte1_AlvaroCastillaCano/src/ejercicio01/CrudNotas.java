@@ -51,5 +51,10 @@ public class CrudNotas {
 			lista.remove(findById(id));
 		}
 	}
+	public void modificarNota(int id, Nota n, String tituloNuevo) {
+		if(findById(id)!=null) {
+			n.setTitulo(tituloNuevo);
+		}
+	}
 
 }
