@@ -35,6 +35,8 @@ public class Principal {
 		
 		System.out.println("**********************");
 		
+		
+		/*
 		System.out.println("Introduzca el id de la nota que desea modificar:");
 		aux=sc.nextLine();
 		id = Integer.parseInt(aux);
@@ -43,7 +45,7 @@ public class Principal {
 		tituloNuevo = sc.nextLine();
 		
 		cr.modificarNota(id, lista, tituloNuevo);
-		
+		*/
 		
 		
 
