@@ -25,7 +25,8 @@ public class CrudPersona {
 		return "CrudPersona [lista=" + lista + "]";
 	}
 	
+	/*
 	public Persona findByDni (String dni) {
 		
-	}
+	}*/
 }
