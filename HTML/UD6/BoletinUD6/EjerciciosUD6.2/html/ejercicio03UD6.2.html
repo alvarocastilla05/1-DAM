@@ -4,6 +4,23 @@
 	<title>Ejercicio 3 - Formulario de alta</title> 
 	<meta charset="utf-8" /> 
 	<style type="text/css"> 
+
+		fieldset{
+			display: block;
+			width: 50%;
+		}
+		fieldset:hover{
+			background-color: #ff9;
+		}
+		input:hover{
+            outline: none;
+            border: 3px solid #E6B700;
+        }
+		.requerido{
+			color: red;
+		}
+
+
 	</style> 
 </head> 
 <body> 
@@ -11,6 +28,7 @@
 	<h2>Formulario de alta</h2> 
 	<form method="post" action="#"> 		
 		<fieldset> 
+			
 			<label class="titulo" for="nombre">Nombre y apellidos <span class="requerido">*</span></label> 
 			<div> 
 				<input id="nombre" name="nombre" value="" /> 
@@ -26,6 +44,7 @@
 			<p class="ayuda">No te olvides de escribir también tu segundo apellido</p>
 		</fieldset> 
 		<fieldset> 
+			
 			<label class="titulo" for="direccion">Dirección <span class="requerido">*</span></label> 
 			<div> 				
 				<input id="direccion" name="direccion" value="" /> 
@@ -56,6 +75,7 @@
 			<p class="ayuda">El código postal es imprescindible para poder recibir los pedidos</p> 
 		</fieldset> 
 		<fieldset> 
+			
 			<label class="titulo" for="email">Email</label> 
 			<div> 
 				<input id="email" name="email" value="" /> 
@@ -63,6 +83,7 @@
 			<p class="ayuda">Asegúrate de que sea váfieldsetdo</p> 
 		</fieldset> 
 		<fieldset> 
+			
 			<label class="titulo" for="telefonofijo">Teléfono <span class="requerido">*</span></label> 
 			<div> 				
 				<input id="telefonofijo" name="telefonofijo" value="" /> 

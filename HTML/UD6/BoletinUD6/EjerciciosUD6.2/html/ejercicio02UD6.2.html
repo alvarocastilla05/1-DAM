@@ -36,6 +36,9 @@ form {
             outline: none;
             border: 3px solid darkred;
         }
+        .imagen{
+            width: 100px;
+        }
 
     </style>
 </head>
@@ -73,15 +76,51 @@ form {
 
         <div class="filaFormulario">
 
-            <label for="sex">Escoja Sexo</label>
-            <select name="sex" id="sex">
-                <option value="H">Hombre</option>
-                <option value="M">Mujer</option>
-                <option value="O">Otro</option>
-
-            </select>
+            <label for="genero">Genero</label>
+            <input type="radio" name="genero" value="M">Masculino <br>
+            <input type="radio" name="genero" value="F">Femenino <br>
+            <input type="radio" name="genero" value="O">Otro <br>
         </div>
-      
+
+        <div class="filaFormulario">
+
+            <label for="fnac">Fecha Nacimiento</label>
+            <input type="date" name="fnac" id="fnac" min="1900-01-01" max="2024-12-31">
+
+        </div>
+
+        
+            Equipo Favorito <br>
+            <input type="checkbox" name="barcelona" value="fbc">
+            <label for="barcelona">FC Barcelona</label><br>
+            <input type="checkbox" name="madrid" value="rm">
+            <label for="madrid">Real Madrid</label><br>
+            <input type="checkbox" name="sevilla" value="sfc">
+            <label for="sevilla">Sevilla FC</label><br>
+            <input type="checkbox" name="betis" value="rb">
+            <label for="betis">Real Betis</label><br>
+            <input type="checkbox" name="atletico" value="atm">
+            <label for="atletico">Atlético de Madrid</label><br>
+            <input type="checkbox" name="manU" value="mnu">
+            <label for="manU">Manchester United</label><br>
+            <input type="checkbox" name="manCi" value="mci">
+            <label for="manCi">Manchester City</label><br>
+            <input type="checkbox" name="madrid" value="rm">
+            <label for="madrid">Real Madrid2</label><br>
+            <input type="checkbox" name="sevilla" value="sfc">
+            <label for="sevilla">Sevilla FC2</label><br>
+            <input type="checkbox" name="betis" value="rb">
+            <label for="betis">Real Betis2</label><br>
+            <input type="checkbox" name="atletico" value="atm">
+            <label for="atletico">Atlético de Madrid2</label><br>
+            <input type="checkbox" name="manU" value="mnu">
+            <label for="manU">Manchester United2</label><br>
+            <input type="checkbox" name="manCi" value="mci">
+            <label for="manCi">Manchester City2</label><br>
+        
+        <div class="imagen">
+            <input type="image" name="enviar" src="../img/boton enviar.png" alt="enviar">
+        </div>
 
 
 
