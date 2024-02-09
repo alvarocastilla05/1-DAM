@@ -1,5 +1,5 @@
 package jdk15;
 
-public class Persona {
+public  class Persona {
 
 }
