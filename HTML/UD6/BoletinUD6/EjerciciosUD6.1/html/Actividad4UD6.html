@@ -6,60 +6,108 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Actividad4</title>
     <style type="text/css">
-        table {
-
+     table{
+            border: solid 2px rgb(209, 209, 209);
             border-collapse: collapse;
-            /*Sirve para evitar la doble linea, es decir, el duplicado de los bordes.*/
-            caption-side: bottom;
+            font-size: 20px;
+            font-family: 'Segoe UI', Tahoma, Verdana, sans-serif;
         }
 
-        img {
-            width: 25px;
+        th{
+            border: solid 2px white;
+            font-weight: normal;
+            padding: 12px;
+            font-weight: bold;
         }
 
-        td,
-        th {
-            vertical-align: middle;
-        }
-
-        th {
-            
+        td{
+            border: solid 0px white;
+            text-align: center;
             padding: 5px;
-            
-
-            
         }
 
-        tr:nth-child(odd) {
-            background-color: rgb(214, 214, 214);
-        }
-        #espacio{
-            width: 30px;
+        tbody>tr:nth-child(odd){
+            background-color: rgb(209, 209, 209);
         }
 
-        #numeros{
-            width: 10px;
+        thead>tr:nth-child(2){
+            border-bottom: solid 4px rgb(202, 2, 2);
         }
-        #equipos{
-            /*text-align: left;*/
+
+        thead>tr:nth-child(1){
+            border-bottom: solid 3px black;
+        }
+
+        tbody>tr>td:first-child{
+            border: solid 2px rgb(209, 209, 209);
+        }
+
+        tbody>tr:last-child{
+            border-bottom: solid 6px rgb(130, 130, 130);
+        }
+
+        .dcha{
+            text-align: right;
+        }
+
+        .izq{
+            text-align: left;
+        }
+
+        .space{
             width: 25px;
         }
-        #Superior1{
-            border-bottom: 2px solid black;
-            background-color: white;
-        }
-        #Superior2{
-            border-bottom: 2px solid red;
 
+        .Champions{
+            background-color: rgb(1, 175, 1);
         }
-        #Champions{
-            border-left: 5px solid green;
+
+        .Europa1{
+            background-color: orange;
         }
-        #Europa{
-            border-left: 5px solid orange;
+
+        .nada{
+            background-color: rgb(159, 158, 158);
         }
-        #Descenso{
-            border-left: 5px solid red;
+
+        .Descenso1{
+            background-color: red;
+        }
+
+        tfoot{
+            font-size: 15px;
+        }
+
+        tfoot>tr{
+            border-left: solid 2px white;
+            border-right: solid 2px white;
+        }
+
+        tfoot>tr>th{
+            font-weight: bold;
+            padding: 5px;
+            text-align: left;
+            border-top: 0px;
+            border-left: 0px;
+            border-right: 0px;
+        }
+
+        tfoot>tr>th.Europa{
+            border-right: solid 13px orange;
+        }
+
+        tfoot>tr>th.Descenso{
+            border-right: solid 13px red;
+        }
+
+        tbody>tr:nth-child(odd):hover{
+            background-color: rgb(226, 64, 64);
+            transform: scale(1.10);
+        }
+
+        tbody>tr:nth-child(even):hover{
+            background-color: rgb(116, 17, 17);
+            transform: scale(1.10);
         }
         
     </style>
@@ -106,11 +154,11 @@
             </tr>
         </thead>
         <tbody>
-           
-            <tr id="Champions">
-                <td id="numeros">1</td>
-                <td id="equipos"><img src="../img/equipos/fcb.png" alt="fcb"></td>
-                <td >Barcelona</td>
+            <tr>
+                <td class="Champions"></td>
+                <td>1</td>
+                <td><img src="../img/equipos/ath.png" height="25px" alt="Escudo del Athletic Club de Bilbao"></td>
+                <td class="izq">Athletic</td>
                 <td></td>
                 <td>0</td>
                 <td>0</td>
@@ -136,10 +184,11 @@
                 <td>0</td>
                 <td>0</td>
             </tr>
-            <tr id="Champions">
+            <tr>
+                <td class="Champions"></td>
                 <td>2</td>
-                <td><img src="../img/equipos/atm.png" alt="atm"></td>
-                <td>Atlético</td>
+                <td><img src="../img/equipos/sfc.png" height="25px" alt="Escudo del Sevilla FC"></td>
+                <td class="izq">Sevilla</td>
                 <td></td>
                 <td>0</td>
                 <td>0</td>
@@ -165,10 +214,11 @@
                 <td>0</td>
                 <td>0</td>
             </tr>
-            <tr id="Champions">
+            <tr>
+                <td class="Champions"></td>
                 <td>3</td>
-                <td><img src="../img/equipos/rma.png" alt="rma"></td>
-                <td>Real Madrid</td>
+                <td><img src="../img/equipos/alm.png" height="25px" alt="Escudo del Almería CF"></td>
+                <td class="izq">Almería</td>
                 <td></td>
                 <td>0</td>
                 <td>0</td>
@@ -194,10 +244,11 @@
                 <td>0</td>
                 <td>0</td>
             </tr>
-            <tr id="Champions">
+            <tr>
+                <td class="Champions"></td>
                 <td>4</td>
-                <td><img src="../img/equipos/sfc.png" alt="sfc"></td>
-                <td>Sevilla</td>
+                <td><img src="../img/equipos/rva.png" height="25px" alt="Escudo del Rayo Vallecano de Madrid"></td>
+                <td class="izq">Rayo</td>
                 <td></td>
                 <td>0</td>
                 <td>0</td>
@@ -223,10 +274,11 @@
                 <td>0</td>
                 <td>0</td>
             </tr>
-            <tr id="Europa">
+            <tr>
+                <td class="Europa1"></td>
                 <td>5</td>
-                <td><img src="../img/equipos/get.png" alt="get"></td>
-                <td>Getafe</td>
+                <td><img src="../img/equipos/vil.png" height="25px" alt="Escudo del Villareal Club de Fútbol"></td>
+                <td class="izq">Villareal</td>
                 <td></td>
                 <td>0</td>
                 <td>0</td>
@@ -252,10 +304,11 @@
                 <td>0</td>
                 <td>0</td>
             </tr>
-            <tr id="Europa">
+            <tr>
+                <td class="Europa1"></td>
                 <td>6</td>
-                <td><img src="../img/equipos/ala.png" alt="ala"></td>
-                <td>Alavés</td>
+                <td><img src="../img/equipos/cel.png" height="25px" alt="Escudo del Celta de Vigo"></td>
+                <td class="izq">Celta</td>
                 <td></td>
                 <td>0</td>
                 <td>0</td>
@@ -282,9 +335,10 @@
                 <td>0</td>
             </tr>
             <tr>
+                <td class="nada"></td>
                 <td>7</td>
-                <td><img src="../img/equipos/alm.png" alt="alm"></td>
-                <td>Almeria</td>
+                <td><img src="../img/equipos/val.png" height="25px" alt="Escudo del Valencia FC"></td>
+                <td class="izq">Valencia</td>
                 <td></td>
                 <td>0</td>
                 <td>0</td>
@@ -311,9 +365,10 @@
                 <td>0</td>
             </tr>
             <tr>
+                <td class="nada"></td>
                 <td>8</td>
-                <td><img src="../img/equipos/ath.png" alt="ath"></td>
-                <td>Bilbao</td>
+                <td><img src="../img/equipos/gir.png" height="25px" alt="Escudo del Girona FC"></td>
+                <td class="izq">Girona</td>
                 <td></td>
                 <td>0</td>
                 <td>0</td>
@@ -340,9 +395,10 @@
                 <td>0</td>
             </tr>
             <tr>
+                <td class="nada"></td>
                 <td>9</td>
-                <td><img src="../img/equipos/bet.png" alt="bet"></td>
-                <td>Betis</td>
+                <td><img src="../img/equipos/fcb.png" height="25px" alt="Escudo del FC Barcelona"></td>
+                <td class="izq">Barcelona</td>
                 <td></td>
                 <td>0</td>
                 <td>0</td>
@@ -369,9 +425,10 @@
                 <td>0</td>
             </tr>
             <tr>
+                <td class="nada"></td>
                 <td>10</td>
-                <td><img src="../img/equipos/cad.png" alt="cad"></td>
-                <td>Cádiz</td>
+                <td><img src="../img/equipos/cad.png" height="25px" alt="Escudo del Cádiz CF"></td>
+                <td class="izq">Cádiz</td>
                 <td></td>
                 <td>0</td>
                 <td>0</td>
@@ -398,9 +455,10 @@
                 <td>0</td>
             </tr>
             <tr>
+                <td class="nada"></td>
                 <td>11</td>
-                <td><img src="../img/equipos/cel.png" alt="cel"></td>
-                <td>Celta</td>
+                <td><img src="../img/equipos/lpa.png" height="25px" alt="Escudo del UD Las Palmas"></td>
+                <td class="izq">Las Palmas</td>
                 <td></td>
                 <td>0</td>
                 <td>0</td>
@@ -427,9 +485,10 @@
                 <td>0</td>
             </tr>
             <tr>
+                <td class="nada"></td>
                 <td>12</td>
-                <td><img src="../img/equipos/gir.png" alt="gir"></td>
-                <td>Girona</td>
+                <td><img src="../img/equipos/mll.png" height="25px" alt="Escudo del Mallorca FC"></td>
+                <td class="izq">Mallorca</td>
                 <td></td>
                 <td>0</td>
                 <td>0</td>
@@ -456,9 +515,10 @@
                 <td>0</td>
             </tr>
             <tr>
+                <td class="nada"></td>
                 <td>13</td>
-                <td><img src="../img/equipos/gra.png" alt="gra"></td>
-                <td>Granada</td>
+                <td><img src="../img/equipos/osa.png" height="25px" alt="Escudo del CA Osasuna"></td>
+                <td class="izq">Osasuna</td>
                 <td></td>
                 <td>0</td>
                 <td>0</td>
@@ -485,9 +545,10 @@
                 <td>0</td>
             </tr>
             <tr>
+                <td class="nada"></td>
                 <td>14</td>
-                <td><img src="../img/equipos/cel.png" alt="cel"></td>
-                <td>Celta</td>
+                <td><img src="../img/equipos/gra.png" height="25px" alt="Escudo del Granada CF"></td>
+                <td class="izq">Granada</td>
                 <td></td>
                 <td>0</td>
                 <td>0</td>
@@ -514,9 +575,10 @@
                 <td>0</td>
             </tr>
             <tr>
+                <td class="nada"></td>
                 <td>15</td>
-                <td><img src="../img/equipos/lpa.png" alt="lpa"></td>
-                <td>Las Palmas</td>
+                <td><img src="../img/equipos/rso.png" height="25px" alt="Escudo de la Real Sociedad"></td>
+                <td class="izq">Real Sociedad</td>
                 <td></td>
                 <td>0</td>
                 <td>0</td>
@@ -543,9 +605,10 @@
                 <td>0</td>
             </tr>
             <tr>
+                <td class="nada"></td>
                 <td>16</td>
-                <td><img src="../img/equipos/mll.png" alt="mll"></td>
-                <td>Mallorca</td>
+                <td><img src="../img/equipos/ala.png" height="25px" alt="Escudo del Deportivo Alavés"></td>
+                <td class="izq">Alavés</td>
                 <td></td>
                 <td>0</td>
                 <td>0</td>
@@ -572,9 +635,10 @@
                 <td>0</td>
             </tr>
             <tr>
+                <td class="nada"></td>
                 <td>17</td>
-                <td><img src="../img/equipos/osa.png" alt="osa"></td>
-                <td>Osasuna</td>
+                <td><img src="../img/equipos/get.png" height="25px" alt="Escudo del Getafe CF"></td>
+                <td class="izq">Getafe</td>
                 <td></td>
                 <td>0</td>
                 <td>0</td>
@@ -601,9 +665,10 @@
                 <td>0</td>
             </tr>
             <tr>
+                <td class="Descenso1"></td>
                 <td>18</td>
-                <td><img src="../img/equipos/rso.png" alt="rso"></td>
-                <td>Real Sociedad</td>
+                <td><img src="../img/equipos/rma.png" height="25px" alt="Escudo del Real Madrid CF"></td>
+                <td class="izq">Real Madrid</td>
                 <td></td>
                 <td>0</td>
                 <td>0</td>
@@ -629,10 +694,41 @@
                 <td>0</td>
                 <td>0</td>
             </tr>
-            <tr id="Descenso">
+            <tr>
+                <td class="Descenso1"></td>
+                <td>19</td>
+                <td><img src="../img/equipos/atm.png" height="25px" alt="Escudo del Atlético de Madrid"></td>
+                <td class="izq">Atlético</td>
+                <td></td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td></td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td></td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+            </tr>
+            <tr>
+                <td class="Descenso1"></td>
                 <td>20</td>
-                <td><img src="../img/equipos/vil.png" alt="vil"></td>
-                <td>Villarreal</td>
+                <td><img src="../img/equipos/bet.png" height="25px" alt="Escudo del Real Betis Balompié"></td>
+                <td class="izq">Betis</td>
                 <td></td>
                 <td>0</td>
                 <td>0</td>
@@ -658,80 +754,32 @@
                 <td>0</td>
                 <td>0</td>
             </tr>
-            <tr id="Descenso">
-                <td>21</td>
-                <td><img src="../img/equipos/val.png" alt="val"></td>
-                <td>Valencia</td>
-                <td></td>
-                <td>0</td>
-                <td>0</td>
-                <td>0</td>
-                <td>0</td>
-                <td>0</td>
-                <td>0</td>
-                <td>0</td>
-                <td></td>
-                <td>0</td>
-                <td>0</td>
-                <td>0</td>
-                <td>0</td>
-                <td>0</td>
-                <td>0</td>
-                <td>0</td>
-                <td></td>
-                <td>0</td>
-                <td>0</td>
-                <td>0</td>
-                <td>0</td>
-                <td>0</td>
-                <td>0</td>
-                <td>0</td>
-            </tr>
-            <tr id="Descenso">
-                <td>22</td>
-                <td><img src="../img/equipos/rva.png" alt="rva"></td>
-                <td>Rayo</td>
-                <td></td>
-                <td>0</td>
-                <td>0</td>
-                <td>0</td>
-                <td>0</td>
-                <td>0</td>
-                <td>0</td>
-                <td>0</td>
-                <td></td>
-                <td>0</td>
-                <td>0</td>
-                <td>0</td>
-                <td>0</td>
-                <td>0</td>
-                <td>0</td>
-                <td>0</td>
-                <td></td>
-                <td>0</td>
-                <td>0</td>
-                <td>0</td>
-                <td>0</td>
-                <td>0</td>
-                <td>0</td>
-                <td>0</td>
-            </tr>
-
         </tbody>
         <tfoot>
             <tr>
-                <td id="Champions">Champions League</td>
-                <td id="Europa">Europa League</td>
-                <td id="Descenso">Descenso</td>
-                <td>PT: Puntos Totales</td>
-                <td>PJ: Partidos Jugados</td>
-                <td>PG: Partidos Ganados</td>
+                <th></th>
             </tr>
+            <tr></tr>
+                <th colspan="1" class="Champions"></th>
+                <th colspan="3">Champions League</th>
+                <th colspan="1" class="Europa"></th>
+                <th colspan="3">Europa League</th>
+                <th colspan="1" class="Descenso"></th>
+                <th colspan="3">Descenso</th>
+                <th></th>
+                <th colspan="4">PT: Puntos Totales</th>
+                <th colspan="4">PJ: Partidos Jugados</th>
+                <th colspan="6">PJ: Partidos Ganados</th>
             <tr>
-                <td>PE: Partidos Empatados</td>
-                <td>PP: Partidos Perdidos</td>
-                <td>GF: Goles a Favor</td>
-                <td>GC: Goles en Contra</td>
+            <tr>
+                <th colspan="4">PE: Partidos Empatados</th>
+                <th colspan="1"></th>
+                <th colspan="3">PP: Partidos Perdidos</th>
+                <th colspan="1"></th>
+                <th colspan="3">GF: Goles a favor</th>
+                <th></th>
+                <th colspan="4">GC: Goles en contra</th>
+                <th colspan="11"></th>
             </tr>
         </tfoot>
 
