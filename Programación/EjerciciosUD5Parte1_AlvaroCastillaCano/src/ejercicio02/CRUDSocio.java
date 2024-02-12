@@ -51,8 +51,10 @@ public class CRUDSocio {
 		}
 	}
 	
-	public void modificarNota(Socio s, double cuotaNueva) {
-		s.setCuota(cuotaNueva);
+	public void modificarSocio(int id, double cuotaNueva) {
+		for (int i = 0; i < lista.size(); i++) {
+			lista.get(i).setCuota(cuotaNueva);
+		}
 	}
 	
 	

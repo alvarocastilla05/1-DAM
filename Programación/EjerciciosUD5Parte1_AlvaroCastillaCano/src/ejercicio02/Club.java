@@ -5,6 +5,7 @@ public class Club {
 	//Aquí debemos de hacer los métodos que no sean CRUD.
 	
 	private String nombre;
+	private CRUDSocio cr;
 	
 
 }

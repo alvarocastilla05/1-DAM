@@ -16,7 +16,7 @@ public class Principal {
 		
 		List <Socio> lista = new ArrayList <Socio>();
 		
-		Socio s = new Socio(id, nombre, cuota);
+		
 		
 		lista.add(new Socio(1, "Alvaro", 25.5));
 		lista.add(new Socio(2, "Lucas", 50));
@@ -46,11 +46,15 @@ public class Principal {
 		cr.deleteSocio(id);
 		cr.mostrarLista();
 		
+		System.out.println("****************************************************************************");
+		
 		System.out.println("Introduzca la cuota nueva:");
 		aux=sc.nextLine();
 		cuotaNueva=Double.parseDouble(aux);
 		
-		cr.modificarNota(, cuotaNueva);
+		cr.modificarSocio(id, cuotaNueva);
+		
+		cr.mostrarLista();
 		
 		
 	}
