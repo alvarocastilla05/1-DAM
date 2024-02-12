@@ -38,6 +38,8 @@ public class Principal {
 		System.out.println(lista2);
 		a.setNombre("Miguel");
 		System.out.println(lista2);
+		
+		
 	}
 
 }
