@@ -28,22 +28,18 @@ public class CRUDSocio {
 	}
 	
 	public Socio findById (int id) {
-		Socio tem = null;
+		Socio s = null;
 		boolean salir = false;
 		
 		for (int i = 0; i < lista.size() && !salir; i++) {
 			if(lista.get(i).getId()==id) {
-				tem = lista.get(i);
+				s = lista.get(i);
 				salir = true;
 			}
 		}
-		return tem;
+		return s;
 	}
-	public void mostrarLista() {
-		for (Socio s : lista) {
-			System.out.println(s);
-		}
-	}
+
 	
 	public void deleteSocio(int id) {
 		if(findById(id)!=null) {
@@ -51,10 +47,9 @@ public class CRUDSocio {
 		}
 	}
 	
-	public void modificarSocio(int id, double cuotaNueva) {
-		for (int i = 0; i < lista.size(); i++) {
-			lista.get(i).setCuota(cuotaNueva);
-		}
+	//No se puede dar como parametro socio y el atributo con el que busqué, o uno u otro pero los dos juntos NO. 
+	public void modificarSocio(Socio s, double cuotaNueva) {
+		s.setCuota(cuotaNueva);
 	}
 	
 	

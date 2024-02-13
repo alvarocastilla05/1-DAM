@@ -13,6 +13,7 @@ public class Principal {
 		String aux;
 		Scanner sc = new Scanner(System.in);
 		double cuotaNueva;
+		String nombre = "The Club";
 		
 		List <Socio> lista = new ArrayList <Socio>();
 		
@@ -23,12 +24,13 @@ public class Principal {
 		lista.add(new Socio(3, "Juan Carlos", 30));
 		
 		CRUDSocio cr = new CRUDSocio(lista);
+		Club c = new Club(nombre, cr);
 		
 		
 		System.out.println("Bienvenido a mi programa donde vamos a gestionar los socios de un club");
 		System.out.println("**************************************************************************");
 		
-		cr.mostrarLista();
+		c.mostrarLista();
 		
 		System.out.println("**************************************************************************");
 
@@ -44,17 +46,21 @@ public class Principal {
 		id=Integer.parseInt(aux);
 		
 		cr.deleteSocio(id);
-		cr.mostrarLista();
+		c.mostrarLista();
 		
 		System.out.println("****************************************************************************");
+		
+		System.out.println("Introduzca el ID del socio que desea modificar:");
+		aux=sc.nextLine();
+		id=Integer.parseInt(aux);
 		
 		System.out.println("Introduzca la cuota nueva:");
 		aux=sc.nextLine();
 		cuotaNueva=Double.parseDouble(aux);
 		
-		cr.modificarSocio(id, cuotaNueva);
+		cr.modificarSocio(cr.findById(id), cuotaNueva);
 		
-		cr.mostrarLista();
+		c.mostrarLista();
 		
 		
 	}
