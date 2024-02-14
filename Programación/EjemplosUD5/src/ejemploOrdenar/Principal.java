@@ -2,12 +2,15 @@ package ejemploOrdenar;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Scanner;
 
 public class Principal {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 
+		String aux;
+		Scanner sc = new Scanner(System.in);
 		int opcioUser, pos = 0;
 		//Coleccion de corredores 
 		List <Corredor> corredores = new ArrayList <Corredor>();
@@ -25,6 +28,8 @@ public class Principal {
 				System.out.println("""
 						1-
 						""");
+				aux=sc.nextLine();
+				opcioUser=Integer.parseInt(aux);
 				
 				
 				
