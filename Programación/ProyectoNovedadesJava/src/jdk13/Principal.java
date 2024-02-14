@@ -8,8 +8,9 @@ public class Principal {
 		double factura  = 30;
 		int envio = 5;
 		int descuento = 0;
+		int op1 = 1;
 		
-		descuento=switch(envio) {
+		descuento=switch(op1) {
 			case 1,2,3->{
 				int op = envio*2;
 				yield op;
@@ -23,11 +24,17 @@ public class Principal {
 		System.out.println(factura*100/(100+descuento));
 		
 		System.out.println("""
-				1-Hola que tal.
-				2-Probando cosas.
-				3-Me aburro.
+				Hola me llamo Álvaro y estoy realizando
+				un proyecto de programación
 				""");
 		
+		System.out.println("Hola me llamo Álvaro \n"
+				+ "y estoy realizando un proyecto de programación");
+		
+		
+		
+		
+			
 		
 	}
 }
