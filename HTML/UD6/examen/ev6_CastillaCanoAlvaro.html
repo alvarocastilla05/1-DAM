@@ -16,6 +16,20 @@
 
 			FUENTE:  Lacquer (está incluida a través de la etiqueta link);
 		*/
+	body {
+		color: white;
+		background-color: #FF6F61;
+	}
+
+	form {
+		background-color: #FE840E;
+		border: 5px solid yellow;
+		width: 80%;
+		margin-left: 175px;
+		margin-right: 250px;
+
+	}
+
 	.checkbox {
 		display: flex;
 		flex: 1 1 auto;
@@ -24,10 +38,69 @@
 	.columnas {
 		margin-right: 50px;
 	}
-	.caja2{
+
+	.caja2 {
 		display: flex;
-		
+
 		width: 100%;
+	}
+	.caja2>fieldset{
+		width: 50%;
+	}
+
+	tbody {
+		text-align: center;
+	}
+
+	table {
+
+		border: 5px solid yellow;
+		background-color: #FE840E;
+		border-collapse: collapse;
+		/*Sirve para evitar la doble linea, es decir, el duplicado de los bordes.*/
+		caption-side: bottom;
+		width: 65%;
+		margin-left: 300px;
+		margin-right: 250px;
+		font-size: 1.5em;
+		text-align: center;
+
+	}
+
+	.primera{
+		width: 55%;
+	}
+
+	td,
+	th {
+		width: 15%;
+		border: 1px solid yellow;
+		vertical-align: middle;
+
+	}
+	h1, h2, caption{
+		font-family: Lacquer, Arial, Helvetica, sans-serif;
+		text-align: center;
+	}
+	tfoot{
+		text-align: left;
+		font-size: 0.7em;
+	}
+	hr{
+		color: yellow;
+	}
+	input:focus{
+        
+            color: darkred;
+            background-color: lightpink;
+            outline: none;
+            border: 3px solid darkred;
+        }
+	.checkbox::selection{
+		color: yellow;
+	}
+	fieldset{
+		border: 1px solid yellow;
 	}
 </style>
 
@@ -36,7 +109,7 @@
 	<h2>Alquiler online de disfraces</h2>
 	<form>
 		<fieldset>
-			<label class="titulo" for="disfraz">Elija su disfraz</label><br>
+			<legend>Elija su disfraz</legend>
 			<label for="disfraz">¿Qué tipo de alquiler desea?</label>
 			<select name="disfraz" id="disfraz" required>
 				<option value="Com">Completo </option>
@@ -86,22 +159,22 @@
 		</fieldset>
 		<div class="caja2">
 			<fieldset>
-				<label class="titulo" for="datos">Indique sus datos personales</label>
-					<label for="nombre">Nombre y apellidos</label>
-					<input type="text" required >
-					<label for="correo">Correo Electrónico</label>
-					<input type="email" name="correo" id="correo"><br><br>
-					<label for="codpostal">Código Postal</label>
-					<input type="text" name="codpostal" id="codpostal" maxlength="5" size="5" pattern="[0-9]{5}"
-						required placeholder="41024"><br><br>
-					<label for="tlf">Teléfono de contacto</label>
-					<input type="text" name="tlf" id="tlf" maxlength="9" size="9" pattern="[0-9]{9}" required
-						placeholder="954123123"><br>
+				<legend>Indique sus datos personales</legend>
+				<label for="nombre">Nombre y apellidos</label>
+				<input type="text" required placeholder="Nombre y Apellidos" size="50"><br>
+				<label for="correo">Correo Electrónico</label>
+				<input type="email" name="correo" id="correo" placeholder="NoMePongoEsoNiLoc@disfraces.com" size="75"><br>
+				<label for="codpostal">Código Postal</label>
+				<input type="text" name="codpostal" id="codpostal" maxlength="5" size="5" pattern="[0-9]{5}" required
+					placeholder="41024"><br><br>
+				<label for="tlf">Teléfono de contacto</label>
+				<input type="text" name="tlf" id="tlf" maxlength="9" size="9" pattern="[0-9]{9}" required
+					placeholder="954123123"><br>
 
 			</fieldset>
-		
-		<fieldset>
-			<label class="titulo" for="pago">Indique sus datos de pago</label>
+
+			<fieldset>
+				<legend>Indique sus datos de pago</legend>
 				<label for="tarjeta">Número de tarjeta</label>
 				<input type="" name="tarjeta" id="tarjeta" maxlength="16" size="16" pattern="[0-9]{16}" required
 					placeholder="16 cifras sin espacios"><br><br>
@@ -110,59 +183,67 @@
 				<label for="ccv">Código de Seguridad (CCV)</label>
 				<input type="" name="ccv" id="ccv" maxlength="3" size="3" pattern="[0-9]{3}" required
 					placeholder="123"><br><br>
-		</fieldset>
-	</div>
+			</fieldset>
+		</div>
 		<p>
-			<input type="" value="Solicitar Reserva">
-			<input type="" value="Borrar datos">
+			<input type="submit" name="enviar" value="Solicitar Reserva">
+			<input type="reset" name="reset" value="Borrar datos">
 		</p>
 	</form>
 
 	<hr />
 
-	<table>
-		Tarifas 2022
+	<table summary="tabla Tarifas">
+		<caption>Tarifas 2022</caption>
+		<thead>
 
-		<th>Categoría</th>
-		<th>Traje</th>
-		<th>Máscara</th>
-		<th>Completo</th>
+			<th class="primera">Categoría</th>
+			<th>Traje</th>
+			<th>Máscara</th>
+			<th>Completo</th>
 
-		<td>Animales, plantas, objetos</td>
-		<td>15€</td>
-		<td>15€</td>
-		<td>25€</td>
+		</thead>
+		<tbody>
+			<tr>
+				<td>Animales, plantas, objetos</td>
+				<td>15€</td>
+				<td>15€</td>
+				<td>25€</td>
+			</tr>
+			<tr>
+				<td>Personas y personajes</td>
+				<td>10€</td>
+				<td>10€</td>
+				<td>15€</td>
+			</tr>
+			<tr>
+				<td>Vehículos</td>
+				<td>15€</td>
+				<td>15€</td>
+				<td>25€</td>
+			</tr>
+			<tr>
+				<td>Inclasificables</td>
+				<td>20€</td>
+				<td>20€</td>
+				<td>35€</td>
+			</tr>
+			<tr>
+				<td rowspan="2">Envío</td>
+				<td colspan="3">Península: 10€.</td>
 
-		<td>Personas y personajes</td>
-		<td>10€</td>
-		<td>10€</td>
-		<td>15€</td>
+			</tr>
+			<tr>
+				<td colspan="3">Otros destinos: consultar</td>
 
-		<td>Vehículos</td>
-		<td>15€</td>
-		<td>15€</td>
-		<td>25€</td>
-
-		<td>Inclasificables</td>
-		<td>20€</td>
-		<td>20€</td>
-		<td>35€</td>
-
-		<td>Envío</td>
-		<td>Península: 10€.</td>
-		<td></td>
-		<td></td>
-
-		<td>Otros destinos: consultar</td>
-		<td></td>
-		<td></td>
-		<td></td>
-
-		<td>NOTA: Todos los precios son por día de alquiler, incluyen IVA, servicio de limpieza y desinfección. Envío no
-			incluido</td>
-		<td></td>
-		<td></td>
-		<td></td>
+			</tr>
+		</tbody>
+		<tfoot>
+			<td colspan="4">NOTA: Todos los precios son por día de alquiler, incluyen IVA, servicio de limpieza y
+				desinfección.
+				Envío no
+				incluido</td>
+		</tfoot>
 
 
 	</table>
