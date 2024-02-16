@@ -26,7 +26,10 @@ public class Principal {
 			
 			do {
 				System.out.println("""
-						1-
+						0-Salir.
+						1-Ordenar por nombre.
+						2-Ordenar por marca.
+						3-Ordenar por dorsal.
 						""");
 				aux=sc.nextLine();
 				opcioUser=Integer.parseInt(aux);
