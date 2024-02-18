@@ -1,5 +1,6 @@
 package ejercicio03;
 
+import java.util.Iterator;
 import java.util.Set;
 
 public class CrudAlumno {
@@ -32,7 +33,32 @@ public class CrudAlumno {
 	}
 	
 	public Alumno findById(int id) {
+		Iterator<Alumno> it = lista.iterator();
+		boolean encontrado = false;
+		Alumno a = null;
 		
+		while(it.hasNext() && !encontrado) {
+			a = it.next();
+			if(a.getId()==id) {
+				encontrado = true;
+			}
+		}
+		if(encontrado) {
+			return a;
+		}else {
+			return null;
+		}
+	}
+	
+	
+	public void eliminarAlumno (int id) {
+		if(findById(id) != null) {
+			lista.remove(findById(id));
+		}
+	}
+	
+	public void modificarAlumno (int id, double nuevaNotaMedia) {
+		findById(id).setNotaMedia(nuevaNotaMedia);
 	}
 	
 	

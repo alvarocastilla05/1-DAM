@@ -10,10 +10,14 @@ public class Principal {
 	
 		String aux;
 		int op;
+		int id;
+		double notaMediaNueva;
 		Scanner sc = new Scanner(System.in);
 		Set<Alumno> lista = new HashSet <> ();
 		
 		CrudAlumno cr = new CrudAlumno(lista);
+		CentroEducativo ce = new CentroEducativo("Colegio", cr);
+		
 		
 		cr.addAlumno(new Alumno(1, "Alvaro", 18, 8.5));
 		cr.addAlumno(new Alumno(2, "Lucas", 18, 9));
@@ -31,7 +35,42 @@ public class Principal {
 			
 			switch(op) {
 				case 1:
+					ce.mostrarLista();
+					System.out.println("**************************************");
 					
+					System.out.println("Introduzca el id del alumno que busca:");
+					aux=sc.nextLine();
+					id=Integer.parseInt(aux);
+					
+					System.out.println(cr.findById(id));
+					
+					break;
+				case 2: 
+					ce.mostrarLista();
+					System.out.println("**************************************");
+					
+					System.out.println("Introduzca el id del alumno que desea eliminar:");
+					aux=sc.nextLine();
+					id=Integer.parseInt(aux);
+					
+					cr.eliminarAlumno(id);
+					ce.mostrarLista();
+					break;
+				case 3:
+					ce.mostrarLista();
+					System.out.println("**************************************");
+					
+					System.out.println("Introduzca el id del alumno que desea modificar:");
+					aux=sc.nextLine();
+					id=Integer.parseInt(aux);
+					
+					System.out.println("Introduzca su nueva nota media:");
+					aux=sc.nextLine();
+					notaMediaNueva=Double.parseDouble(aux);
+					
+					cr.modificarAlumno(id, notaMediaNueva);
+					
+					ce.mostrarLista();
 			}
 		}while(op!=0);
 	}

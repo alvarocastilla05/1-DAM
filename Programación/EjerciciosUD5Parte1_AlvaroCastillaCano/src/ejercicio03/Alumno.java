@@ -51,9 +51,10 @@ public class Alumno {
 		this.notaMedia = notaMedia;
 	}
 	//toString
+	
 	@Override
 	public String toString() {
-		return "Alumno [id=" + id + ", nombre=" + nombre + ", edad=" + edad + "]";
+		return "Alumno [id=" + id + ", nombre=" + nombre + ", edad=" + edad + ", notaMedia=" + notaMedia + "]";
 	}
 
 	//hashCode y equals
@@ -61,6 +62,8 @@ public class Alumno {
 	public int hashCode() {
 		return Objects.hash(edad, id, nombre);
 	}
+
+	
 
 	@Override
 	public boolean equals(Object obj) {
@@ -73,6 +76,8 @@ public class Alumno {
 		Alumno other = (Alumno) obj;
 		return edad == other.edad && id == other.id && Objects.equals(nombre, other.nombre);
 	}
+	
+
 	
 	
 	
