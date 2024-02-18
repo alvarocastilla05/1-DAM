@@ -23,6 +23,15 @@ public class CrudContacto {
 		return "CrudContacto [agenda=" + agenda + "]";
 	}
 	
-	
-	
+	/*
+	public Contacto findByNombre (String nombre) {
+		
+        if (agenda.containsKey(nombre)) {
+            Contacto numeroDeTelefono = agenda.get(nombre);
+            System.out.println("El número de teléfono de " + nombre + " es: " + numeroDeTelefono);
+        } else {
+            System.out.println("No se encontró ningún contacto con el nombre: " + nombrezz);
+        }
+        */
+	}
 }
