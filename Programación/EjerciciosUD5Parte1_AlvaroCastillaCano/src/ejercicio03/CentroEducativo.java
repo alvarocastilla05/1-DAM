@@ -30,13 +30,14 @@ public class CentroEducativo {
 	public String toString() {
 		return "CentroEducativo [nombre=" + nombre + ", cr=" + cr + "]";
 	}
-	
+	/*
 	public void mostrarLista() {
 		for (Alumno a : cr.getLista()) {
 			System.out.println(a);
 		}
 		
-	}
+	}*/
+	
 	
 	
 }

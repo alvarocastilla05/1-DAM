@@ -25,17 +25,20 @@ public class Principal {
 
 		System.out.println("Bienvenido al programa de gestión de alumnos");
 		do {
+			System.out.println("-----------------------------");
 			System.out.println("""
+					0-Salir
 					1-Buscar un alumno.
 					2-Eliminar alumno.
 					3-Modificar alumno
 					""");
+			System.out.println("-----------------------------");
 			aux=sc.nextLine();
 			op=Integer.parseInt(aux);
 			
 			switch(op) {
 				case 1:
-					ce.mostrarLista();
+					cr.mostrarLista();
 					System.out.println("**************************************");
 					
 					System.out.println("Introduzca el id del alumno que busca:");
@@ -46,7 +49,7 @@ public class Principal {
 					
 					break;
 				case 2: 
-					ce.mostrarLista();
+					cr.mostrarLista();
 					System.out.println("**************************************");
 					
 					System.out.println("Introduzca el id del alumno que desea eliminar:");
@@ -54,10 +57,11 @@ public class Principal {
 					id=Integer.parseInt(aux);
 					
 					cr.eliminarAlumno(id);
-					ce.mostrarLista();
+					/*ce.mostrarLista();*/
+					cr.mostrarLista();
 					break;
 				case 3:
-					ce.mostrarLista();
+					cr.mostrarLista();
 					System.out.println("**************************************");
 					
 					System.out.println("Introduzca el id del alumno que desea modificar:");
@@ -70,7 +74,14 @@ public class Principal {
 					
 					cr.modificarAlumno(id, notaMediaNueva);
 					
-					ce.mostrarLista();
+					cr.mostrarLista();
+					break;
+				case 0:
+					System.out.println("Gracias por utilizar este programa :)");
+					break;
+				default: 
+					System.out.println("Opción no válida");
+					break;
 			}
 		}while(op!=0);
 	}

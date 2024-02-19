@@ -62,6 +62,9 @@ public class Principal {
 					System.out.println("Introduzca el nombre del contacto que desea eliminar:");
 					nombre=sc.nextLine();
 					
+					cr.borrarContacto(nombre);
+					
+					System.out.println(agenda);
 					
 					break;
 				case 3:
@@ -71,6 +74,7 @@ public class Principal {
 					System.out.println("Introduzca el nombre del contacto que busca:");
 					nombre=sc.nextLine();
 					
+					System.out.println(cr.findByNombre(nombre));
 					
 					break;
 				case 0:

@@ -32,6 +32,15 @@ public class CrudAlumno {
 		lista.add(a);
 	}
 	
+	public void mostrarLista() {
+		for (Alumno a : lista) {
+			System.out.println(a);
+		}
+		
+	}
+	
+	
+	//Buscar con Iterator.
 	public Alumno findById(int id) {
 		Iterator<Alumno> it = lista.iterator();
 		boolean encontrado = false;
@@ -48,6 +57,19 @@ public class CrudAlumno {
 		}else {
 			return null;
 		}
+	}
+	
+	//Buscar con forEach.
+	public Alumno findByIdV2(int id) {
+		
+		if(lista.size() != 0) {
+			for (Alumno alumno : lista) {
+				if(alumno.getId() == id) {
+					return alumno;
+				}
+			}
+		}
+		return null;
 	}
 	
 	

@@ -29,22 +29,22 @@ public class CrudContacto {
 	
 	
 	public Contacto findByNombre(String nombre) {
-		boolean encontrado = false;
+		
 		for (Contacto c : agenda.values()) {
 			if(c.getNombre().equalsIgnoreCase(nombre)) {
-				encontrado = true;
+				return c;
 			}
 		}
-		if(encontrado) {
-			return c;
-		}
+		return null;
 	}
 	
 	public void modificarContacto(Contacto c, String nombreNuevo) {
 		
 	}
 	
-	public void borraContacto(Contacto c) {
-		
+	public void borrarContacto(String nombre) {
+		if(findByNombre(nombre) != null) {
+			agenda.remove(findByNombre(nombre));
+		}
 	}
 }
