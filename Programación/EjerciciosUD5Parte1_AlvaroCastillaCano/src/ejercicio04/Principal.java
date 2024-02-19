@@ -62,7 +62,7 @@ public class Principal {
 					System.out.println("Introduzca el nombre del contacto que desea eliminar:");
 					nombre=sc.nextLine();
 					
-					cr.borrarContacto(nombre);
+					cr.borrarContacto(cr.findByNombre(nombre));
 					
 					System.out.println(agenda);
 					
