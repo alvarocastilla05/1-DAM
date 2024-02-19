@@ -23,15 +23,28 @@ public class CrudContacto {
 		return "CrudContacto [agenda=" + agenda + "]";
 	}
 	
-	/*
-	public Contacto findByNombre (String nombre) {
+	public void addContacto(int telefono, Contacto c) {
+		agenda.put(telefono, c);
+	}
+	
+	
+	public Contacto findByNombre(String nombre) {
+		boolean encontrado = false;
+		for (Contacto c : agenda.values()) {
+			if(c.getNombre().equalsIgnoreCase(nombre)) {
+				encontrado = true;
+			}
+		}
+		if(encontrado) {
+			return c;
+		}
+	}
+	
+	public void modificarContacto(Contacto c, String nombreNuevo) {
 		
-        if (agenda.containsKey(nombre)) {
-            Contacto numeroDeTelefono = agenda.get(nombre);
-            System.out.println("El número de teléfono de " + nombre + " es: " + numeroDeTelefono);
-        } else {
-            System.out.println("No se encontró ningún contacto con el nombre: " + nombrezz);
-        }
-        */
+	}
+	
+	public void borraContacto(Contacto c) {
+		
 	}
 }
