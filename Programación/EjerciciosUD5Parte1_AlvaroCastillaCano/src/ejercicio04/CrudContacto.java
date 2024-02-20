@@ -46,5 +46,6 @@ public class CrudContacto {
 		if(findByNombre(nombre) != null) {
 			agenda.remove(findByNombre(nombre));
 		}
+		/*agenda.remove(c);*/
 	}
 }
