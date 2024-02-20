@@ -7,6 +7,8 @@
 		<item key="WizardProjectsImportPage.STORE_CLOSE_CREATED_PROJECTS_ID" value="false"/>
 		<item key="WizardProjectsImportPage.STORE_HIDE_CONFLICTING_PROJECTS_ID" value="false"/>
 		<list key="WizardProjectsImportPage.STORE_DIRECTORIES">
+			<item value="C:\Users\castilla.caalv24_tri\Desktop\1-DAM\Programación\EjemplosUD5"/>
+			<item value="C:\Users\castilla.caalv24_tri\Desktop\1-DAM\Programación\EjerciciosUD5Parte1_AlvaroCastillaCano"/>
 			<item value="C:\Users\alvar\OneDrive\Escritorio\1-DAM\Programación\EjemplosUD5"/>
 			<item value="C:\Users\alvar\OneDrive\Escritorio\1-DAM\Programación\EjerciciosUD5Parte1_AlvaroCastillaCano"/>
 			<item value="C:\Users\alvar\OneDrive\Escritorio\1-DAM\Programación\ProyectoNovedadesJava"/>
@@ -14,8 +16,6 @@
 			<item value="C:\Users\castilla.caalv24_tri\Desktop\1-DAM\Programación\UD5\UD5EjemploCrud"/>
 			<item value="C:\Users\castilla.caalv24_tri\Desktop\1-DAM\Programación\UD5\EjemploOrdenarUD5"/>
 			<item value="C:\Users\castilla.caalv24_tri\Desktop\1-DAM\Programación\ProyectoNovedadesJava"/>
-			<item value="C:\Users\castilla.caalv24_tri\Desktop\1-DAM\Programación\EjemplosUD5"/>
-			<item value="C:\Users\castilla.caalv24_tri\Desktop\1-DAM\Programación\EjerciciosUD5Parte1_AlvaroCastillaCano"/>
 			<item value="C:\Users\castilla.caalv24_tri\Desktop\1-DAM\Programación\UD4\EjemplosUD4_AlvaroCastilla"/>
 			<item value="C:\Users\castilla.caalv24_tri\Desktop\1-DAM\Programación\UD4\ExamenUD4_AlvaroCastillaCano"/>
 			<item value="C:\Users\castilla.caalv24_tri\Desktop\1-DAM\Programación\UD4\EjerciciosPolimorfismo"/>
