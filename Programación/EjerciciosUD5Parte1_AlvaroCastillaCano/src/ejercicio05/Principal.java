@@ -1,6 +1,7 @@
 package ejercicio05;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 import java.util.Scanner;
 
@@ -28,6 +29,29 @@ public class Principal {
 		for (Persona p : lista) {
 			System.out.println(p);
 		}
+		
+		do {
+			System.out.println("********************************************");
+			System.out.println("""
+					0-Salir.
+					1-Ordenar por nombre.
+					""");
+			aux=sc.nextLine();
+			op=Integer.parseInt(aux);
+			
+			switch(op) {
+				case 1:
+					Collections.sort(lista, new ComparaPorNombre());
+					System.out.println();
+					for (Persona p : lista) {
+						System.out.println(p);
+					}
+					break;
+				case 2:
+					
+			}
+			
+		}while(op!=0);
 	}
 
 }
