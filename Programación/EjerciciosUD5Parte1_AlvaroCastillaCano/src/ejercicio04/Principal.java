@@ -13,6 +13,7 @@ public class Principal {
 		String aux;
 		int op, telefono;
 		String nombre;
+		String nombreNuevo;
 		Scanner sc = new Scanner(System.in);
 		
 		
@@ -62,12 +63,17 @@ public class Principal {
 					System.out.println("Introduzca el nombre del contacto que desea eliminar:");
 					nombre=sc.nextLine();
 					
-					cr.borrarContacto(cr.findByNombre(nombre));
+					cr.borrarContacto(nombre);
 					
 					System.out.println(agenda);
 					
 					break;
 				case 3:
+					System.out.println("Introduzca el nombre del contacto que desea modificar:");
+					nombre = sc.nextLine();
+					
+					System.out.println("Introduzca el nuevo nombre:");
+					nombreNuevo = sc.nextLine();
 					
 					break;
 				case 4:
