@@ -11,23 +11,24 @@ public class Principal {
 		// TODO Auto-generated method stub
 
 		String aux;
-		int op, telefono;
+		int op;
+		String telefono;
 		String nombre;
 		String nombreNuevo;
 		Scanner sc = new Scanner(System.in);
 		
 		
 		
-		Contacto c1 = new Contacto("Alvaro");
-		Contacto c2 = new Contacto("Angel");
-		Contacto c3 = new Contacto("Lucas");
+		Contacto c1 = new Contacto("Alvaro", "675314070");
+		Contacto c2 = new Contacto("Angel", "659883212");
+		Contacto c3 = new Contacto("Lucas", "611905014");
 		
-		Map<Integer, Contacto> agenda = new HashMap<Integer, Contacto>();
+		Map<Contacto, String> agenda = new HashMap<Contacto, String>();
 		CrudContacto cr = new CrudContacto(agenda);
 		
-		agenda.put(675314070, c1);
-		agenda.put(659883212, c2);
-		agenda.put(611905014, c3);
+		agenda.put(c1, "675314070");
+		agenda.put(c2,"659883212");
+		agenda.put(c3, "611905014");
 		
 		System.out.println("Bienvenido al programa de gestión de contactos.");
 		System.out.println("**************************************************");
@@ -47,13 +48,12 @@ public class Principal {
 			switch(op) {
 				case 1:
 					System.out.println("Indique el número de teléfono nuevo:");
-					aux=sc.nextLine();
-					telefono=Integer.parseInt(aux);
+					telefono=sc.nextLine();
 					
 					System.out.println("Indique el nombre del contacto");
 					nombre=sc.nextLine();
 					
-					Contacto c = new Contacto(nombre);
+					Contacto c = new Contacto(nombre, telefono);
 					
 					cr.addContacto(telefono, c);
 					
@@ -69,18 +69,22 @@ public class Principal {
 					
 					break;
 				case 3:
+					
+				case 4:
+					System.out.println("Introduzca el nombre del contacto que busca:");
+					nombre=sc.nextLine();
+					
+					System.out.println(cr.findByNombreV2(nombre));
+					
+					break;
+				case 5:
 					System.out.println("Introduzca el nombre del contacto que desea modificar:");
 					nombre = sc.nextLine();
 					
 					System.out.println("Introduzca el nuevo nombre:");
 					nombreNuevo = sc.nextLine();
 					
-					break;
-				case 4:
-					System.out.println("Introduzca el nombre del contacto que busca:");
-					nombre=sc.nextLine();
-					
-					System.out.println(cr.findByNombre(nombre));
+					cr.modificarContacto(nombre, nombreNuevo);
 					
 					break;
 				case 0:
