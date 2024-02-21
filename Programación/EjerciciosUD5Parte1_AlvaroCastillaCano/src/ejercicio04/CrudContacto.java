@@ -69,11 +69,12 @@ public class CrudContacto {
 		}
 	}
 	
+	/*
 	public void imprimirAgenda() {
 		System.out.println("Agenda");
 		System.out.println("-".repeat(40));
 		for(Map.Entry<Contacto, String> entrada : agenda) {
 			Contacto c = entrada.getKey()
 		}
-	}
+	}*/
 }
