@@ -35,12 +35,15 @@ public class Principal {
 			System.out.println("""
 					0-Salir.
 					1-Ordenar por nombre.
+					2-Ordenado por edad.
 					""");
 			aux=sc.nextLine();
 			op=Integer.parseInt(aux);
 			
 			switch(op) {
 				case 1:
+					System.out.println("Ordenado por Nombre");
+					
 					Collections.sort(lista, new ComparaPorNombre());
 					System.out.println();
 					for (Persona p : lista) {
@@ -48,6 +51,12 @@ public class Principal {
 					}
 					break;
 				case 2:
+					Collections.sort(lista);
+					
+					for (Persona p : lista) {
+						System.out.println(p);
+					}
+					break;
 					
 			}
 			

@@ -56,6 +56,17 @@ public class Persona {
 	}
 	
 	
+	//Natural -->compareTo(p1)     NoNatural-->compare(p1, p2)
+	public int compareTo(Persona p) {
+		if(this.edad < p.getEdad()) {
+			return -1;
+		}else if (this.edad > p.getEdad()){
+			return 1;
+		}
+		return 0;
+	}
+	
+	
 	
 	
 	
