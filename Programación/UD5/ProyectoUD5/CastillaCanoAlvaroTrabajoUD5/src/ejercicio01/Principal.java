@@ -5,6 +5,7 @@ import java.util.Scanner;
 
 public class Principal {
 
+
 	/*Crea una tienda de figuras, todas las figuras van a tener un precio base, y su precio final se calculará multiplicando este por su área.
 	 *  Crea la tienda con record para así implementar una de las novedades de Java.
 		Crea una clase Figura, que tan solo permita heredar a sus dos hijas y tenga un método para calcular el área. Crea dos 
@@ -37,6 +38,9 @@ public class Principal {
 		Figura c2 = new Circulo(5, precioBase);
 		Figura cu2 = new Cuadrado(10, precioBase);
 		
+		Circulo c = new Circulo(1.5, precioBase);
+		Cuadrado cu = new Cuadrado(5, precioBase);
+		
 		Figura [] lista = new Figura[tam];
 		
 		lista[0]=c1;
@@ -51,6 +55,7 @@ public class Principal {
 		
 		do {
 			System.out.println("""
+					0-Salir
 					1-Mostrar lista con aviso
 					2-Sorteooo!!
 					3-Calcular area de un circulo con mensaje.
@@ -89,19 +94,16 @@ public class Principal {
 					break;
 				case 3:
 					/*Como podemos ver, en este ejemplo de Pattern en switchs, comprueba de que tipo es la figura, y depende del tipo que sea
-					 * mostrara una frase u otra*/
-					 */
+					 * mostrara una frase u otra
+					 * Este da error porque aunque se aplicara en Java 17, no se puede utilizar hasta Java 21.
+					/*
 					String mensaje = switch (c1) {
-					case Circulo c -> "Circulo con area de " + c.area();
-					case Cuadrado cu -> "Cuadrado con area de" + cu.area();
+					case c -> "Circulo con area de " + c.calcularArea();
+					case cu -> "Cuadrado con area de" + cu.calcularArea();
 					default -> "Figura desconocida";
-					
-					/*De sin usar String y double, ees un ejemplo para comprobar si de esta manera no da error*/
-					double area2=switch(Figura f) {
-					case Circulo c -> Math.PI*c.getRadio()*c.getRadio();
-					case Cuadrado cu -> cu.getLado()*cu.getLado();
-					default ->0;
 					};
+					*/
+					
 					break;
 				case 0: 
 					System.out.println("Gracias por utilizar este extraño programa");
@@ -117,6 +119,5 @@ public class Principal {
 		
 		
 	}
-	
 
 }
