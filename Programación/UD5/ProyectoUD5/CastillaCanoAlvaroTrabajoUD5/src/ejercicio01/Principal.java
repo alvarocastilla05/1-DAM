@@ -5,15 +5,16 @@ import java.util.Scanner;
 
 public class Principal {
 
-	/*Crea una tienda de figuras, todas las figuras van a tener un precio base, y su precio final se calculará
- 	multiplicando este por su área. Crealo con record para así implementar una de las novedades de Java.
-	Crea una clase Figura, que tan solo permita heredar a sus dos hijas y tenga un método para calcular el 
-	área. Crea dos hijas de Figura (Cuadrado y Círculo). La clase Cuadrado debe de tener como atributo lado, y
-	Círculo debe de tener como atributo radio. El círculo tendrá un método que muestre el mensaje que desees.
-	Debemos de crear un menú en el que tengamos las distinta opciones:
+	/*Crea una tienda de figuras, todas las figuras van a tener un precio base, y su precio final se calculará multiplicando este por su área.
+	 *  Crea la tienda con record para así implementar una de las novedades de Java.
+		Crea una clase Figura, que tan solo permita heredar a sus dos hijas y tenga un método para calcular el área. Crea dos 
+		hijas de Figura (Cuadrado y Círculo). La clase Cuadrado debe de tener como atributo lado, y Círculo debe de tener como 
+		atributo radio. El círculo tendrá un método que muestre el mensaje que desees.
+		Debemos de crear un menú en el que tengamos las distinta opciones:
 				Mostrar lista de figuras con aviso
 				Un case donde se realice un sorteo y dependiendo del número obtenido obtenga una recompensa u otra (esta recompensa será de elección libre).
-				Mostrar mensaje de Círculo.*/
+				Mostrar área de Círculo con un mensaje
+*/
 
 
 	public static void main(String[] args) {
@@ -87,13 +88,20 @@ public class Principal {
 					
 					break;
 				case 3:
-					/*
+					/*Como podemos ver, en este ejemplo de Pattern en switchs, comprueba de que tipo es la figura, y depende del tipo que sea
+					 * mostrara una frase u otra*/
+					 */
 					String mensaje = switch (c1) {
 					case Circulo c -> "Circulo con area de " + c.area();
 					case Cuadrado cu -> "Cuadrado con area de" + cu.area();
 					default -> "Figura desconocida";
+					
+					/*De sin usar String y double, ees un ejemplo para comprobar si de esta manera no da error*/
+					double area2=switch(Figura f) {
+					case Circulo c -> Math.PI*c.getRadio()*c.getRadio();
+					case Cuadrado cu -> cu.getLado()*cu.getLado();
+					default ->0;
 					};
-*/
 					break;
 				case 0: 
 					System.out.println("Gracias por utilizar este extraño programa");
