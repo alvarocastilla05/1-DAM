@@ -2,12 +2,12 @@ package ejercicio06;
 
 import java.util.Comparator;
 
-public class ComparaPorHoras implements Comparator<Double>{
+public class ComparaPorHoras implements Comparator<Trabajador>{
 
 	@Override
-	public int compare(Double horas1, Double horas2) {
+	public int compare(Trabajador t1, Trabajador t2) {
 		
-		if(horas1< horas2) {
+		if(t1.getHorasTrabajadas()< t2.getHorasTrabajadas()) {
 			return -1;
 		}else {
 			return 1;
