@@ -45,10 +45,17 @@ public class Trabajador implements Comparable<Trabajador>{
 	public void setSueldoFinal(double sueldoFinal) {
 		this.sueldoFinal = sueldoFinal;
 	}
+	
+	@Override
+	public String toString() {
+		return "Trabajador [nombre=" + nombre + ", dni=" + dni + ", horasTrabajadas=" + horasTrabajadas
+				+ ", sueldoFinal=" + sueldoFinal + "]";
+	}
+	
 
 	//Orden natural.
 	@Override
-	/*public int compareTo(Trabajador t) {
+	public int compareTo(Trabajador t) {
 		if(this.sueldoFinal < t.getSueldoFinal()) {
 			return -1;
 		}else if (this.sueldoFinal > t.getSueldoFinal()){
@@ -56,8 +63,8 @@ public class Trabajador implements Comparable<Trabajador>{
 		}
 		return 0;
 	}
-	*/
 	
+	/*
 	public int compareTo(Trabajador t) {
 		ComparaPorHoras c = new ComparaPorHoras();
 		
@@ -66,7 +73,19 @@ public class Trabajador implements Comparable<Trabajador>{
 		}else {
 			return 
 		}
-	}
+	}*/
+	
+	/*
+	public int compareTo(Trabajador t1, Trabajador t2) {
+		
+		ComparaPorHoras c = new ComparaPorHoras();
+		
+		if(t1.getNombre().equalsIgnoreCase(t2.getNombre())) {
+			return c.compare(t1, t2);
+		}else {
+			return 
+		}
+	}*/
 	
 	
 	
