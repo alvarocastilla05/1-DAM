@@ -140,7 +140,30 @@ public class Principal {
 					
 				case 7:
 					System.out.println("Orden natural (ordenado por números):");
-					Collections.sort();
+					Collections.sort(lista);
+					
+					for (Trastero t : lista) {
+						System.out.println(t);
+					}
+					
+					System.out.println("Orden no natural, por precio");
+					
+					Collections.sort(lista, new ComparaPorPrecio());
+					
+					for (Trastero t : lista) {
+						System.out.println(t);
+					}
+					
+					break;
+				case 8:
+					o.mostrarNoOcupados();
+					break;
+				case 0: 
+					System.out.println("Gracias por utilizar este programa :)");
+					break;
+				default:
+					System.out.println("Opción no válida");
+					break;
 			}
 		}while(op!=0);
 		

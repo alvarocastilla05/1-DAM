@@ -88,4 +88,11 @@ public class Oficina {
 		t.setPrecio(precioNuevo);
 	}
 	
+	public void mostrarNoOcupados() {
+		for (Trastero t : lista) {
+			if(t.isOcupado()==false) {
+				System.out.println(t);
+			}
+		}
+	}
 }
