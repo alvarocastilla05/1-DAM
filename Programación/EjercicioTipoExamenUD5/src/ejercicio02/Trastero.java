@@ -1,6 +1,6 @@
 package ejercicio02;
 
-public class Trastero {
+public class Trastero implements Comparable<Trastero>{
 
 	private double metrosCuadrados;
 	private String direccion;
@@ -60,6 +60,19 @@ public class Trastero {
 	public String toString() {
 		return "Trastero [metrosCuadrados=" + metrosCuadrados + ", direccion=" + direccion + ", numTrastero="
 				+ numTrastero + ", precio=" + precio + ", ocupado=" + ocupado + "]";
+	}
+
+	@Override
+	public int compareTo(Trastero t) {
+		
+		if(this.numTrastero < t.getNumTrastero()) {
+			return 1;
+		}
+		if(this.numTrastero > t.getNumTrastero()) {
+			return -1;
+		}
+		
+		return 0;
 	}
 	
 	

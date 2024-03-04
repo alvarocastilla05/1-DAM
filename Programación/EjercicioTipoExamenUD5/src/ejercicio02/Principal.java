@@ -1,6 +1,7 @@
 package ejercicio02;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 import java.util.Scanner;
 
@@ -26,12 +27,12 @@ public class Principal {
 		lista con varios elementos*/
 		
 		String aux;
-		int op;
+		int op, op1;
 		double metros2;
 		String direccion;
 		int numTrastero;
 		boolean ocupado;
-		double precio;
+		double precio, precioNuevo;
 		Scanner sc = new Scanner(System.in);
 		
 		List<Trastero> lista = new ArrayList<Trastero>();
@@ -58,6 +59,7 @@ public class Principal {
 					7-Ordenar por número de trastero y por precio. 
 					8-Mostrar trasteros no ocupados. 
 					""");
+			System.out.println("-".repeat(100));
 			aux=sc.nextLine();
 			op=Integer.parseInt(aux);
 			
@@ -79,14 +81,66 @@ public class Principal {
 					precio=Double.parseDouble(aux);
 					
 					
-					System.out.println("Introduzca 1 si esta ocupado, 2 sino lo está:");
-					switch(op1) {
+					System.out.println("Introduzca 1 si esta ocupado, sino lo está pulse cualquier otro número:");
+					aux=sc.nextLine();
+					op1=Integer.parseInt(aux);
 					
+					if(op1==1) {
+						ocupado = true;
+					}else {
+						ocupado = false;
 					}
 					
 					
 					o.addTrastero(new Trastero(metros2, direccion, numTrastero, precio,ocupado));
+					
+					o.mostrarLista();
 					break;
+				case 2:
+					o.mostraListaV2();
+					
+					System.out.println("Introduzca el precio del trastero que busca:");
+					aux=sc.nextLine();
+					precio=Double.parseDouble(aux);
+					
+					System.out.println(o.findByPrecio(precio)); 
+					break;
+				case 3: 
+					System.out.println("Introduzca el número del trastero que busca:");
+					aux=sc.nextLine();
+					numTrastero=Integer.parseInt(aux);
+					
+					System.out.println(o.findByNumero(numTrastero));
+					break;
+				case 4:
+					System.out.println(o.buscarPrecioMayor());
+					break;
+				case 5:
+					System.out.println("Introduzca el número del trastero que desea eliminar:");
+					aux=sc.nextLine();
+					numTrastero=Integer.parseInt(aux);
+					
+					o.deleteTrastero(o.findByNumero(numTrastero));
+					
+					o.mostraListaV2();
+					break;
+				case 6:
+					System.out.println("Introduzca el número del trastero que desea modificar");
+					aux=sc.nextLine();
+					numTrastero=Integer.parseInt(aux);
+					
+					System.out.println("Introduzca su precio nuevo:");
+					aux=sc.nextLine();
+					precioNuevo=Double.parseDouble(aux);
+					
+					o.modifyPrecio(o.findByNumero(numTrastero), precioNuevo);
+					
+					o.mostraListaV2();
+					break;
+					
+				case 7:
+					System.out.println("Orden natural (ordenado por números):");
+					Collections.sort();
 			}
 		}while(op!=0);
 		
