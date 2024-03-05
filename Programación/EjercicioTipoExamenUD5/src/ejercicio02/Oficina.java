@@ -45,17 +45,16 @@ public class Oficina {
 		}
 	}
 	
-	public List findByPrecio(double precio) {
-		List<Trastero> lista = new ArrayList<Trastero>();
-		boolean salir = false;
+	public List<Trastero> findByPrecio(double precio) {
+		List<Trastero> listaPrecio = new ArrayList<Trastero>();
 		
 		for (Trastero t : lista) {
 			if(t.getPrecio()==precio) {
-				lista.add(t);
+				listaPrecio.add(t);
 			}
 				
 		}
-		return lista;
+		return listaPrecio;
 		
 	}
 	
@@ -92,7 +91,7 @@ public class Oficina {
 	
 	public void mostrarNoOcupados() {
 		for (Trastero t : lista) {
-			if(t.isOcupado()==false) {
+			if(!t.isOcupado()) {
 				System.out.println(t);
 			}
 		}

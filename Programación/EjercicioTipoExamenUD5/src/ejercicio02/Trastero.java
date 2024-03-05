@@ -16,6 +16,7 @@ public class Trastero implements Comparable<Trastero>{
 		this.ocupado = ocupado;
 	}
 
+
 	public double getMetrosCuadrados() {
 		return metrosCuadrados;
 	}
