@@ -7,9 +7,9 @@
 		<item key="WizardProjectsImportPage.STORE_CLOSE_CREATED_PROJECTS_ID" value="false"/>
 		<item key="WizardProjectsImportPage.STORE_HIDE_CONFLICTING_PROJECTS_ID" value="false"/>
 		<list key="WizardProjectsImportPage.STORE_DIRECTORIES">
-			<item value="C:\Users\castilla.caalv24_tri\Desktop\1-DAM\Programación\EjercicioTipoExamenUD5"/>
-			<item value="C:\Users\alvar\OneDrive\Escritorio\1-DAM\Programación\EjerciciosUD5Parte1_AlvaroCastillaCano"/>
 			<item value="C:\Users\alvar\OneDrive\Escritorio\1-DAM\Programación\EjercicioTipoExamenUD5"/>
+			<item value="C:\Users\alvar\OneDrive\Escritorio\1-DAM\Programación\EjerciciosUD5Parte1_AlvaroCastillaCano"/>
+			<item value="C:\Users\castilla.caalv24_tri\Desktop\1-DAM\Programación\EjercicioTipoExamenUD5"/>
 		</list>
 		<list key="WizardProjectsImportPage.STORE_ARCHIVES">
 			<item value=""/>

@@ -4,6 +4,8 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 import java.util.Scanner;
+import java.util.Map;
+import java.util.HashMap;
 
 public class Principal {
 
@@ -18,11 +20,11 @@ public class Principal {
 		Scanner sc = new Scanner(System.in);
 		
 		
-		List<Palabra> lista = new ArrayList<Palabra>();
+		Map<Integer,Palabra> lista = new HashMap<Integer, Palabra>();
 		
-		lista.add(new Palabra(1, "Food", "Comida"));
-		lista.add(new Palabra (2, "Car", "Coche"));
-		lista.add(new Palabra(3, "Ball", "Pelota"));
+		lista.put(1,new Palabra(1, "Food", "Comida"));
+		lista.put(2,new Palabra (2, "Car", "Coche"));
+		lista.put(3,new Palabra(3, "Ball", "Pelota"));
 		
 		Diccionario d = new Diccionario(lista);
 		
@@ -66,7 +68,7 @@ public class Principal {
 					System.out.println("Introduzca el significa de la palabra que desea añadir:");
 					significado=sc.nextLine();
 					
-					d.addPalabra(new Palabra(id, nombre, significado));
+					d.addPalabra(id, new Palabra(id, nombre, significado));
 					break;
 				case 4:
 					System.out.println("Introduzca el nombre de la palabra que desea modificar:");
