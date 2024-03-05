@@ -1,5 +1,6 @@
 package ejercicio02;
 
+import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
 
@@ -44,17 +45,18 @@ public class Oficina {
 		}
 	}
 	
-	public Trastero findByPrecio(double precio) {
-		Trastero t = null;
+	public List findByPrecio(double precio) {
+		List<Trastero> lista = new ArrayList<Trastero>();
 		boolean salir = false;
 		
-		for (int i = 0; i < lista.size() && !salir; i++) {
-			if(lista.get(i).getPrecio()==precio) {
-				t = lista.get(i);
-				salir = true;
+		for (Trastero t : lista) {
+			if(t.getPrecio()==precio) {
+				lista.add(t);
 			}
+				
 		}
-		return t;
+		return lista;
+		
 	}
 	
 	public Trastero findByNumero(int numTrastero) {
