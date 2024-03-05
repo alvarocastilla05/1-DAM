@@ -20,11 +20,11 @@ public class Principal {
 		Scanner sc = new Scanner(System.in);
 		
 		
-		Map<Integer,Palabra> lista = new HashMap<Integer, Palabra>();
+		Map<Palabra,Integer> lista = new HashMap<Palabra,Integer>();
 		
-		lista.put(1,new Palabra(1, "Food", "Comida"));
-		lista.put(2,new Palabra (2, "Car", "Coche"));
-		lista.put(3,new Palabra(3, "Ball", "Pelota"));
+		lista.put(new Palabra(1, "Food", "Comida"), 1);
+		lista.put(new Palabra (2, "Car", "Coche"),2);
+		lista.put(new Palabra(3, "Ball", "Pelota"), 3);
 		
 		Diccionario d = new Diccionario(lista);
 		

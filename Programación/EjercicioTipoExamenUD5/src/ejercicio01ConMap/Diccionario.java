@@ -7,21 +7,21 @@ import java.util.Map;
 public class Diccionario {
 
 	//Atributos
-	private Map<Integer,Palabra> lista;
+	private Map<Palabra,Integer> lista;
 
 	//Constructores
 	
-	public Diccionario(Map<Integer, Palabra> lista) {
+	public Diccionario(Map<Palabra,Integer> lista) {
 		this.lista = lista;
 	}
 	
 	//Getters and Setters
 	
-	public Map<Integer, Palabra> getLista() {
+	public Map<Palabra,Integer> getLista() {
 		return lista;
 	}
 
-	public void setLista(Map<Integer, Palabra> lista) {
+	public void setLista(Map<Palabra,Integer> lista) {
 		this.lista = lista;
 	}
 
@@ -35,7 +35,7 @@ public class Diccionario {
 
 	//Métodos
 	public void addPalabra(int id,Palabra p) {
-			lista.put(id,p);
+			lista.put(p,id);
 	}
 	
 	//Mostrar con iterator
@@ -48,24 +48,21 @@ public class Diccionario {
 		}
 	}*/
 	
-	/*
+	
 	public void mostrarLista() {
-		for (Map.entry(Integer, Palabra) lista : diccionario) {
-			
-		}
-	}*/
+		 for (Map.Entry<Palabra, Integer> entry : lista.entrySet()) {
+	            System.out.println(entry.getKey() + " : " + entry.getValue());
+	        }
+	}
 	
 	public Palabra findByNombre(String nombre) {
-		Palabra p = null;
-		boolean salir = false;
 		
-		for (int i = 0; i < lista.size() && !salir; i++) {
-			if(lista.get(i).getNombre().equalsIgnoreCase(nombre)) {
-				p = lista.get(i);
-				salir = true;
+		for (Palabra p : lista.keySet()) {
+			if(p.getNombre().equalsIgnoreCase(nombre)) {
+				return p;
 			}
 		}
-		return p;
+		return null;
 	}
 	
 	public void modificarSignificado(Palabra p, String significadoNuevo) {
