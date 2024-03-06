@@ -85,7 +85,7 @@ public class Equipo {
 		double total = 0;
 		
 		for (Jugador jugador : lista) {
-			total=+jugador.getGolesMarcados();
+			total+=jugador.getGolesMarcados();
 		}
 		return total/lista.size();
 	}
