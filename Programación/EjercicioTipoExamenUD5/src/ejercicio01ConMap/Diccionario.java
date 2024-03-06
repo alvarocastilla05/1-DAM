@@ -3,6 +3,8 @@ package ejercicio01ConMap;
 import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
+import java.util.Set;
+import java.util.Map.Entry;
 
 public class Diccionario {
 
@@ -53,6 +55,15 @@ public class Diccionario {
 		 for (Map.Entry<Palabra, Integer> entry : lista.entrySet()) {
 	            System.out.println(entry.getKey() + " : " + entry.getValue());
 	        }
+	}
+	
+	//Mostrar Map con set.
+	public void mostrarListaV2() {
+		Set <Entry<Palabra, Integer>> listaSet = lista.entrySet();
+		
+		for (Entry<Palabra, Integer> entry : listaSet) {
+			System.out.println(entry);
+		}
 	}
 	
 	public Palabra findByNombre(String nombre) {
