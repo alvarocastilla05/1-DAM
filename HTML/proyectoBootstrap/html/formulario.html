@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inicio - EcijaCofrade</title>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="../css/bootstrap.min (1).css">
+    <style>
+        .bg-cover {
+            background-image: url('../img/ecija-sevilla-organo.jpg');
+            /* URL de la imagen de fondo */
+            background-size: cover;
+            background-position: center;
+            height: 100vh;
+            /* Altura de la portada igual al 100% del viewport height */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .btn-custom {
+            font-size: 1.5rem;
+            border-color: yellow;
+            /* Tamaño de fuente del botón */
+        }
+
+
+        footer a {
+            text-decoration: none;
+            color: yellow;
+        }
+
+        .btn {
+            background-color: rgb(255, 195, 65);
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg bg-info" data-bs-theme="danger">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="./portada.html"><img src="../img/logo-tiempocofrade-horizontal.png"
+                    alt="logo"></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor02"
+                aria-controls="navbarColor02" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarColor02">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="./hermandades.html">Hermandades
+                            <span class="visually-hidden">(current)</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./historia.html">Historia</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./destacados.html">Destacados</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./tabla.html">Nº Nazarenos</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button"
+                            aria-haspopup="true" aria-expanded="false">OTROS</a>
+                        <div class="dropdown-menu">
+                            <a class="dropdown-item" href="./carrusel.html">Imagenes</a>
+                            <a class="dropdown-item" href="#">Formulario Cofrade</a>
+                        </div>
+                    </li>
+                </ul>
+                <form class="d-flex">
+                    <input class="form-control me-sm-2" type="search" placeholder="Search">
+                    <button class="btn btn-secondary my-2 my-sm-0" type="submit">Buscar</button>
+                </form>
+            </div>
+        </div>
+    </nav>
+
+    <body>
+
+        <div class="container">
+            <h1 class="mt-5">Semana Santa de Écija</h1>
+            <form>
+                <div class="mb-3">
+                    <label for="hermandad_favorita" class="form-label">1. ¿Cuál es tu hermandad favorita en la Semana
+                        Santa de Écija?</label>
+                    <input type="text" class="form-control" id="hermandad_favorita" required>
+                </div>
+                <div class="mb-3">
+                    <label for="paso_preferido" class="form-label">2. ¿Cuál es tu paso o imagen religiosa preferida en
+                        las procesiones de Écija?</label>
+                    <input type="text" class="form-control" id="paso_preferido" required>
+                </div>
+                <div class="mb-3">
+                    <label for="banda_favorita" class="form-label">3. ¿Cuál es la banda de música que tienes más ganas
+                        de escuchar en esta Semana Santa 2024?</label>
+                    <select class="form-select" id="banda_favorita" required>
+                        <option value="" selected>Selecciona tu banda favorita</option>
+                        <option value="Banda A">AM Santa Cruz de Huelva</option>
+                        <option value="Banda B">BCT Vera Cruz de Utrera</option>
+                        <option value="Banda C">AMUECI</option>
+                        <option value="Banda D">BCT Caído Fuensanta</option>
+                        <option value="Otra">Otra</option>
+                    </select>
+                </div>
+                <div class="mb-3">
+                    <label for="momento_destacado" class="form-label">4. ¿Cuál ha sido tu momento más destacado en la
+                        Semana Santa de Écija?</label>
+                    <textarea class="form-control" id="momento_destacado" rows="3" required></textarea>
+                </div>
+                <div class="mb-3">
+                    <label for="participacion_hermandad" class="form-label">¿Sales en alguna hermandad?</label>
+                    <select class="form-select" id="participacion_hermandad" required>
+                        <option value="" selected>Selecciona una opción</option>
+                        <option value="Si">Sí</option>
+                        <option value="No">No</option>
+                        <option value="Si_mas_de_una">Sí, en más de una</option>
+                    </select>
+                </div>
+                <div class="mb-3">
+                    <label for="aspecto_valorado" class="form-label">6. ¿Qué aspecto de la Semana Santa de Écija valoras
+                        más?</label>
+                    <input type="text" class="form-control" id="aspecto_valorado" required>
+                </div>
+                <div class="mb-3">
+                    <label for="expectativas" class="form-label">7. ¿Qué esperas experimentar en la Semana Santa de
+                        Écija en el futuro?</label>
+                    <textarea class="form-control" id="expectativas" rows="3" required></textarea>
+                </div>
+                <div class="mb-3">
+                    <label for="comentarios_adicionales" class="form-label">8. ¿Hay algún comentario adicional que te
+                        gustaría compartir sobre la Semana Santa de Écija?</label>
+                    <textarea class="form-control" id="comentarios_adicionales" rows="3"></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary">Enviar</button>
+            </form>
+        </div>
+
+
+    </body>
+
+
+    <footer class="bg-info">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4">
+                    <h3>Enlaces</h3>
+                    <ul>
+                        <li><a href="#">Inicio</a></li>
+                        <li><a href="#">Acerca de</a></li>
+                        <li><a href="#">Contacto</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-4">
+                    <h3>Contacto</h3>
+                    <p>Correo electrónico: castilla.caalv24@triana.salesianos.edu</p>
+                    <p>Teléfono: 675 31 40 70</p>
+                </div>
+                <div class="col-lg-4">
+                    <h3>Derechos de autor</h3>
+                    <p>(c) 2023 Mi Sitio Web. Todos los derechos reservados.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+</body>
+
+</html>
