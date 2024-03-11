@@ -42,10 +42,15 @@ public class Principal {
 		}
 		
 		
-		//Interfaz Funcional Function.
+		//Interfaz Funcional Function. Se le pasa un parametro y devuelve otro.
 		
 		
 		//Interfaz Funcional BiFunction. Se le pasan dos parámetro y devuelve uno.
+		
+		
+		/*Predicados. Devuelve un booleano. 
+		Predicate<TipoObjetoQueRecibe> nombreLambda = (TipoObjetoQueRecibe nombre) -> Lo que comprueba.*/
+		
 		
 		
 		
