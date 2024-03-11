@@ -44,7 +44,12 @@ public class Principal {
 		
 		//Interfaz Funcional Function.
 		
-		//apply
+		
+		//Interfaz Funcional BiFunction. Se le pasan dos parámetro y devuelve uno.
+		
+		
+		
+		
 		
 		
 	}
