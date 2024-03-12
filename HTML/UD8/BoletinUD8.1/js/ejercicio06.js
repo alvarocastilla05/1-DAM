@@ -1,0 +1,1 @@
+let dni = prompt("Indique su DNI")
