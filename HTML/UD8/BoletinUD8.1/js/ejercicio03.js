@@ -1,3 +1,5 @@
 let meses = ['Enero', 'Febrero', 'Marzo', 'Abril', 'Mayo', 'Junio', 'Julio', 'Agosto', 'Septiembre', 'Octubre', 'Noviembre', 'Diciembre'];
 
-alert(meses);
+for(let mes of meses){  //forof
+    alert(mes)
+}
