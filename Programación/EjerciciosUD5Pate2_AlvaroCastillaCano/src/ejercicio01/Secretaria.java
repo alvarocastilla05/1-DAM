@@ -55,9 +55,9 @@ public class Secretaria {
 		return lista.stream().count();
 	}
 	
-	public List<Alumno> mostrarNotaMediaAlta(){
+	public List<Alumno> mostrarNotaMediaAlta(String nombreCurso){
 		int nueve = 9;
-		return lista.stream().filter(a -> a.getNotaMedia()>=nueve).toList();
+		return lista.stream().filter(a -> a.getNotaMedia()>=nueve && a.getNombreCurso().equalsIgnoreCase(nombreCurso)).toList();
 	}
 	
 	public void mostrarTresPrimeros() {

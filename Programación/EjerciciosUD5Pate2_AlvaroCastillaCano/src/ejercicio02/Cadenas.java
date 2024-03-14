@@ -1,6 +1,8 @@
 package ejercicio02;
 
 import java.util.List;
+import java.util.function.Consumer;
+import java.util.stream.Stream;
 
 public class Cadenas {
 
@@ -25,6 +27,28 @@ public class Cadenas {
 	@Override
 	public String toString() {
 		return "Cadenas [lista=" + lista + "]";
+	}
+	
+	//Métodos
+	
+	public List<String> ordenarOrdenAlfabetico(){
+		return lista.stream().sorted().toList();
+	}
+	
+	public void mostrarLista() {
+		lista.stream().forEach((Consumer<? super String>) new Consumer<String>() {
+
+			@Override
+			public void accept(String t) {
+				System.out.println(t);
+				
+			}
+			
+		});
+	}
+	
+	public String findByNombre(String buscado) {
+		return lista.stream().filter(s -> s.equalsIgnoreCase(buscado)).toString();
 	}
 	
 	

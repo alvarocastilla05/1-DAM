@@ -13,13 +13,14 @@ public class Principal {
 		String aux;
 		String nombre;
 		String letra;
+		String nombreCurso;
 		
 		Scanner sc = new Scanner(System.in);
 		
 		List<Alumno> lista = new ArrayList<Alumno>();
 		
-		lista.add(new Alumno("Alvaro", "Castilla", "DAM", 8, 18));
-		lista.add(new Alumno("Lucas", "Falla", "DAM", 7.5, 18));
+		lista.add(new Alumno("Alvaro", "Castilla", "DAM", 9.5, 18));
+		lista.add(new Alumno("Lucas", "Falla", "DAM", 8, 18));
 		lista.add(new Alumno("Alberto", "Rodriguez", "ESO", 8, 18));
 		lista.add(new Alumno("Angel", "Naranjo", "Primaria", 10, 10));
 		lista.add(new Alumno("Francisco Manuel", "Sanchez", "Infantil", 10, 5));
@@ -36,7 +37,7 @@ public class Principal {
 					2-Mostrar todos los alumnos con foreach.
 					3-Imprimir alumnos que comiencen por la letra indicada.
 					4-Dar tamaño a la lista con count.
-					5-Obtener alumnos con nota media superior a 9.
+					5-Obtener alumnos con nota media superior a 9 de 1DAM.
 					6-Imprimir los 3 primeros alumnos.
 					7-Obtener menor de edad.
 					8-Obtener primer alumno.
@@ -67,7 +68,10 @@ public class Principal {
 					System.out.println(s.darTamanio());
 					break;
 				case 5:
-					System.out.println(s.mostrarNotaMediaAlta());
+					System.out.println("Introduzca el nombre del curso donde busca alumnos con una media 9 o mayor");
+					nombreCurso = sc.nextLine();
+					
+					System.out.println(s.mostrarNotaMediaAlta(nombreCurso));
 					break;
 				case 6:
 					s.mostrarTresPrimeros();
