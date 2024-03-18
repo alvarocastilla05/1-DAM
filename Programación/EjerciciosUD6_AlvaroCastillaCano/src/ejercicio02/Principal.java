@@ -21,9 +21,13 @@ public class Principal {
 			aux=sc.nextLine();
 			celsius=Double.parseDouble(aux);
 			
-			System.out.println(celsius+"ºC son: "+c.conversionGrados(celsius)+"ºF"); 
-		}catch(Exception e) {
-			
+			if(celsius < -273) {
+				throw new MiExcepcion("No puede haber temperaturas menores a -273ºC");
+			}else {
+				System.out.println(celsius+"ºC son: "+c.conversionGrados(celsius)+"ºF"); 
+			}
+		}catch(MiExcepcion e) {
+			System.err.println(e.getMessage());
 		}
 
 	}

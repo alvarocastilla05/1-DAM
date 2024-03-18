@@ -1,9 +1,8 @@
 package ejercicio02;
 
-public class Miexcepcion extends Exception{
-	
-	public Miexcepcion(String info) {
-		super(info);
-	}
+public class MiExcepcion extends Exception{
 
+	public MiExcepcion(String mensaje) {
+		super(mensaje);
+	}
 }
