@@ -1,6 +1,7 @@
 /*EJERCICIO 01*/
 
 
+
 function redondearElementos(arr){
     for (let i = 0; i < unArray.length; i++) {
         
@@ -34,9 +35,12 @@ function eliminarExtremos(arr){
     let primero = arr.shift();
     let eliminado = arr.pop();
 
-    return eliminado;
+    return  eliminado
     
 }
+
+
+
 
 /*EJERCICIO 03*/
 
