@@ -17,7 +17,7 @@ function camelize(str) {
 
     //1-Quitamos los guiones y separamos por palabras.
 
-    let palabrasSueltas = str.split('-');
+    let palabrasSueltas = str.split(str);
 
     //2-Cambiar la primera letra a mayúsculas(a partir de la 2º)
 
