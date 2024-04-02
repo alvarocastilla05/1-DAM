@@ -12,12 +12,35 @@ for (let elem of elementos) {
 }*/
 //Si ponemos unicamente querySelector, únicamente nos muestra el primer elementos que cumpla la condición.
 
-
+/*----------------------------------------------------------------------------------------------------------*/
 let boton = document.getElementById('boton');
 
 boton.addEventListener('click', botonPulsado);
 
 function botonPulsado(){
-    let ultimoLi = document.querySelector('li:last-child');
-    alert(ultimoLi.innerText)
+    /*let ultimoLi = document.querySelector('li:last-child');
+    alert(ultimoLi.innerText)*/
+    let texto = prompt("Diga el texto del nuevo elemento: ");
+
+    //obtengo la lista.
+    let lista = document.querySelector('ol');
+
+    //creo el nuevo elemento.
+    let nuevoLi = document.createElement('li');
+
+    //le doy contenido.
+    nuevoLi.innerText =  texto; //Si queremos podemos poner directamente el prompt.
+
+    //añado el li al ol.
+    lista.append(nuevoLi);
+
+    
 }
+
+/* ol.before lo añade antes del ol
+ol.prepend se añade el primer elemento del ol
+ol.append se añade el ultimo elemento del ol.
+ol.after lo añade despues del ol.
+/*/
+
+/*------------------------------------------------------------------------------*/
