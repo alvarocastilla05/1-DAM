@@ -38,14 +38,13 @@ public class Tarjeta {
 		}
 	}
 	
-	public void comprobarPin(int pin, String letraPin) throws Exception{
-		if(pin < 1000) {
-			throw new ExcepcionPin("El PIN debe de tener minimo 4 números");
-		}if(letraPin.length()>1) {
-			throw new ExcepcionPin("El PIN debe de contener una única letra");
-		}
-		else {
-			System.out.println("PIN correcto");
+	public boolean comprobarPin(String pin) throws ExcepcionPin{
+		String regex = "[0-9]{4}[A-Za-z]";
+		
+		if(pin.matches(regex)) { //matches sirve para comprobar si el String realiza el patron de regex.
+			return true;
+		}else {
+			throw new ExcepcionPin("Formato de PIN no valido.");
 		}
 	}
 }

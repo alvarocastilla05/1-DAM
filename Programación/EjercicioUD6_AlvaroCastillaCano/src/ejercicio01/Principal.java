@@ -6,8 +6,7 @@ public class Principal {
 
 	public static void main(String[] args) {
 		
-		int pin;
-		String letraPin;
+		String pin;
 		String aux;
 		double dineroRetirado;
 		double dineroIngresado;
@@ -39,13 +38,9 @@ public class Principal {
 				
 				//Comprobar PIN
 				System.out.println("Introduzca el PIN de la tarjeta:");
-				aux=sc.nextLine();
-				pin=Integer.parseInt(aux);
+				pin=sc.nextLine();
 				
-				System.out.println("Introduzca la letra del PIN");
-				letraPin=sc.nextLine();
-				
-				t.comprobarPin(pin, letraPin);
+				t.comprobarPin(pin);
 				salir =false;
 				
 				
@@ -58,6 +53,8 @@ public class Principal {
 			}catch(ExcepcionPin e) {
 				System.err.println(e.getMessage());
 				salir = true;
+			}catch(NumberFormatException e) {
+				System.err.println("Introduzca un dato numérico.");
 			}
 			catch(Exception e) {
 				System.err.println("Error inesperado");
