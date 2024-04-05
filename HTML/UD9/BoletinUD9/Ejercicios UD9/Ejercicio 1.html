@@ -2,7 +2,7 @@
 <html lang="es">
 
 <head>
-	<title>Ejercicio 11</title>
+	<title>Ejercicio 1</title>
 	<meta charset="utf-8">
 
 	<script>
@@ -21,11 +21,24 @@
 
 			// Direccion del penultimo enlace
 
-			let penultimoEnlace = document.querySelector('')
+			let penultimoEnlace = numEnlaces[numEnlaces.length-2] ;
+			alert(penultimoEnlace.href);
 
 			// Numero de enlaces que apuntan a http://prueba
 
+			let contador = 0;
+			for (let enlace of numEnlaces) {
+				if(enlace.href === "http://prueba/"){
+					contador++;
+				}
+			}
+
+			alert(contador);
 			// Numero de enlaces del tercer párrafo
+
+			let enlacesTercero = document.querySelectorAll('p:nth-child(3) a');
+			alert(enlacesTercero.length);
+			
 		}
 	</script>
 </head>
@@ -47,7 +60,8 @@
 		nulla vitae tellus. Sed quis eros nec lectus tempor lacinia. Aliquam nec lectus nec neque aliquet dictum. Etiam
 		<a href="http://prueba3/">consequat sem quis massa</a>. Donec aliquam euismod diam. In magna massa, mattis id,
 		pellentesque sit amet, porta sit amet, lectus. Curabitur posuere. Aliquam in elit. Fusce condimentum, arcu in
-		scelerisque lobortis, ante arcu scelerisque mi, at cursus mi risus sed tellus.</p>
+		scelerisque lobortis, ante arcu scelerisque mi, at cursus mi risus sed tellus.
+	</p>
 	<p>Donec sagittis, nibh nec ullamcorper tristique, pede velit feugiat massa, at sollicitudin justo tellus vitae
 		justo. Vestibulum aliquet, nulla sit amet imperdiet suscipit, nunc erat laoreet est, a <a
 			href="http://prueba/">aliquam leo odio sed sem</a>. Quisque eget eros vehicula diam euismod tristique. Ut
