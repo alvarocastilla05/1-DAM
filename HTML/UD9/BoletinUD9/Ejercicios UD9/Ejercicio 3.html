@@ -11,7 +11,20 @@
 			}
 
 			function anade() {
-				
+				//Pido un nuevo elementos
+				let elemento = prompt("Introduzca el nuevo elemento de la lista: ");
+
+				//Obtengo la lista.
+				let lista = document.querySelector('ul');
+
+				//Creo el nuevo elementos
+				let nuevoElemento = document.createElement('li');
+
+				//Le doy contenido
+				nuevoElemento.innerText = elemento
+
+				//Añado el nuevo elemento a la lista
+				lista.append(nuevoElemento);
 			}
 		</script>
 	</head>
