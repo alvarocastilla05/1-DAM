@@ -21,7 +21,9 @@
 		}
 
 		function muestra() {
-			span.hidden = false;
+			let spanAdicional = document.querySelector('#adicional');
+            spanAdicional.classList.remove('oculto');
+            spanAdicional.classList.add('visible');
 		}
 	</script>
 </head>
