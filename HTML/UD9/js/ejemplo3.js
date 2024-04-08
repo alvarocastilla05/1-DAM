@@ -1,6 +1,6 @@
 let boton = document.getElementById('boton');
 
-boton.addEventListener('click', botonPulsado);
+boton.addEventListener('click', botonPulsado); //Si además en el parentesis ponemos 'once:true', esto quiere decir que solo va a ocurrir la primera vez que pulsemos en el boto
 
 
 function botonPulsado() {
