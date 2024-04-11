@@ -1,24 +1,37 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style type="text/css">
-        div{
+        div {
             background-color: green;
             width: 50%;
             height: 400px;
             margin: 50px auto;
         }
-        div h1{
+
+        div h1 {
             display: none;
             color: white;
         }
     </style>
     <script src="../js/ejemploEventos.js" defer></script>
 </head>
+
 <body>
-    
+
+    <label for="nombre">Nombre</label>
+    <input type="text" name="nombre" id="nombre" required placeholder="Su nombre aquí" autofocus autocomplete><br />
+
+    <label for="apellido">Apellidos: </label>
+    <input type="text" name="apellido" id="apellido" required placeholder="Su apellido aquí" autofocus autocomplete><br />
+
+    <input type="submit" value="Enviar">
+
+
 </body>
+
 </html>
