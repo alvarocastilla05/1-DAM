@@ -34,3 +34,4 @@ function validarFormulario(elEvento){
         formulario.submit();
     }
 }
+
