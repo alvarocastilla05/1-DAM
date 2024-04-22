@@ -10,13 +10,32 @@
 		#info h1 {margin: 0;}
 	</style>
 	<script>
-		
-		window.addEventListener('click',informacion);
+		window.onload = function() {
+			document.addEventListener('click', informacion);
+		};
 
 		function informacion(elEvento) {
 			let evento = elEvento || window.event;
-			
-			muestraInformacion();
+			let posX = evento.clientX;
+			let posY = evento.clientY;
+			let tamanoVentana = tamanoVentanaNavegador();
+			let mensaje = ['Posición del clic'];
+
+			if (posX < tamanoVentana[0] / 2) {
+				if (posY < tamanoVentana[1] / 2) {
+					mensaje.push('Has pulsado en la zona izquierda arriba.');
+				} else {
+					mensaje.push('Has pulsado en la zona izquierda abajo.');
+				}
+			} else {
+				if (posY < tamanoVentana[1] / 2) {
+					mensaje.push('Has pulsado en la zona derecha arriba.');
+				} else {
+					mensaje.push('Has pulsado en la zona derecha abajo.');
+				}
+			}
+
+			muestraInformacion(mensaje);
 		}
 
 		function muestraInformacion(mensaje) {
@@ -44,8 +63,6 @@
 			
 			return dimensiones;
 		}
-
-
 
 	</script>
 </head>

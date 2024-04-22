@@ -6,17 +6,18 @@
 
 	<script>
 		function muestraOculta() {
-			let contenido = document.getElementById(idContenido);
-			let enlace = document.getElementById(idEnlace);
-			
-			if (contenido.style.display === "none") {
-				contenido.style.display = "block";
-				enlace.innerHTML = "Ocultar contenidos";
-			} else {
-				contenido.style.display = "none";
-				enlace.innerHTML = "Mostrar contenidos";
-			}
-		}
+			let contenido = document.getElementById('contenidos_' + id);
+            let enlace = document.getElementById('enlace_' + id);
+
+            if (contenido.style.display === 'none') {
+                contenido.style.display = 'block';
+                enlace.innerHTML = 'Ocultar contenidos';
+            } else {
+                contenido.style.display = 'none';
+                enlace.innerHTML = 'Mostrar contenidos';
+            }
+        }
+
 	</script>
 </head>
 <body>

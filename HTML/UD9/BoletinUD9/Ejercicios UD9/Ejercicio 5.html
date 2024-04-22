@@ -9,15 +9,54 @@
 		#info {width:160px; border:thin solid silver; padding:.5em; position:fixed;}
 		#info h1 {margin: 0;}
 	</style>
-	<script>
-	function muestraInformacion(mensaje) {
-		let info = document.getElementById("info");
-		info.innerHTML = '<h1>'+mensaje[0]+'</h1>';
-		for(let elemento of mensaje) {
-			info.innerHTML += '<p>'+elemento+'</p>';
-		}
-	}
-	</script>
+	      <script>
+			function muestraInformacion(mensaje, colorFondo) {
+				let info = document.getElementById("info");
+				info.innerHTML = '<h1>'+mensaje[0]+'</h1>';
+				for(let i = 1; i < mensaje.length; i++) {
+					info.innerHTML += '<p>'+mensaje[i]+'</p>';
+				}
+				info.style.backgroundColor = colorFondo;
+			}
+	
+			window.onload = function() {
+				document.onmousemove = function(event) {
+					let posX = event.clientX;
+					let posY = event.clientY;
+					let posXPagina = event.pageX;
+					let posYPagina = event.pageY;
+	
+					let mensaje = [];
+					mensaje.push('Posición del ratón');
+					mensaje.push('Respecto al navegador: (' + posX + ', ' + posY + ')');
+					mensaje.push('Respecto a la página: (' + posXPagina + ', ' + posYPagina + ')');
+	
+					muestraInformacion(mensaje, 'white');
+				};
+	
+				document.onkeydown = function(event) {
+					let tecla = event.key;
+					let codigo = event.keyCode;
+	
+					let mensaje = [];
+					mensaje.push('Tecla pulsada');
+					mensaje.push('Tecla: ' + tecla);
+					mensaje.push('Código: ' + codigo);
+	
+					muestraInformacion(mensaje, '#CCE6FF');
+				};
+	
+				document.onmousedown = function(event) {
+					var boton = event.button;
+					var mensaje = [];
+					mensaje.push('Botón del ratón pulsado');
+					mensaje.push('Botón: ' + boton);
+	
+					muestraInformacion(mensaje, '#FFFFCC');
+				};
+			};
+		</script>
+	
 </head>
 <body>
 	<div id="info"></div>
