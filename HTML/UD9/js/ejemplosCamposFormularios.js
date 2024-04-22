@@ -6,9 +6,13 @@ for(let campo of formulario.elements){
         campo.addEventListener('input', pasarMayusculas)
     }else if(campo.type==="password"){
         campo.nextElementSibling.addEventListener('pointerover', verContrasenia);
-        campo.nextElementSibling.addEventListener('pointerover', ocultarContrasenia);
+        campo.nextElementSibling.addEventListener('pointerout', ocultarContrasenia);
     }
 }
+
+let botonEnviar = document.querySelectorAll("button");
+
+botonEnviar.addEventListener("click", validarFormulario);
 
 function pasarMayusculas(elEvento){
     this.value = this.value.toUpperCase();
