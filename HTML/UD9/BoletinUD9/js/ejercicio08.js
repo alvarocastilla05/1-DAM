@@ -28,6 +28,34 @@ function ocultarContrasenia(elEvento){
     this.previousElementSibling.type="password";
 }
 
+/*
+function validarContrasenia() {
+    let contrasena1 = document.getElementsByName("clave")[0].value;
+    let contrasena2 = document.getElementById("confirm_password").value;
+
+    // Comprobar que las contraseñas coinciden
+    if (contrasena1 !== contrasena2) {
+        alert("Las contraseñas no coinciden");
+        return false;
+    }
+
+    // Comprobar que la contraseña tenga al menos 8 caracteres
+    if (contrasena1.length < 8) {
+        alert("La contraseña debe tener al menos 8 caracteres");
+        return false;
+    }
+
+    // Comprobar que la contraseña contenga al menos una letra y un número
+    var letras = '/[a-zA-Z]/';
+    var numeros = '/\d/';
+    if (!letras.test(contrasena1) || !numeros.test(contrasena1)) {
+        alert("La contraseña debe contener al menos una letra y un número");
+        return false;
+    }
+
+    // Si pasa todas las condiciones, el formulario se puede enviar
+    return true;
+}*/
 function validarFormulario(elEvento){
     let resultado = true;
     if(formulario.elements.nombre.value==''){
