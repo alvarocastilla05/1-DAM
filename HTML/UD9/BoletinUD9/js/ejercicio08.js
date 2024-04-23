@@ -7,23 +7,25 @@ for(let campo of formulario.elements){
     }else if(campo.type==="password"){
         campo.nextElementSibling.addEventListener('pointerover', verContrasenia);
         campo.nextElementSibling.addEventListener('pointerout', ocultarContrasenia);
+    }else if(campo.type==="submit"){
+        campo.addEventListener("click", validarFormulario)
     }
 }
 
-let botonEnviar = document.querySelectorAll("button");
+/*let botonEnviar = document.querySelector("button");
 
-botonEnviar.addEventListener("click", validarFormulario);
+botonEnviar.addEventListener("click", validarFormulario);*/
 
 function pasarMayusculas(elEvento){
     this.value = this.value.toUpperCase();
 }
 
 function verContrasenia(elEvento){
-    this.previousElementsSibling.type="text";
+    this.previousElementSibling.type="text";
 }
 
 function ocultarContrasenia(elEvento){
-    this.previousElementsSibling.type="password";
+    this.previousElementSibling.type="password";
 }
 function validarFormulario(elEvento){
     let resultado = true;
