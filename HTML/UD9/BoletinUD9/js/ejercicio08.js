@@ -27,6 +27,7 @@ function verContrasenia(elEvento){
 function ocultarContrasenia(elEvento){
     this.previousElementSibling.type="password";
 }
+
 function validarFormulario(elEvento){
     let resultado = true;
     if(formulario.elements.nombre.value==''){
