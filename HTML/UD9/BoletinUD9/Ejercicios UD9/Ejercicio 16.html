@@ -20,6 +20,35 @@
         }
         
     </style>
+     <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        let contadorColores = 0;
+  
+        const generarColorAleatorio = () => {
+          const red = Math.floor(Math.random() * 256);
+          const green = Math.floor(Math.random() * 256);
+          const blue = Math.floor(Math.random() * 256);
+          return `rgb(${red}, ${green}, ${blue})`;
+        };
+  
+        const actualizarMensaje = () => {
+          const colorGenerado = generarColorAleatorio();
+          document.body.style.backgroundColor = colorGenerado;
+          contadorColores++;
+          const avisoElement = document.getElementById("aviso");
+          avisoElement.innerHTML = `<span class="badge bg-success">Color generado: ${colorGenerado}, Colores generados: ${contadorColores}</span>`;
+        };
+  
+        const limpiarColor = () => {
+          document.body.style.backgroundColor = "white";
+          document.getElementById("aviso").innerHTML = "";
+          contadorColores = 0;
+        };
+  
+        document.getElementById("btnGenerar").addEventListener("click", actualizarMensaje);
+        document.getElementById("btnLimpiar").addEventListener("click", limpiarColor);
+      });
+    </script>
     
 </head>
 

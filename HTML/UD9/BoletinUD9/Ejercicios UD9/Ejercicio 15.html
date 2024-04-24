@@ -19,16 +19,53 @@
 		
 	</style>
 	<script>
-		let turno = "X";
-
-		turno = (turno === 'X')?'O':'X';
-		/*Esto es lo mismo que arriba pero de la forma
-		if(turno === ' X'){
-			turno = 'O';
-		}else{
-			turno = 'X';
-		}*/
+		document.addEventListener("DOMContentLoaded", function() {
+            // Variables para controlar el turno y el mensaje
+            let turno = 'X';
+            let mensaje = document.getElementById('mensaje');
+            
+            // Función para cambiar el turno
+            function cambiarTurno() {
+                turno = turno === 'X' ? 'O' : 'X';
+                mensaje.textContent = `es el turno de ${turno}`;
+                mensaje.classList.toggle('btn-success');
+                mensaje.classList.toggle('btn-danger');
+            }
+            
+            // Función para colocar una ficha en una casilla
+            function colocarFicha(casilla) {
+                if (casilla.textContent === '') {
+                    casilla.textContent = turno;
+                    casilla.classList.remove('btn-light');
+                    casilla.classList.add(turno === 'X' ? 'btn-danger' : 'btn-success');
+                    cambiarTurno();
+                } else {
+                    mensaje.textContent = 'Casilla ocupada';
+                }
+            }
+            
+            // Event listeners para las casillas
+            document.querySelectorAll('.btn').forEach(casilla => {
+                casilla.addEventListener('click', function() {
+                    colocarFicha(casilla);
+                });
+            });
+            
+            // Event listener para el botón de limpiar tablero
+            document.getElementById('limpiar').addEventListener('click', function() {
+                document.querySelectorAll('.btn').forEach(casilla => {
+                    casilla.textContent = '';
+                    casilla.classList.remove('btn-success', 'btn-danger');
+                    casilla.classList.add('btn-light');
+                });
+                turno = 'X';
+                mensaje.textContent = 'es el turno de X';
+                mensaje.classList.remove('btn-danger');
+                mensaje.classList.add('btn-success');
+            });
+        });
 	</script>
+	
 </head>
 <body>
 	<!-- cabecera-->
