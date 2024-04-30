@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Evento</title>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="../css/bootstrap.css">
+</head>
+<body>
+
+    <div class="container">
+        <h2 class="mt-5 mb-4">Registro de Evento</h2>
+        <form action="procesar_registro.php" method="POST">
+            <div class="mb-3">
+                <label for="nombre" class="form-label">Nombre</label>
+                <input type="text" class="form-control" id="nombre" name="nombre" required>
+              </div>
+              <div class="mb-3">
+                <label for="fecha" class="form-label">Fecha</label>
+                <input type="date" class="form-control" id="fecha" name="fecha" required>
+              </div>
+              <div class="mb-3">
+                <label for="hora" class="form-label">Hora</label>
+                <input type="time" class="form-control" id="hora" name="hora" required>
+              </div>
+              <div class="mb-3">
+                <label for="duracion" class="form-label">Duración (en horas)</label>
+                <input type="number" class="form-control" id="duracion" name="duracion" required>
+              </div>
+              <div class="mb-3">
+                <label for="lugar" class="form-label">Lugar</label>
+                <input type="text" class="form-control" id="lugar" name="lugar" required>
+              </div>
+              <div class="mb-3">
+                <label for="dineroPagado" class="form-label">Dinero Pagado</label>
+                <input type="number" class="form-control" id="dineroPagado" name="dineroPagado" step="100" required>
+              </div>
+              <button type="submit" class="btn btn-primary">Enviar</button>
+        </form>
+    </div>
+    
+</body>
+</html>
+    
